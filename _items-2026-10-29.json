@@ -1,0 +1,78 @@
+{
+ "saved": "2026-10-29 16:07",
+ "overview": "Gemini 4 Carbon 发布，编码智能体基础设施基准与提示缓存误用检测成研究热点。",
+ "items": [
+  {
+   "title": "InfraDev：编码智能体能开发AI基础设施吗",
+   "link": "https://arxiv.org/abs/2610.36589",
+   "source": "arXiv cs.AI",
+   "zh": "基于Megatron-LM、vLLM、verl真实PR构建36任务基准，评测编码智能体开发AI基础设施的能力。",
+   "zh_title": "InfraDev：编码智能体能开发AI基础设施吗",
+   "why": "填补多GPU基础设施级编码评测空白",
+   "published_ts": 1793246827.009454
+  },
+  {
+   "title": "氛围游戏开发的十月拐点",
+   "link": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+   "source": "Simon Willison",
+   "zh": "Simon Willison认为2026年10月编码智能体在游戏开发上跨过可靠性拐点，并列举多款作品。",
+   "zh_title": "氛围游戏开发的十月拐点",
+   "why": "观察智能体实际产出能力变化",
+   "published_ts": 1793196427.009779
+  },
+  {
+   "title": "Google发布Gemini 4 Carbon",
+   "link": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+   "source": "The Verge AI",
+   "zh": "新前沿模型在编码、智能体任务与网络安全上显著提升，称登顶Artificial Analysis智能指数。",
+   "zh_title": "Google发布Gemini 4 Carbon",
+   "why": "前沿模型能力与安全定位更新",
+   "published_ts": 1793221627.010046
+  },
+  {
+   "title": "LLM智能体提示缓存误集成检测",
+   "link": "https://arxiv.org/abs/2610.34817",
+   "source": "arXiv cs.AI",
+   "zh": "分析下游智能体中提示缓存误集成问题，因各家API与语义差异导致成本与延迟上升。",
+   "zh_title": "LLM智能体提示缓存误集成检测",
+   "why": "直接影响推理成本优化实践",
+   "published_ts": 1793246827.010305
+  },
+  {
+   "title": "Google向更多应用开放Gemini与搜索",
+   "link": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
+   "source": "TechCrunch AI",
+   "zh": "新开发者平台让企业服务接入Google AI体验，改变应用发现与使用方式。",
+   "zh_title": "Google向更多应用开放Gemini与搜索",
+   "why": "智能体时代应用分发入口变化",
+   "published_ts": 1793207227.010556
+  },
+  {
+   "title": "GitHub Octoverse 2026报告",
+   "link": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+   "source": "Simon Willison",
+   "zh": "2026年合并PR不足一年增至每月2.2亿次，体现智能体工程对GitHub的影响。",
+   "zh_title": "GitHub Octoverse 2026报告",
+   "why": "量化智能体编码的规模影响",
+   "published_ts": 1793207227.010807
+  },
+  {
+   "title": "为什么智能体偏爱Supabase",
+   "link": "https://latent.space/p/supabase/",
+   "source": "Latent Space",
+   "zh": "Supabase创始人谈为AI智能体构建后端的技术思路与设计取舍。",
+   "zh_title": "为什么智能体偏爱Supabase",
+   "why": "智能体后端基础设施实践参考",
+   "published_ts": 1793218027.011091
+  },
+  {
+   "title": "Dayjob Tax：50项专业税务任务评测",
+   "link": "https://surgehq.ai/blog/dayjob-tax",
+   "source": "Hacker News",
+   "zh": "用50个专业税务作业评测AI智能体，检验其在真实专业工作流中的表现。",
+   "zh_title": "Dayjob Tax：50项专业税务任务评测",
+   "why": "垂直专业领域智能体评测样例",
+   "published_ts": 1793203627.011353
+  }
+ ]
+}
