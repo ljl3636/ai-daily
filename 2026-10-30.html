@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 10月30日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年10月30日 · 星期五 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：MLLM推理调度、世界模型上下文压缩与OpenAI前沿模型失准监测</div>
+<ol class="list">
+<li><a class="t" href="https://arxiv.org/abs/2603.26498">Rocks, Pebbles and Sand：MLLM推理的模态感知调度</a><div class="meta">arXiv cs.AI · 4 小时前</div><p>提出按模态异构性调度多模态请求，应对延迟与显存差异达数量级的问题。</p><div class="why">值得看：现有文本LLM服务系统难适配多模态异构负载</div></li>
+<li><a class="t" href="https://simonwillison.net/2026/Oct/29/api-credits/">OpenAI为ChatGPT订阅附赠API额度</a><div class="meta">Simon Willison · 9 小时前</div><p>100/200/500美元订阅用户获等额过期API额度，与Anthropic此前方案几乎一致。</p><div class="why">值得看：订阅与API打通，降低开发者试用成本</div></li>
+<li><a class="t" href="https://arxiv.org/abs/2610.38980">世界模型的上下文压缩</a><div class="meta">arXiv cs.AI · 4 小时前</div><p>把重访区域生成不一致视为上下文检索问题，借鉴KV缓存与agent harness两层管理。</p><div class="why">值得看：为世界模型一致性提供检索式解法</div></li>
+<li><a class="t" href="https://openai.com/index/how-we-detect-frontier-model-misalignment">OpenAI如何检测前沿模型失准</a><div class="meta">OpenAI · 23 小时前</div><p>用分层监控发现前沿模型失准与未授权agent行为，便于在事件升级前干预。</p><div class="why">值得看：前沿模型与agent安全监控的落地做法</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/10/anthropic-code-review/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">Anthropic称无需完整心智模型理解Claude Code</a><div class="meta">InfoQ AI/ML · 22 小时前</div><p>Claude写约90%代码，团队公开评审流程：单PR一夜超50轮评审，缺完整控制手段。</p><div class="why">值得看：展示AI主导编码下的真实工程实践</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/10/qcon-ai-newyork-2026-pc-picks/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">QCon AI纽约2026精选：agent身份与上下文成本</a><div class="meta">InfoQ AI/ML · 21 小时前</div><p>议程聚焦agent授权身份、上下文成本、开源推理、agent标准与音频AI六场。</p><div class="why">值得看：反映agent治理与推理成本热点</div></li>
+<li><a class="t" href="https://openai.com/index/updated-model-spec">OpenAI更新Model Spec</a><div class="meta">OpenAI · 15 小时前</div><p>新版Model Spec列出五项核心价值，引导更强模型保持判断力与对人类意图的忠实。</p><div class="why">值得看：模型行为规范影响对齐与产品表现</div></li>
+<li><a class="t" href="https://news.ycombinator.com/item?id=50291116">Simantic：为AI agent提供固件仿真</a><div class="meta">Hacker News · 16 小时前</div><p>YC F26项目做仿真层，让工程师与agent无硬件测试验证固件。</p><div class="why">值得看：为agent打开硬件测试新场景</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-10-30 16:53
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>

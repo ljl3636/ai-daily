@@ -1,0 +1,102 @@
+{
+ "saved": "2026-10-30 16:53",
+ "overview": "MLLM推理调度、世界模型上下文压缩与OpenAI前沿模型失准监测",
+ "items": [
+  {
+   "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference",
+   "link": "https://arxiv.org/abs/2603.26498",
+   "source": "arXiv cs.AI",
+   "summary": "Multimodal Large Language Models (MLLMs) power platforms like ChatGPT, Gemini, and Copilot, enabling rich interactions across text, images, and videos. Unlike text-only workloads, multimodal requests are inherently heterogeneous, differing by orders of magnitude in latency and memory footprint. Existing LLM serving systems, designed for homogeneous text workloads, struggle under this heterogeneity: large image and video requests monopolize GPU resources, causing severe head-of-line blocking and degrading the responsiveness of lightweight, latency-critical text queries. Recent multimodal serving systems mitigate this interference through disaggregation, isolating encoding and inference stages across GPUs. While effective at large scale, such designs introduce severe GPU underutilization in more practical, moderate-scale deployments. In response, we build RPS-Serve a modality-aware scheduling framework that leverages the extreme heterogeneity in multimodal workloads and introduces a simple abstraction: videos behave like rocks, images like pebbles, and text like sand. Then, it lets sand flow quickly through pebbles and rocks, maximizing GPU utilization while ensuring fast responsiveness for lightweight requests and controlled execution for heavier ones. To achieve this, RPS-Serve estimates the GPU admission cost of each request, classifies requests into rocks, pebbles, and sand using lightweight clustering, and applies priority-based scheduling with aging to balance performance across modalities. Evaluation across state-of-the-art MLLMs shows that RPS-Serve increases GPU utilization by 65% and reduces TTFT by up to 9.3x, on average across models, compared to disaggregation-based multi-modal systems.",
+   "zh": "提出按模态异构性调度多模态请求，应对延迟与显存差异达数量级的问题。",
+   "zh_title": "Rocks, Pebbles and Sand：MLLM推理的模态感知调度",
+   "short": "MLLM推理模态感知调度",
+   "why": "现有文本LLM服务系统难适配多模态异构负载",
+   "weight": 0.9,
+   "published_ts": 1793332800.0
+  },
+  {
+   "title": "API credits benefit for eligible ChatGPT subscriptions",
+   "link": "https://simonwillison.net/2026/Oct/29/api-credits/",
+   "source": "Simon Willison",
+   "summary": "API credits benefit for eligible ChatGPT subscriptions \nEarlier this month Anthropic announced a generous new benefit for their Max and Team subscriptions: $100, $200, and $500 per month subscribers would get the equivalent quantity of (expiring) credits to use with the Anthropic API. \n OpenAI have now launched pretty much exactly the same deal: if you have a $100, $200, or $500 subscription plan with them you now get that same quantity of credits to apply to one of your API organizations. \n I maintain subscriptions with both companies, so this is great news for me! I may even ship some public-facing demos now that the credits are already covered by my existing subscriptions.\n\n Tags: ai , openai , generative-ai , llms , anthropic , llm-pricing",
+   "zh": "100/200/500美元订阅用户获等额过期API额度，与Anthropic此前方案几乎一致。",
+   "zh_title": "OpenAI为ChatGPT订阅附赠API额度",
+   "short": "OpenAI订阅送等额API额度",
+   "why": "订阅与API打通，降低开发者试用成本",
+   "weight": 1.1,
+   "published_ts": 1793314109.0
+  },
+  {
+   "title": "Context Compaction for World Models",
+   "link": "https://arxiv.org/abs/2610.38980",
+   "source": "arXiv cs.AI",
+   "summary": "World models let observers explore and interact with generated worlds. Recent work shows that when observers revisit a region, current models often fail to regenerate it consistently. We view this as a context retrieval problem. LLM agents manage context retrieval at two layers of their stack. At the model layer, the KV cache design determines how much context fits in memory. At the agent harness layer, harnesses such as Claude Code pick the context sent to the LLM. Prior work on world models has mostly focused only on the model layer. In this paper, we make three contributions. First, we build a benchmark to measure world model context retrieval. It generates new worlds for every episode, preventing a model from recalling rooms using training data. It also separates context retrieval from guesses based on nearby frames. Second, we build an agent harness that performs context compaction for world models, which to our knowledge no prior work has studied. Third, we use our benchmark to study four world model designs. Context compaction lets our world models retrieve rooms up to 4 times beyond their context window without retraining. However, world models with sliding-window attention lose most of their context retrieval when dreaming. Therefore, a dreaming world agent benefits more from extending the reach of its world model using context compaction than switching to sliding window attention at the model layer.",
+   "zh": "把重访区域生成不一致视为上下文检索问题，借鉴KV缓存与agent harness两层管理。",
+   "zh_title": "世界模型的上下文压缩",
+   "short": "世界模型上下文压缩",
+   "why": "为世界模型一致性提供检索式解法",
+   "weight": 0.9,
+   "published_ts": 1793332800.0
+  },
+  {
+   "title": "How we detect frontier model misalignment",
+   "link": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+   "source": "OpenAI",
+   "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+   "zh": "用分层监控发现前沿模型失准与未授权agent行为，便于在事件升级前干预。",
+   "zh_title": "OpenAI如何检测前沿模型失准",
+   "short": "OpenAI分层监控模型失准",
+   "why": "前沿模型与agent安全监控的落地做法",
+   "weight": 1.3,
+   "published_ts": 1793264400.0
+  },
+  {
+   "title": "Anthropic Says Nobody Needs a Mental Model of Claude Code. Practitioners Are Testing That",
+   "link": "https://www.infoq.com/news/2026/10/anthropic-code-review/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Anthropic has published how the Claude Code team reviews code now that Claude writes roughly 90% of it, including a claim that nobody keeps a complete mental model of the codebase. The post documents a pull request that ran more than fifty review rounds overnight, a reviewer spending most of its effort on pre-existing code, and a control the team says it does not yet have. By Steef-Jan Wiggers",
+   "zh": "Claude写约90%代码，团队公开评审流程：单PR一夜超50轮评审，缺完整控制手段。",
+   "zh_title": "Anthropic称无需完整心智模型理解Claude Code",
+   "short": "Claude写90%代码的评审流程",
+   "why": "展示AI主导编码下的真实工程实践",
+   "weight": 1.0,
+   "published_ts": 1793267880.0
+  },
+  {
+   "title": "QCon AI New York 2026 Program Committee Picks: Agent Identity, Context Costs, and Open-Source Infere",
+   "link": "https://www.infoq.com/news/2026/10/qcon-ai-newyork-2026-pc-picks/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Who authorizes an agent’s actions, and how should teams manage growing context costs? The QCon AI New York 2026 program committee shares six session picks that tackle these questions, alongside open-source inference, agent standards, and audio AI. By Artenisa Chatziou",
+   "zh": "议程聚焦agent授权身份、上下文成本、开源推理、agent标准与音频AI六场。",
+   "zh_title": "QCon AI纽约2026精选：agent身份与上下文成本",
+   "short": "QCon AI NY 2026议题精选",
+   "why": "反映agent治理与推理成本热点",
+   "weight": 1.0,
+   "published_ts": 1793271600.0
+  },
+  {
+   "title": "An updated Model Spec for more capable and beneficial AI",
+   "link": "https://openai.com/index/updated-model-spec",
+   "source": "OpenAI",
+   "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+   "zh": "新版Model Spec列出五项核心价值，引导更强模型保持判断力与对人类意图的忠实。",
+   "zh_title": "OpenAI更新Model Spec",
+   "short": "OpenAI更新Model Spec",
+   "why": "模型行为规范影响对齐与产品表现",
+   "weight": 1.3,
+   "published_ts": 1793293200.0
+  },
+  {
+   "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+   "link": "https://news.ycombinator.com/item?id=50291116",
+   "source": "Hacker News",
+   "summary": "Hi HN, we're Ahnaf and Seungmin from Simantic ( https://simantic.com ). We are building the simulation layer that lets engineers and AI agents test and validate firmware without hardware. Before Simantic, we were ex-firmware engineers at companies like Neuralink and Tesla. We’ve worked on some of the coolest projects, like the Cybertruck and Roadster, back when they were still early prototypes. We started working on firmware back when ChatGPT didn’t exist yet, but over the years, we saw how much of the engineering and development work has been automated as the frontier models improved to this point. In software, AI can run and test code inside your computer in a matter of seconds. But as firmware engineers, we didn’t have that luxury. An AI agent can write firmware in seconds, but in order to test it, we had to flash a physical board, then manually run tests using expensive and clunky tools with software made over a decade ago. To speed up the validation loop, we built the simulation layer that lets AI agents test the firmware and make decisions based on evidence, instead of waiting for the engineer to run tests for them. We used to spend hours testing our firmware manually on devboards, but now we use our own simulation to validate firmware in seconds. What we offer:\n- Virtual devboards you can program and run with a single API call, without leaving your terminal.\n- An AI code reviewer for firmware, that makes informed decisions based on evidence, using our simulation as a verification engine.\n- A CI/CD pipeline for your hardware projects that validates your firmware against a simulated version of the microcontroller on every commit. Here is a demo of our simulation used in an AI code review session: https://www.youtube.com/watch?v=kBK1ZjGWWbQ Our users are using Simantic for bare-metal and RTOS development for applications like flight controllers, electric vehicles, robotics, and satellites. For safety critical systems like avionics and automotives, a robust simulation system is incredibly important, because every change in the firmware puts a human life at stake, especially for machines that cost hundreds of thousands to millions of dollars. We recently helped an early stage space startup building satellites, to test their firmware on hardware that they don't yet have. Even the development modules for those satellites costs over $100k, and we helped them do that at just a hundredth of the cost and time. Early on in our journey, we established our idea to make better simulation but didn’t have a clear idea of how we would do it, we considered developing our software around open source emulation frameworks like Renode ( https://github.com/renode/renode ) and QEMU ( https://www.qemu.org/ ), because they were tools already used within the firmware industry. We built our MVP that was essentially a wrapper around Renode, but we quickly realized there were a lot of limitations to doing this. 1. We were bottlenecked by the development speed of Renode themselves. We tried making contributions on Github to fix issues we came across, but the speed in which we could merge our features in was not fast enough for a startup like us trying to move fast. 2. Renode is built using Dotnet, and it was proving itself to be slower than we would have liked. Renode was released in 2017, which was when all code was still being written by hand, so I think it made sense looking back, but there were limitations because of the language itself. 3. The open source tools were bloated, with features that we would never use. Yes, there were a breadth of features, but we had a lot of things we had to work around just because we couldn’t remove or change them.\nUsers were complaining about simulation accuracy. Renode is an emulator at the core, but our users, especially those who are building systems where timing accuracy is crucial did not find the accuracy good enough to validate their firmware. Because of these issues, we made our own simulation engine from scratch, fully written in Rust. - Our simulation is focused on accuracy. Open source frameworks often focus on expandability and developer experience, which means there were a lot of tradeoffs made to prioritize a breadth of models rather than going deep into a set of select models. - We have our own hardware validation rigs running 24/7 to ensure our simulation models are as close to real world hardware as possible, and any gaps are detected and fixed as soon as we can. It currently looks like devboards connected to a Saleae Logic MSO and a SWD bus, controlled by a Linux PC, running Claude 24/7 just finding these gaps. Our cloud-hosted simulator is available to use right now! We also provide a native binary with our developer plan licenses that let you run your firmware on your machines locally without any limitations. Check it out at https://simantic.com/cloud-sim , and you can start using our AI firmware reviewer bot in your own Github repos here: https://simantic.com/dashboard/simantic-bot . We currently have support for some models of the STM32F0, F4, H7 series MCUs, ESP32-S3/C3, and RP2040, but we’re constantly working to release new models every week, and improve our existing ones. Thank you, and if you have any questions, feel free to send us an email at founders@simantic.dev",
+   "zh": "YC F26项目做仿真层，让工程师与agent无硬件测试验证固件。",
+   "zh_title": "Simantic：为AI agent提供固件仿真",
+   "short": "Simantic固件仿真",
+   "why": "为agent打开硬件测试新场景",
+   "weight": 0.9,
+   "published_ts": 1793289392.0
+  }
+ ]
+}
