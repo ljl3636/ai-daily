@@ -1,0 +1,61 @@
+{
+ "saved": "2026-10-31 18:53",
+ "overview": "",
+ "items": [
+  {
+   "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference",
+   "link": "https://arxiv.org/abs/2603.26498",
+   "source": "arXiv cs.AI",
+   "summary": "Multimodal Large Language Models (MLLMs) power platforms like ChatGPT, Gemini, and Copilot, enabling rich interactions across text, images, and videos. Unlike text-only workloads, multimodal requests are inherently heterogeneous, differing by orders of magnitude in latency and memory footprint. Existing LLM serving systems, designed for homogeneous text workloads, struggle under this heterogeneity: large image and video requests monopolize GPU resources, causing severe head-of-line blocking and degrading the responsiveness of lightweight, latency-critical text queries. Recent multimodal serving systems mitigate this interference through disaggregation, isolating encoding and inference stages across GPUs. While effective at large scale, such designs introduce severe GPU underutilization in more practical, moderate-scale deployments. In response, we build RPS-Serve a modality-aware scheduling framework that leverages the extreme heterogeneity in multimodal workloads and introduces a simple abstraction: videos behave like rocks, images like pebbles, and text like sand. Then, it lets sand flow quickly through pebbles and rocks, maximizing GPU utilization while ensuring fast responsiveness for lightweight requests and controlled execution for heavier ones. To achieve this, RPS-Serve estimates the GPU admission cost of each request, classifies requests into rocks, pebbles, and sand using lightweight clustering, and applies priority-based scheduling with aging to balance performance across modalities. Evaluation across state-of-the-art MLLMs shows that RPS-Serve increases GPU utilization by 65% and reduces TTFT by up to 9.3x, on average across models, compared to disaggregation-based multi-modal systems.",
+   "weight": 0.9,
+   "published_ts": 1793419200.0
+  },
+  {
+   "title": "Context Compaction for World Models",
+   "link": "https://arxiv.org/abs/2610.38980",
+   "source": "arXiv cs.AI",
+   "summary": "World models let observers explore and interact with generated worlds. Recent work shows that when observers revisit a region, current models often fail to regenerate it consistently. We view this as a context retrieval problem. LLM agents manage context retrieval at two layers of their stack. At the model layer, the KV cache design determines how much context fits in memory. At the agent harness layer, harnesses such as Claude Code pick the context sent to the LLM. Prior work on world models has mostly focused only on the model layer. In this paper, we make three contributions. First, we build a benchmark to measure world model context retrieval. It generates new worlds for every episode, preventing a model from recalling rooms using training data. It also separates context retrieval from guesses based on nearby frames. Second, we build an agent harness that performs context compaction for world models, which to our knowledge no prior work has studied. Third, we use our benchmark to study four world model designs. Context compaction lets our world models retrieve rooms up to 4 times beyond their context window without retraining. However, world models with sliding-window attention lose most of their context retrieval when dreaming. Therefore, a dreaming world agent benefits more from extending the reach of its world model using context compaction than switching to sliding window attention at the model layer.",
+   "weight": 0.9,
+   "published_ts": 1793419200.0
+  },
+  {
+   "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+   "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+   "weight": 1.0,
+   "published_ts": 1793427600.0
+  },
+  {
+   "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+   "link": "https://www.infoq.com/news/2026/10/doordash-ai-grocery-reorder/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "DoorDash reduced grocery reorder latency from 16 to 2 seconds by precomputing recurring purchase needs using batch LLM inference and deterministic validation. Live catalog resolution keeps product selections current, while an editable shopping interface avoids unnecessary model calls. The company reports that shopping list views doubled and the flow’s order rate increased by approximately 34% By Leela Kumili",
+   "weight": 1.0,
+   "published_ts": 1793367060.0
+  },
+  {
+   "title": "dbreunig/nesformer",
+   "link": "https://simonwillison.net/2026/Oct/30/nesformer/",
+   "source": "Simon Willison",
+   "summary": "dbreunig/nesformer \nInspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! \n In a comment on Hacker News Drew reveals the Opus 5.5 prompts he used to build this system: \n \n Read this article and any relevant source code: https://divagr.com/blog/qwenputer. Then explore if you could emulate the chip and ram in a Nintendo Entertainment System (as people do today with FPGAs in MISTRs) using this technique. If so, what size model would you have to build and if you could use smaller faster ones, could you get it to be at the standard clockspeed. \n \n Followed by: \n \n I think we should build it! Just for fun. It's okay if it's not fast. We want to be able to have the weights, and a cli to run them that we can point at a ROM. \n \n Apparently Opus found and then used this collection of conformance tests for the NES CPU released 15 years ago by Christopher Pow.\n\n Via Hacker News \n\n Tags: games , ai , generative-ai , llms , drew-breunig , qwen , conformance-suites",
+   "weight": 1.1,
+   "published_ts": 1793397562.0
+  },
+  {
+   "title": "Google’s satellite AI server transmits its first response to Earth",
+   "link": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
+   "source": "The Verge AI",
+   "summary": "Google's AI chip-equipped satellite has generated its first response from space. In a blog post on Friday, Google says it successfully booted up the satellite's Tensor Processing Units (TPUs), allowing the on-board Gemma 4 model to follow through on a prompt to create a haiku about being in space: Blue marble below Data streams in […]",
+   "weight": 0.7,
+   "published_ts": 1793384498.0
+  },
+  {
+   "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
+   "link": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+   "source": "Hacker News",
+   "weight": 0.9,
+   "published_ts": 1793369300.0
+  }
+ ]
+}
