@@ -1,0 +1,65 @@
+{
+ "saved": "2026-11-01 17:07",
+ "overview": "Claude 拦截游戏克隆、Google AI 安全代理发现500+漏洞、Datasette 插件升级",
+ "items": [
+  {
+   "title": "datasette-llm 0.1a9",
+   "link": "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-llm 0.1a9 \n I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. \n It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: \n uvx --with datasette-agent datasette content.db --internal internal.db\n \n Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . \n \n \n Tags: datasette , llm , datasette-agent",
+   "zh": "插件自动读取 LLM 默认模型，Datasette Agent 无需手动配置即可启动",
+   "zh_title": "datasette-llm 0.1a9 发布",
+   "short": "datasette-llm 0.1a9 自动继承默认模型",
+   "why": "降低 Agent 上手配置成本",
+   "weight": 1.1,
+   "published_ts": 1793484601.0
+  },
+  {
+   "title": "How We Took Over ChatGPT Accounts",
+   "link": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+   "source": "Simon Willison",
+   "summary": "How We Took Over ChatGPT Accounts \nParameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. \n It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. \n Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its own virtual keyboard , which can be triggered in the parent page via postMessage() from the sandboxed iframe. \n That message receiving code uses innerHTML , so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method. \n This meant untrusted code in an iframe could insert HTML, and while innerHTML doesn't directly execute script elements it could be used to inject a new iframe without sandbox restrictions. \n OpenAI’s CSP rules blocked inline scripts entirely, and only allowed script loading from a handful of domains, but one of those was YouTube - and the YouTube oEmbed endpoint could be used to reflect JavaScript back in a way that executed it. \n Once the attack had JavaScript execution on ChatGPT, it was trivial to fetch private user data from APIs and exfiltrate it via an image reference. \n The end result: you could create a ChatGPT share URL which, when visited by another signed-in user, could exfiltrate their private data or take actions on their behalf. \n OpenAI closed the hole and paid out a $5,000 bug bounty, which I think was a bit cheap for a vulnerability this serious.\n\n Via Hacker News \n\n Tags: iframes , javascript , sandboxing , security , xss , openai , chatgpt , content-security-policy",
+   "zh": "Parameter Labs 披露针对 ChatGPT HTML 预览沙箱 iframe 的利用手法",
+   "zh_title": "ChatGPT 账户如何被接管",
+   "short": "ChatGPT HTML 预览沙箱遭利用",
+   "why": "沙箱隔离是 Agent 安全关键",
+   "weight": 1.1,
+   "published_ts": 1793488522.0
+  },
+  {
+   "title": "Anthropic's Claude AI blocks video game cloning and reverse-engineering",
+   "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked",
+   "source": "Hacker News",
+   "zh": "Anthropic 的 Claude 拒绝协助克隆和逆向工程电子游戏",
+   "zh_title": "Claude 拦截游戏克隆与逆向工程",
+   "short": "Claude 拒绝游戏克隆与逆向",
+   "why": "反映模型使用策略边界",
+   "weight": 0.9,
+   "published_ts": 1793453100.0
+  },
+  {
+   "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+   "link": "https://www.infoq.com/news/2026/10/google-pagebreak-security-agent/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "According to a paper published by Google, its AI-powered security agent has uncovered more than 500 XSS vulnerabilities across its web applications since entering full operation in January. PageBreak uses Gemini models to autonomously investigate potential vulnerabilities, but reports them only after deterministic validators successfully reproduce the exploit against a running application. By Renato Losio",
+   "zh": "PageBreak 用 Gemini 自主排查漏洞，经确定性验证器复现后才报告，已发现500+ XSS",
+   "zh_title": "Google 披露 PageBreak 安全代理",
+   "short": "PageBreak 用 Gemini 发现500+ XSS",
+   "why": "验证器复现降低误报",
+   "weight": 1.0,
+   "published_ts": 1793427600.0
+  },
+  {
+   "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+   "link": "https://latent.space/p/arca/",
+   "source": "Latent Space",
+   "summary": "Arca's head of AI discusses persistent memory, the benefits of a custom harness, and agentic workflows that span days.",
+   "zh": "Arca AI 负责人谈持久记忆、自定义 harness 与跨天 Agent 工作流",
+   "zh_title": "用 Agent 做长周期金融工作",
+   "short": "Arca 谈持久记忆与跨天 Agent 工作流",
+   "why": "长周期任务需记忆与定制框架",
+   "weight": 1.0,
+   "published_ts": 1793462700.0
+  }
+ ]
+}

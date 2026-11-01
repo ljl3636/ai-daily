@@ -13,5 +13,10 @@
   "count": 7,
   "overview": "",
   "updated": "2026-10-31 18:53"
+ },
+ "2026-11-01": {
+  "count": 5,
+  "overview": "Claude 拦截游戏克隆、Google AI 安全代理发现500+漏洞、Datasette 插件升级",
+  "updated": "2026-11-01 17:07"
  }
 }
