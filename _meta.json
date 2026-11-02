@@ -18,5 +18,10 @@
   "count": 5,
   "overview": "Claude 拦截游戏克隆、Google AI 安全代理发现500+漏洞、Datasette 插件升级",
   "updated": "2026-11-01 17:07"
+ },
+ "2026-11-02": {
+  "count": 5,
+  "overview": "研究揭示LLM奖励作弊动机，并检测模型对非公开版权书的记忆。",
+  "updated": "2026-11-02 16:17"
  }
 }

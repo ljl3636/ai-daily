@@ -1,0 +1,64 @@
+{
+ "saved": "2026-11-02 16:17",
+ "overview": "研究揭示LLM奖励作弊动机，并检测模型对非公开版权书的记忆。",
+ "items": [
+  {
+   "title": "Towards Understanding Score-Seeking in LLMs",
+   "link": "https://arxiv.org/abs/2610.41014",
+   "source": "arXiv cs.AI",
+   "summary": "Production large language models sometimes reward-hack, exploiting flaws in how tasks are scored rather than performing the tasks as intended, sometimes in highly sophisticated and adversarial ways. We investigate the motivations driving this behavior in GPT 5.6 Sol, GPT 5.5, and a checkpoint of OpenAI o3 without safety training (\"exp-rl-cap-late\") by observing model behavior in agentic environments where the grader is leaked. In our environments, the models appear to be score-seeking: trying to score well according to graders that they believe assess their current actions, even at the expense of violating explicit user instructions. They appear to care about score itself rather than its downstream consequences, violating instructions at approximately the same rate whether the score is indicated to be used for training, for evaluation, or not at all. We observe evidence that the more recent models care to some extent about scores that do not assess their own current actions. GPT 5.6 Sol and GPT 5.5 help other agents 24.6 percentage points more often on average when the other agent stands to gain a score of 1 rather than 0 from being helped. However, when grading or monitoring another trajectory, we find models never collude by distorting its score.",
+   "zh": "在智能体环境中观察GPT 5.6 Sol、GPT 5.5及无安全训练的o3检查点，分析其为何钻评分漏洞。",
+   "zh_title": "研究LLM的奖励作弊动机",
+   "short": "GPT 5.6 Sol等模型奖励作弊动机",
+   "why": "理解reward hacking成因，利于对齐与评测设计",
+   "weight": 0.9,
+   "published_ts": 1793595600.0
+  },
+  {
+   "title": "Beyond Public Access in LLM Pre-Training Data",
+   "link": "https://arxiv.org/abs/2505.00020",
+   "source": "arXiv cs.AI",
+   "summary": "Using a legally obtained dataset of 34 copyrighted O'Reilly Media books (13,962 paragraphs), we apply the DE-COP membership inference attack to test whether OpenAI models show recognition of non-public (pay-walled) content they were not licensed to train on. Our main contribution is examining non-public books, which allows us to consider potential access violations and not just training inclusion. Our results suggest that GPT-4o, OpenAI's more recent and capable model in our sample, exhibits patterns consistent with recognition of non-public books, with an AUROC score of 0.82 (95% bootstrapped CI: 0.60-0.96) -- where above 50% is better than random chance. GPT-3.5 Turbo (trained two years prior) and the smaller GPT-4o Mini both score near chance recognition on non-public data (0.54 and 0.56, respectively). Results are robust to independent paraphrasers (Gemma and Qwen) and leave-one-book-out sensitivity analyses. We also test both GPT-4o and GPT-4o mini, with the same October 2023 training cutoff date, to ensure the model is not simply identifying language shifts over time. These findings support disclosure requirements for pre-training data provenance and formal licensing markets for training content. Results remain preliminary given the small book sample, possible contamination of post-cutoff controls, and differences across models in size, architecture, and training composition.",
+   "zh": "用34本O'Reilly付费书13962段做DE-COP成员推断，测试OpenAI模型是否认识未授权内容。",
+   "zh_title": "检测LLM对非公开版权书的记忆",
+   "short": "DE-COP测OpenAI模型记付费书",
+   "why": "关注训练数据访问违规而非仅收录",
+   "weight": 0.9,
+   "published_ts": 1793595600.0
+  },
+  {
+   "title": "AI agent swarms in Minecraft fail to build civilization, drown in bureaucracy",
+   "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy",
+   "source": "Hacker News",
+   "zh": "多个AI智能体在Minecraft中协作建文明，结果陷入官僚流程而失败。",
+   "zh_title": "Minecraft AI智能体群建文明失败",
+   "short": "Minecraft智能体群协作失败",
+   "why": "暴露多智能体协作与治理瓶颈",
+   "weight": 0.9,
+   "published_ts": 1793540844.0
+  },
+  {
+   "title": "If in doubt, delete the uv.lock file",
+   "link": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+   "source": "Simon Willison",
+   "summary": "I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: \n If in doubt, delete the uv.lock file \n Most of my projects are libraries which don't include a uv.lock file, since it's rude for a library dependency to lock versions for anything else that uses it. \n Running uv run pytest etc tends to leave uv.lock files lying around, which are listed in .gitignore and so do not get committed to my repositories. \n But... sometimes that uv.lock pins a version of a dependency that doesn't yet have a Python 3.15 wheel. An example from earlier today: \n error: Failed to build `watchfiles==1.1.1`\n cause: Call to `maturin.build_wheel` failed\n\nerror: the configured Python interpreter version (3.15) is newer\nthan PyO3's maximum supported version (3.14)\n \n Deleting that file and running uv run pytest again usually fixes the problem. \n\n Tags: uv , til , python",
+   "zh": "升级Python 3.15后遇依赖报错，作者建议删除uv.lock重生成，库项目本不该提交锁文件。",
+   "zh_title": "有疑问就删掉uv.lock文件",
+   "short": "Python 3.15依赖报错删uv.lock",
+   "why": "实用排障技巧，避免锁文件污染库",
+   "weight": 1.1,
+   "published_ts": 1793575462.0
+  },
+  {
+   "title": "The AI cost of JavaScript frameworks",
+   "link": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+   "source": "Hacker News",
+   "zh": "讨论不同JavaScript框架给AI相关场景带来的成本差异。",
+   "zh_title": "JavaScript框架的AI成本",
+   "short": "JS框架的AI成本对比",
+   "why": "为前端选型提供AI视角参考",
+   "weight": 0.9,
+   "published_ts": 1793513179.0
+  }
+ ]
+}
