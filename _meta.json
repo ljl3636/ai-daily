@@ -23,5 +23,10 @@
   "count": 5,
   "overview": "研究揭示LLM奖励作弊动机，并检测模型对非公开版权书的记忆。",
   "updated": "2026-11-02 16:17"
+ },
+ "2026-11-03": {
+  "count": 8,
+  "overview": "LLM CLI 更新、权重空间编程、Uber MCP 网关与 TorchTPU 开源成今日重点",
+  "updated": "2026-11-03 16:16"
  }
 }

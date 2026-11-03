@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月3日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月3日 · 星期二 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：LLM CLI 更新、权重空间编程、Uber MCP 网关与 TorchTPU 开源成今日重点</div>
+<ol class="list">
+<li><a class="t" href="https://simonwillison.net/2026/Nov/2/llm/">Simon Willison 发布 llm 0.37</a><div class="meta">Simon Willison · 8 小时前</div><p>LLM CLI 与 Python 库更新，新增 gpt-6.1-sol/terra 模型和 openai endpoint add 命令。</p><div class="why">值得看：便于配置兼容 OpenAI 的自定义端点</div></li>
+<li><a class="t" href="https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/">权重空间编程：LLM 直接读写神经网络权重</a><div class="meta">Latent Space · 2 小时前</div><p>编辑 Qwen 权重减少推理循环，提出 Weight Space Programming，另含 DeepSeek 超级智能体原型与 GDPx 基准。</p><div class="why">值得看：或改变自动研究流程</div></li>
+<li><a class="t" href="https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/">美国人口普查局与“超级智能”</a><div class="meta">Simon Willison · 18 小时前</div><p>回顾 2025 年 9 月 Apollo 图表显示大企业 AI 采用率放缓，并借此演示 GPT-5 与 Claude 代码解释器分析。</p><div class="why">值得看：展示用 LLM 做数据分析</div></li>
+<li><a class="t" href="https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones">Anthropic 限制 Claude 复刻电子游戏</a><div class="meta">The Verge AI · 9 小时前</div><p>更新 Claude Code 系统提示，禁止用于重建现有电子游戏，但仍允许制作游戏。</p><div class="why">值得看：系统提示层面的用途限制</div></li>
+<li><a class="t" href="https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/">NVIDIA 推城市物理与智能体 AI 方案</a><div class="meta">NVIDIA · 1 小时前</div><p>面向城市摄像头与传感器数据，提供数字孪生、视觉与服务智能体，用于规划、维护和公共服务。</p><div class="why">值得看：物理与智能体 AI 落地城市</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/uber-mcp-gateway-ai-agents/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">Uber 构建 MCP 网关管理 800+ 服务器</a><div class="meta">InfoQ AI/ML · 18 小时前</div><p>统一 AI 智能体发现与调用内部服务，分离工具注册与执行，含访问控制、敏感数据脱敏与 Omni MCP 增量发现。</p><div class="why">值得看：大规模 MCP 治理参考架构</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/torchtpu-native-pythorch-tpu/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">Google 与 Meta 开源 TorchTPU</a><div class="meta">InfoQ AI/ML · 15 小时前</div><p>为 Google TPU 提供原生 PyTorch 后端，支持 eager 与编译执行、分布式计算及硬件优化，改动代码极少。</p><div class="why">值得看：降低 TPU 使用门槛</div></li>
+<li><a class="t" href="https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/">YC 的 Garry Tan 年花 20 万美元 token</a><div class="meta">TechCrunch AI · 7 小时前</div><p>Garry Tan 称重度使用 AI 智能体，年 token 支出最高达 20 万美元，并自嘲有“赛博精神病”。</p><div class="why">值得看：反映智能体重度使用成本</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-03 16:16
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>

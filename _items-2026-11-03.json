@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-03 16:16",
+ "overview": "LLM CLI 更新、权重空间编程、Uber MCP 网关与 TorchTPU 开源成今日重点",
+ "items": [
+  {
+   "title": "llm 0.37",
+   "link": "https://simonwillison.net/2026/Nov/2/llm/",
+   "source": "Simon Willison",
+   "summary": "Release: llm 0.37 \n There's a lot of stuff in this new release of my LLM CLI tool and Python library, representing around two months of accumulated features and fixes. \n I added gpt-6.1-sol and gpt-6.1-terra , plus a new llm openai endpoint add command to make it easier to configure additional models that use OpenAI-compatible endpoints. \n I switched the default model (if you have not set your own default) to gpt-6-luna - half the price of the previous default, gpt-5.6-luna . \n LLM's support for embeddings now accepts that different binary content may have different content-type - necessary for models like Gemini Embedding 2 , which can embed text, audio, images, and video. \n A lot of open source maintainers complain about a flood of AI-assisted PRs. LLM is my project that has been most affected by this and, to be honest, I'm not finding it to be a problem. That's mainly because I have Opus 5.5 or GPT-6 Astra help me with triage to spot the most useful fixes! \n This release includes fixes from 12 authors - almost all AI-assisted - and the burden of reviewing them wasn't nearly as great as I expected. I really see them as bug reports with attached examples - sometimes I land them, sometimes I implement my own fix. \n So thanks to 0d00ciallo0721 , ac1982 , Allen Flux , Bian Yuhan , Bishop Kammeraad , Chen Yufeiyang , Christopher Krah , Ethan Stoner , Jiachen Xie , Olamide Faniyan , Sharat Chandra Sai Boddu , nosmile99 for helping out with (or spending tokens on) this release! \n \n \n Tags: open-source , projects , ai , annotated-release-notes , generative-ai , llms , embeddings , llm",
+   "zh": "LLM CLI 与 Python 库更新，新增 gpt-6.1-sol/terra 模型和 openai endpoint add 命令。",
+   "zh_title": "Simon Willison 发布 llm 0.37",
+   "short": "llm 0.37 新增 gpt-6.1 模型",
+   "why": "便于配置兼容 OpenAI 的自定义端点",
+   "weight": 1.1,
+   "published_ts": 1793663370.0
+  },
+  {
+   "title": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop",
+   "link": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/",
+   "source": "Latent Space",
+   "summary": "Editing Qwen’s weights to reduce reasoning loops, DeepSeek’s super-agent prototype, and the GDPx benchmark.",
+   "zh": "编辑 Qwen 权重减少推理循环，提出 Weight Space Programming，另含 DeepSeek 超级智能体原型与 GDPx 基准。",
+   "zh_title": "权重空间编程：LLM 直接读写神经网络权重",
+   "short": "LLM 可读写权重，编辑 Qwen",
+   "why": "或改变自动研究流程",
+   "weight": 1.0,
+   "published_ts": 1793684100.0
+  },
+  {
+   "title": "The U.S. Census Bureau and “Super Intelligence”",
+   "link": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+   "source": "Simon Willison",
+   "summary": "I was reminded today of AI Adoption Rate Trending Down for Large Companies , a chart produced by Apollo Global Management in September 2025, which appeared to show a slowdown in U.S. corporate AI adoption based on numbers collected by the U.S. Census Bureau. At the time I used that chart to demonstrate GPT-5 data analysis , and then to experiment with Claude's new Code Interpreter . I decided to try running those numbers again to see what had changed over the past year, and in doing so learned that the Bureau has fallen foul of Executive Order 14434 , aka the asinine Super Intelligence one. \n First, the updated chart \n Every two weeks the U.S. Census Bureau runs a survey called the Business Trends and Outlook Survey (aka BTOS). Each time it goes to 200,000 businesses out of 1.2 million total - the surveyed group (a \"panel\") cycles such that an individual business only completes the survey every twelve weeks. \n The latest data is published on alternating Thursdays at 10am. \n I used the most recent numbers (published October 22, 2026) to create a new version ( GPT-6 Astra Extra High transcript ) of the AI adoption chart, updated to reflect both the last twelve months and a change that was made to the survey question sent out by the Bureau: \n \n\n Here's a link to the larger image . \n\n For comparison, here's that AI adoption chart from last year (my GPT-5 version):\n \n\n In September 2025 the largest (250+ employees) companies answered \"yes\" around 12% of the time to the question about whether they used AI in \"producing goods or services\". \n Under the new \"any business function\" wording, by February 2026, those same large companies answered \"yes\" around 30% of the time, and by October 2026 that had increased to around 40%. \n The data in the above chart comes from the \"Employment size class\" XLSX file, available from here . Here's a copy of the file I used. \n You can view the survey document that is sent out to businesses - here's my snapshot copy of that 346KB PDF. \n The changing language of the questions \n As the chart demonstrates, the question asked by the Bureau changed in a material way on November 17th, 2025. Prior to that date, the question they asked was this (emphasis mine): \n \n In the last two weeks, did this business use Artificial Intelligence (AI) in producing goods or services ? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) \n \n On December 3rd, 2025, the Bureau announced a significant change to that question. Here's the replacement: \n \n In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions ? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.) \n \n No more \"producing goods or services\" - now it's \"in any of its business functions\"! This means that the answers to the question before and after November 17th are not directly comparable. \n From October 19, 2026, they ask about Super Intelligence \n When I went looking for the updated question language in the latest XLSX file, I couldn't find it. I found this instead: \n \n In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions? (Examples of SI use include: SI-powered data analysis; generative SI for marketing, product design, or coding; virtual SI agents for customer service; SI-powered forecasting or pricing; SI-driven computer vision for quality control, etc.) \n \n The BTOS about page explains what happened: \n \n Beginning with the October 19, 2026 collection, instrument wording was updated due to Executive Order 14434 . \n \n The current numbers reflect the old Artificial Intelligence survey wording - the first survey results reflecting the Super Intelligence wording are due for publication on Thursday. \n Is this going to affect the survey? \n The obvious open question here is whether this wording change is going to affect the survey results. \n The businesses answering this survey will have last seen that question twelve weeks ago, when it was still called AI. Hopefully the new language isn't going to confuse them, especially since the survey helpfully spells out \"formerly referred to as Artificial Intelligence or AI\". \n I can't help but laugh at the absurdity of \"SI-powered data analysis; generative SI for marketing, product design, or coding; virtual SI agents for customer service\" though. \n \n Tags: census , surveys , ai , generative-ai , llms",
+   "zh": "回顾 2025 年 9 月 Apollo 图表显示大企业 AI 采用率放缓，并借此演示 GPT-5 与 Claude 代码解释器分析。",
+   "zh_title": "美国人口普查局与“超级智能”",
+   "short": "Census 数据与 GPT-5 分析",
+   "why": "展示用 LLM 做数据分析",
+   "weight": 1.1,
+   "published_ts": 1793626286.0
+  },
+  {
+   "title": "Anthropic clamps down on Claude’s AI video game clones",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+   "source": "The Verge AI",
+   "summary": "Anthropic has updated Claude Code's system prompt to prevent the AI tool from being used to re-create existing video games, as reported by Tom's Hardware. Retro gaming is currently being overrun with AI-made decompilations, recompilations, and ports, but while Anthropic will still let people use Claude Code to make games, it doesn't want people to […]",
+   "zh": "更新 Claude Code 系统提示，禁止用于重建现有电子游戏，但仍允许制作游戏。",
+   "zh_title": "Anthropic 限制 Claude 复刻电子游戏",
+   "short": "Claude Code 禁复刻游戏",
+   "why": "系统提示层面的用途限制",
+   "weight": 0.7,
+   "published_ts": 1793660236.0
+  },
+  {
+   "title": "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and Agentic AI",
+   "link": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
+   "source": "NVIDIA",
+   "summary": "Cities generate enormous amounts of data from cameras, sensors and operational systems, but turning it into useful action — for planning, maintenance and public services — remains a challenge. Physical and agentic AI offer new ways to close that gap, from digital twins for infrastructure planning to vision and service agents, while keeping local governments […]",
+   "zh": "面向城市摄像头与传感器数据，提供数字孪生、视觉与服务智能体，用于规划、维护和公共服务。",
+   "zh_title": "NVIDIA 推城市物理与智能体 AI 方案",
+   "short": "NVIDIA 城市智能体 AI",
+   "why": "物理与智能体 AI 落地城市",
+   "weight": 0.9,
+   "published_ts": 1793689212.0
+  },
+  {
+   "title": "Uber Builds MCP Gateway to Govern Access to 800+ Servers and 5,000+ AI Agent Tools",
+   "link": "https://www.infoq.com/news/2026/11/uber-mcp-gateway-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Uber has built an MCP Gateway to standardize how AI agents discover and invoke internal services across more than 800 MCP servers and 5,000 tools. The gateway separates tool registration from runtime execution and includes automated API discovery, access controls, sensitive data redaction, incremental tool discovery through Omni MCP, and response filtering. By Leela Kumili",
+   "zh": "统一 AI 智能体发现与调用内部服务，分离工具注册与执行，含访问控制、敏感数据脱敏与 Omni MCP 增量发现。",
+   "zh_title": "Uber 构建 MCP 网关管理 800+ 服务器",
+   "short": "Uber MCP 网关管 5000+ 工具",
+   "why": "大规模 MCP 治理参考架构",
+   "weight": 1.0,
+   "published_ts": 1793627580.0
+  },
+  {
+   "title": "Google and Meta Open-source TorchTPU to Bring Native PyTorch Support to Google TPUs",
+   "link": "https://www.infoq.com/news/2026/11/torchtpu-native-pythorch-tpu/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "TorchTPU is an open-source project developed by Google in collaboration with Meta that provides a native PyTorch backend for Google TPUs. It enables PyTorch workloads to execute on TPU hardware with minimal code modifications, supporting eager and compiled execution, distributed computing, and hardware-specific optimizations. By Sergio De Simone",
+   "zh": "为 Google TPU 提供原生 PyTorch 后端，支持 eager 与编译执行、分布式计算及硬件优化，改动代码极少。",
+   "zh_title": "Google 与 Meta 开源 TorchTPU",
+   "short": "TorchTPU 让 PyTorch 跑 TPU",
+   "why": "降低 TPU 使用门槛",
+   "weight": 1.0,
+   "published_ts": 1793638800.0
+  },
+  {
+   "title": "Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+   "link": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+   "source": "TechCrunch AI",
+   "summary": "Y Combinator Garry Tan has jokingly admitted that he's suffered from \"cyber psychosis” and barely sleeps sometimes because he’s so excited to be working with his AI agents. On a new episode of Walter Isaacson’s podcast, The Builders, Tan put a price tag on his passion.",
+   "zh": "Garry Tan 称重度使用 AI 智能体，年 token 支出最高达 20 万美元，并自嘲有“赛博精神病”。",
+   "zh_title": "YC 的 Garry Tan 年花 20 万美元 token",
+   "short": "Garry Tan 年耗 20 万美元 token",
+   "why": "反映智能体重度使用成本",
+   "weight": 0.7,
+   "published_ts": 1793666152.0
+  }
+ ]
+}
