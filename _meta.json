@@ -28,5 +28,10 @@
   "count": 8,
   "overview": "LLM CLI 更新、权重空间编程、Uber MCP 网关与 TorchTPU 开源成今日重点",
   "updated": "2026-11-03 16:16"
+ },
+ "2026-11-04": {
+  "count": 8,
+  "overview": "LLM可直接读写神经网络权重，AI研究自动化再进一步",
+  "updated": "2026-11-04 16:16"
  }
 }

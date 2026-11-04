@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月4日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月4日 · 星期三 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：LLM可直接读写神经网络权重，AI研究自动化再进一步</div>
+<ol class="list">
+<li><a class="t" href="https://arxiv.org/abs/2611.04126">GlucoAgent：多模态个人上下文血糖预测</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>基于LLM的智能体，融合血糖仪、手表、饮食记录与健康档案做个性化血糖预测。</p><div class="why">值得看：多模态个性化健康预测的LLM智能体方案</div></li>
+<li><a class="t" href="https://arxiv.org/abs/2611.04473">科学推理失败剖析：治标不治本</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>在合成调控系统中测试7个LLM，模型多能修复表型却很少定位隐藏故障。</p><div class="why">值得看：揭示科学智能体推理的根本缺陷</div></li>
+<li><a class="t" href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/">Qwen 27B本地可解读模型权重</a><div class="meta">Simon Willison · 15 小时前</div><p>Simon Willison复现权重空间编程论文，本地Qwen也能读写模型原始权重。</p><div class="why">值得看：权重空间编程可在消费级设备复现</div></li>
+<li><a class="t" href="https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of/">权重空间编程绕开自动研究循环</a><div class="meta">Latent Space · 1 天前</div><p>编辑Qwen权重减少推理循环，另含DeepSeek超级智能体原型与GDPx基准。</p><div class="why">值得看：RSI循环可能不再依赖自动研究</div></li>
+<li><a class="t" href="https://openai.com/index/cisco-cyber">思科用OpenAI模型做机器速度防御</a><div class="meta">OpenAI · 1 天前</div><p>思科结合网络情报与OpenAI模型，构建自适应企业安全防御体系。</p><div class="why">值得看：大模型落地企业安全运营的案例</div></li>
+<li><a class="t" href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/">Google Antigravity智能体化学信息学</a><div class="meta">Google DeepMind · 15 小时前</div><p>Antigravity配合化学信息学技能，加速药物发现、化合物检索与宏环设计。</p><div class="why">值得看：智能体进入药物发现工作流</div></li>
+<li><a class="t" href="https://openai.com/index/accelerating-engineering-for-the-physical-world">ChatGPT与Codex加速物理世界工程</a><div class="meta">OpenAI · 20 小时前</div><p>用ChatGPT和Codex辅助CAD、PCB设计与仿真等实体工程工作流。</p><div class="why">值得看：编码智能体延伸到硬件设计</div></li>
+<li><a class="t" href="https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/">Anthropic研发模型身份证明系统FlashProve</a><div class="meta">TechCrunch AI · 9 小时前</div><p>FlashProve可让任何人验证AI回复确实来自其声称的模型。</p><div class="why">值得看：为模型溯源与防冒充提供方案</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-04 16:16
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>
