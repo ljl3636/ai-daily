@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月5日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月5日 · 星期四 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：多模型作者模仿评测、智能体数据科学项目迭代与ChatGPT生成GIF</div>
+<ol class="list">
+<li><a class="t" href="https://arxiv.org/abs/2611.05771">六大LLM模仿个人作者文风对比评测</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>用短评论文本测试Gemini 3 Pro、Claude Opus、GPT 5.2等六模型模仿特定作者风格的能力</p><div class="why">值得看：揭示模型风格克隆风险与检测难度</div></li>
+<li><a class="t" href="https://arxiv.org/abs/2611.05548">语言模型迭代创建、评分与修订数据科学项目</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>writer模型带工具完成下载清洗分析并写论文，grader评分后writer据此修订</p><div class="why">值得看：验证智能体端到端科研与反馈增益</div></li>
+<li><a class="t" href="https://news.ycombinator.com/item?id=50366117">HN讨论：你当前的AI智能体配置是什么</a><div class="meta">Hacker News · 17 小时前</div><p>社区征集日常AI订阅、工具链与智能体工作流的使用情况与付费档位</p><div class="why">值得看：反映开发者真实工具选型与成本</div></li>
+<li><a class="t" href="https://news.ycombinator.com/item?id=50368804">Kino AI发布：AI媒体管理与视频编辑器</a><div class="meta">Hacker News · 14 小时前</div><p>整合素材存储、视频编辑与评审链接，Codex/Claude Code可与团队同时间线协作</p><div class="why">值得看：智能体接入视频生产协作流程</div></li>
+<li><a class="t" href="https://simonwillison.net/2026/Nov/4/datasette-llm/">datasette-llm 0.1a10发布</a><div class="meta">Simon Willison · 16 小时前</div><p>修复可用LLM模型未按配置正确限制的bug，影响agent.datasette.io演示站</p><div class="why">值得看：插件式LLM接入的配置正确性修复</div></li>
+<li><a class="t" href="https://latent.space/p/ainews-it-s-swapping-season/">AINews：模型换血季</a><div class="meta">Latent Space · 1 小时前</div><p>OpenAI的Linux内核安全工作、Kimi K3.1 Pro开放权重、Ricursive的Ripple-65B</p><div class="why">值得看：开源权重与安全方向新动向</div></li>
+<li><a class="t" href="https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6">ChatGPT现可生成动态GIF</a><div class="meta">The Verge AI · 13 小时前</div><p>随Images 2.6模型推出，支持提示词或图片生成GIF，可调速度、编辑帧并分享</p><div class="why">值得看：图像模型新增动图生成与逐帧编辑</div></li>
+<li><a class="t" href="https://pytorch.org/blog/call-for-proposals-pytorch-day-china-2026/">PyTorch Day China 2026征集议题</a><div class="meta">PyTorch · 11 小时前</div><p>提案截止11月10日23:59北京时间，活动12月12日在北京举办</p><div class="why">值得看：国内PyTorch开发者线下交流机会</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-05 16:17
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>

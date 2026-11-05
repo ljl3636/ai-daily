@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-05 16:17",
+ "overview": "多模型作者模仿评测、智能体数据科学项目迭代与ChatGPT生成GIF",
+ "items": [
+  {
+   "title": "How Well Can Large Language Models Impersonate Individual Authors? A Comparative Evaluation",
+   "link": "https://arxiv.org/abs/2611.05771",
+   "source": "arXiv cs.AI",
+   "summary": "This study investigates the authorship impersonation capacity of six widely used large language models (LLMs): Gemini 3 Pro, Claude Opus, GPT 5.2, GPT 5.2 Pro, DeepSeek 3.2, and Grok 4.1 Fast. The evaluation was conducted using short product review texts selected to ensure high within author consistency in individual writing style. Two types of in context prompt were designed: a simple prompt with minimal instruction and a complex prompt incorporating explicit stylometric guidance for mimicry. Authorship mimicry was evaluated using a cosine distance based distance to training metric, supplemented by visual analyses of embedding distributions. The results indicate that authorship impersonation remained challenging for most LLMs, with Gemini 3 Pro showing the strongest apparent mimicry performance. However, subsequent overlap analysis revealed that Gemini 3 Pro extensively copied and reused sentences and phrases from the training texts, at levels far exceeding those observed among human authors. Follow up factor analyses showed that training set consistency was the most robust predictor of mimicry success across models, whereas author distinctiveness did not generalise as a reliable predictor. Global embedding visualisations further revealed a consistent macro level pattern: for most models, generated texts occupied regions of the embedding space that were largely separated from the corresponding human training clusters. This indicates limited convergence towards target author style and suggests the presence of model specific lexical and phraseological preferences. The findings highlight the importance of distinguishing genuine stylistic imitation from direct textual reuse and have implications for the forensic analysis of textual evidence involving potential LLM enabled impersonation.",
+   "zh": "用短评论文本测试Gemini 3 Pro、Claude Opus、GPT 5.2等六模型模仿特定作者风格的能力",
+   "zh_title": "六大LLM模仿个人作者文风对比评测",
+   "short": "6款LLM作者模仿能力评测",
+   "why": "揭示模型风格克隆风险与检测难度",
+   "weight": 0.9,
+   "published_ts": 1793854800.0
+  },
+  {
+   "title": "Iterated creation, grading, and revision of data science projects by language models",
+   "link": "https://arxiv.org/abs/2611.05548",
+   "source": "arXiv cs.AI",
+   "summary": "We evaluate the extent to which agentic AI models can complete an end-to-end data science project, and how this improves with feedback. A 'writer' model with specific tools creates a complete data science project including downloading, cleaning, and analyzing a dataset, and writing a short paper about it. The project is executed and a 'grader' model evaluates it. The writer can then revise its submission, and this repeats for a total of three rounds. We consider seven models from five developers: Anthropic, OpenAI, Google, DeepSeek, and Z.AI. Each model is both a writer and a grader, so there are 49 writer-grader pairs and we run each pair three times. Of the 147 initial submissions, 107 run and render, and the average score increases from 59 per cent to 76 per cent after the final round of feedback. By writer the extent of the increase ranges from 3 percentage points for Anthropic's Opus 5.5 to 46 percentage points for Anthropic's Haiku 4.5, and by grader it ranges from 13 percentage points for Google's Gemini 3.8 Flash to 32 percentage points for Anthropic's Haiku 4.5. When a model grades its own writing the score tends to be about 9 percentage points higher than the average of what the other models give it. About half of the difference that we see from round to round is within the grader's own noise. Feedback generally results in the highest marks, but even just having the chance to revise, or having the additional budget, in terms of time or tool calls, without any feedback, results in considerable increases for some of the models but not for others. We find that how much such a loop helps depends on which model plays which role, but weaker models generally do not improve stronger models.",
+   "zh": "writer模型带工具完成下载清洗分析并写论文，grader评分后writer据此修订",
+   "zh_title": "语言模型迭代创建、评分与修订数据科学项目",
+   "short": "writer-grader循环做完整数据科学项目",
+   "why": "验证智能体端到端科研与反馈增益",
+   "weight": 0.9,
+   "published_ts": 1793854800.0
+  },
+  {
+   "title": "Ask HN: What's your current AI agentic setup?",
+   "link": "https://news.ycombinator.com/item?id=50366117",
+   "source": "Hacker News",
+   "summary": "I'm curious how people on HN are using AI day to day, and came up with a list of questions I thought could be interesting to know. No need to answer every question of course, just wanted to get a gut feel how people are using AI. 1) What AI subscriptions are you personally paying for? (Claude, ChatGPT/Codex, Cursor, etc) - Which tiers? - Have you purchased multiple subscriptions from the same provider (eg two Claude accounts)? 2) Are you using models outside (or instead) of those subscriptions? For example, pay-as-you-go APIs, OpenRouter, or locally hosted models. - Which models and providers? 3) What coding harnesses and interfaces are you using? Are you sticking with the default CLIs or IDE integrations, or using alternatives like OpenCode, Pi, Aider, Muse Code, or custom-built harnesses? - What made you switch harnesses (if you switched)? 4) Are you using any agent orchestration or swarm tools? - For example, Munder Difflin, Gas Town, Ruflo, or something custom. 5) Are you using broader agent platforms like OpenClaw / Hermes Agent / Grok bot / Dots / Muse? - If you are using them, what are your main use cases? ----- I know my workflow has differed significantly from a year ago, and so it would be interesting to capture a snapshot today of what people are using and why.",
+   "zh": "社区征集日常AI订阅、工具链与智能体工作流的使用情况与付费档位",
+   "zh_title": "HN讨论：你当前的AI智能体配置是什么",
+   "short": "HN征集AI智能体日常配置",
+   "why": "反映开发者真实工具选型与成本",
+   "weight": 0.9,
+   "published_ts": 1793803042.0
+  },
+  {
+   "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
+   "link": "https://news.ycombinator.com/item?id=50368804",
+   "source": "Hacker News",
+   "summary": "Hi HN! I'm Luke from Kino ( https://kino.ai ). Kino lets you make great videos with your agents and your teammates. Storage of footage and assets, a rich video editor, and review links for teammates are all bundled into one. Your colleagues and Codex / Claude Code can work on the same timeline with review notes and footage all in one place. See a basic overview at https://kino.ai/walkthrough-video and our launch video (made entirely with Kino!) at https://kino.ai/launch-video Opus 5.5 can edit videos and make great motion graphics now. But with a raw agent harness, you need to describe tiny edits either in words or in quick one-off UIs, you can’t refer to footage shared across your devices, and feedback from teammates comes as screenshots on Slack. Kino is code-first. All editing, all motion graphics, all dragging of timeline items around, all teammate comments, and all 3D scenes are expressed as code, built on Remotion. This was hard to get right, as we found ourselves building a what-you-see-is-what-you-get editor for React, which we then turned into a video editor. For our launch video I told Claude-with-Kino to find a macOS Leopard install disk and reskin our whole video to match. Kino is also fully collaborative and real-time, so you can see your teammates' cursors and exactly which part of the timeline they’re currently watching. For our launch video I had 5+ agents editing the timeline concurrently while my friend Donald had his swarm working a few minutes further down. Donald had one agent rotoscoping to make our visual effects work, I had an LLM color grading all media via our LUT support, and we both made tiny tweaks to the timeline along the way. To make this code-first editor work with video footage, everything gets transcribed, embedded, described, and face-detected. You can scrub your footage locally after you drag it in, but we upload a low-res proxy so your teammates and cloud inference can see it. This local scrubbing plus custom pro media decoders means you can drag a 250GB ProRes clip from your new iPhone right into your Kino timeline. We built custom decoders for professional codecs such as ProRes, BRAW, R3D, and more (see my extremely successful nine point HN post https://news.ycombinator.com/item?id=50198052 ). None of the performance we’re getting would have been possible before WebCodecs and libraries like Mediabunny. I grew up making YouTube videos, and during my undergrad at MIT I co-directed a 3.5 hour archival footage documentary on the history of my school and technological development in America ( https://regressions.net ). Much of the work was logging footage, managing hard drives, manually syncing Premiere project state, and planning our movie in a spreadsheet. Our first launch in 2023 proclaimed that Kino was \"Silicon Valley meets Hollywood.\" It was more like Palantir for Hollywood; we ran bespoke on-prem Kino deployments with our team of forward deployed engineers on shows like Survivor and A24's Beef. It was a rush, but it felt like the slowest way to improve video editing for the whole world. Bound by the Avid Media Composer and strict studio security rules, we couldn't touch frontier models, and we couldn't make editors >10x faster. So in 2025, we rebuilt Kino as a true editor, and we took a bet on coding-as-editing. Everything in Kino has a URL: projects, clips, footage, comments and replies, even a single frame and the line of code that draws it. Projects and media living in one place and everything being addressable means that your agents and team have a single, editable source of truth for video production. At a lower level, I now paste Kino links into my agent constantly, whether it’s making sure Codex knows exactly which timeline item (among thousands) I am referring to or which teammate’s comment needs fixing. We have teams managing their whole company’s media in Kino, spinning up agents to make new videos every day, then using review links to flag issues. One founder ships ads like this: each day he uses Kino's YouTube support to find b-roll he is allowed to use, he edits something, his co-founder leaves notes such as “we need to use this clip instead” and his agent can then apply them. Full-time filmmakers are also using Kino. They tend to resemble “toxenmaxxer” software developers, where 15+ agents iterate on a single project, each trusting Kino as the source of truth for timeline state, graphics, media, everything. The full editor is free, including unlimited imports and exports, real-time collaboration and MCP access for your own agent. Pro is $25 per editor per month and adds unlimited MCP tool calls, share links, more storage, YouTube search, and the ability to edit alongside your team. You can download it at https://kino.ai . We have not yet released Kino for the pure web browser, just Electron for now. If you make videos personally, if you have ProRes media and you want to try to break Kino, if you have legacy video editor projects to bring in, or if you want to make more content for your company, we'd love to hear how Kino works for you.",
+   "zh": "整合素材存储、视频编辑与评审链接，Codex/Claude Code可与团队同时间线协作",
+   "zh_title": "Kino AI发布：AI媒体管理与视频编辑器",
+   "short": "Kino AI让编码智能体剪视频",
+   "why": "智能体接入视频生产协作流程",
+   "weight": 0.9,
+   "published_ts": 1793813513.0
+  },
+  {
+   "title": "datasette-llm 0.1a10",
+   "link": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-llm 0.1a10 \n Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. \n \n \n Tags: datasette , llm",
+   "zh": "修复可用LLM模型未按配置正确限制的bug，影响agent.datasette.io演示站",
+   "zh_title": "datasette-llm 0.1a10发布",
+   "short": "datasette-llm修复模型配置限制",
+   "why": "插件式LLM接入的配置正确性修复",
+   "weight": 1.1,
+   "published_ts": 1793805962.0
+  },
+  {
+   "title": "[AINews] It's Swapping Season",
+   "link": "https://latent.space/p/ainews-it-s-swapping-season/",
+   "source": "Latent Space",
+   "summary": "November 4, 2026 — OpenAI’s Linux kernel security work, Kimi K3.1 Pro’s open weights, and Ricursive’s Ripple-65B.",
+   "zh": "OpenAI的Linux内核安全工作、Kimi K3.1 Pro开放权重、Ricursive的Ripple-65B",
+   "zh_title": "AINews：模型换血季",
+   "short": "Kimi K3.1 Pro开放权重",
+   "why": "开源权重与安全方向新动向",
+   "weight": 1.0,
+   "published_ts": 1793859849.0
+  },
+  {
+   "title": "ChatGPT will now make you animated GIFs",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+   "source": "The Verge AI",
+   "summary": "ChatGPT can now create GIFs using a prompt or a photo uploaded to the AI chatbot. The update, which is rolling out alongside OpenAI's new Images 2.6 model, allows you to adjust the GIF's animation speed, edit individual frames, and share it with others. Before this change, ChatGPT couldn't natively generate GIFs in a single […]",
+   "zh": "随Images 2.6模型推出，支持提示词或图片生成GIF，可调速度、编辑帧并分享",
+   "zh_title": "ChatGPT现可生成动态GIF",
+   "short": "ChatGPT配Images 2.6生成GIF",
+   "why": "图像模型新增动图生成与逐帧编辑",
+   "weight": 0.7,
+   "published_ts": 1793818960.0
+  },
+  {
+   "title": "Call for Proposals: PyTorch Day China 2026",
+   "link": "https://pytorch.org/blog/call-for-proposals-pytorch-day-china-2026/",
+   "source": "PyTorch",
+   "summary": "The Call for Proposals for PyTorch Day China 2026 closes November 10 at 23:59 China Standard Time. The event takes place in Beijing on December 12, bringing together PyTorch developers,... \n The post Call for Proposals: PyTorch Day China 2026 appeared first on PyTorch .",
+   "zh": "提案截止11月10日23:59北京时间，活动12月12日在北京举办",
+   "zh_title": "PyTorch Day China 2026征集议题",
+   "short": "PyTorch Day中国站12月12日",
+   "why": "国内PyTorch开发者线下交流机会",
+   "weight": 1.2,
+   "published_ts": 1793824195.0
+  }
+ ]
+}
