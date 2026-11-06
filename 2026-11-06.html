@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月6日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月6日 · 星期五 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：OpenAI发布安全模型GPT-6 Cyber，Perplexity推工作型AI代理，开源权重持续升温</div>
+<ol class="list">
+<li><a class="t" href="https://openai.com/index/introducing-gpt-6-cyber">OpenAI发布GPT-6 Cyber安全模型</a><div class="meta">OpenAI · 23 小时前</div><p>面向网络安全，可发现可利用漏洞并开发修复方案，训练时限定在授权范围内行动</p><div class="why">值得看：安全代理从演示走向可授权落地</div></li>
+<li><a class="t" href="https://arxiv.org/abs/2611.08116">小团队自托管AI栈的实战经验</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>Grayhat Developers报告混合AI栈部署，起因是Claude/Codex商业调用成本约325美元</p><div class="why">值得看：自托管省成本但引入部署开销</div></li>
+<li><a class="t" href="https://arxiv.org/abs/2611.08315">LLM在异构知识图谱上的多跳推理评测</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>评测GPT-5.1、Gemini 2.0 Pro、Llama 3、Qwen、BioGPT在五个生物医学与认知KG上的推理与幻觉</p><div class="why">值得看：图谱接地能否抑制幻觉有实证</div></li>
+<li><a class="t" href="https://openai.com/index/merge-builds-with-openai">Merge用GPT-6 Astra做产品与业务工具</a><div class="meta">OpenAI · 1 天前</div><p>Merge用GPT-6 Astra、ChatGPT和Codex审查产品代码并支持营销，还用于活动与销售准备</p><div class="why">值得看：企业内代码审查与营销的落地样例</div></li>
+<li><a class="t" href="https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work">Perplexity推出工作型AI代理Teammates</a><div class="meta">The Verge AI · 9 小时前</div><p>常驻代理可在工作区承担多角色，复用已有项目、技能与记忆，并与Perplexity Computer集成</p><div class="why">值得看：代理产品竞争扩展到工作场景</div></li>
+<li><a class="t" href="https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/">Gemini Omni 1.2 Flash：更快更省、支持更长片段</a><div class="meta">Google DeepMind · 15 小时前</div><p>DeepMind发布Gemini Omni 1.2 Flash，主打速度与成本效益，并支持更长视频片段</p><div class="why">值得看：长片段与低成本利于批量推理</div></li>
+<li><a class="t" href="https://blogs.nvidia.com/blog/nvidia-life-chris-alexiuk/">NVIDIA工程师推动开放权重模型易用化</a><div class="meta">NVIDIA · 16 小时前</div><p>NVIDIA深度学习产品研究工程师Chris Alexiuk专注让开放LLM对实际开发者更实用</p><div class="why">值得看：开放模型工程化实践受关注</div></li>
+<li><a class="t" href="https://latent.space/p/ainews-it-s-swapping-season/">AINews：模型与权重换血季</a><div class="meta">Latent Space · 1 天前</div><p>汇总OpenAI的Linux内核安全工作、Kimi K3.1 Pro开放权重、Ricursive的Ripple-65B</p><div class="why">值得看：开源权重与安全研究同日推进</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-06 16:16
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>
