@@ -1,0 +1,100 @@
+{
+ "saved": "2026-11-07 16:49",
+ "overview": "Inkling 2 Small 高效训练、GitLab 与 Copilot 推进智能体工程落地",
+ "items": [
+  {
+   "title": "[AINews] Inkling 2 Small: 17A-594B trained in 68 hours on 12T tokens, beating Muse Spark",
+   "link": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/",
+   "source": "Latent Space",
+   "summary": "November 5, 2026 — Inside Inkling 2 Small’s training run and METR’s study of AI research at Anthropic.",
+   "zh": "披露 Inkling 2 Small 训练细节：17A-594B 架构，68 小时处理 12T token，评测超过 Muse Spark。",
+   "zh_title": "Inkling 2 Small：17A-594B 用 68 小时训完 12T token",
+   "short": "Inkling 2 Small 68h 训 12T token",
+   "why": "超大规模模型训练效率与成本参考",
+   "weight": 1.0,
+   "published_ts": 1793961321.0
+  },
+  {
+   "title": "Beyond code generation: A developer’s guide to agentic engineering",
+   "link": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+   "source": "GitHub AI",
+   "summary": "Writing code got faster. The work around it didn't. See how you can plan, write code, review changes, and investigate production issues with GitHub Copilot, and what work still needs your judgment. \n The post Beyond code generation: A developer’s guide to agentic engineering appeared first on The GitHub Blog .",
+   "zh": "GitHub 介绍用 Copilot 完成规划、写码、评审与线上问题排查，并说明哪些环节仍需人工判断。",
+   "zh_title": "GitHub：从代码生成到智能体工程指南",
+   "short": "GitHub Copilot 智能体工程指南",
+   "why": "明确智能体工作流的边界与用法",
+   "weight": 1.1,
+   "published_ts": 1794003359.0
+  },
+  {
+   "title": "How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks",
+   "link": "https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/",
+   "source": "NVIDIA",
+   "summary": "A year ago, NVIDIA open sourced its Aerial wireless software, joining Sionna and a broader suite of open source tools for accelerating next-generation 6G network development. Together, they give researchers a foundation for testing ideas, comparing results and building on each other’s work — connecting simulation and AI training with experiments on real over-the-air wireless […]",
+   "zh": "NVIDIA 开源 Aerial 无线软件，与 Sionna 等工具打通仿真、AI 训练与真实空口实验。",
+   "zh_title": "NVIDIA 开源工具助力 6G 研究",
+   "short": "NVIDIA Aerial 开源助 6G",
+   "why": "6G 研究可复现的开源基础设施",
+   "weight": 0.9,
+   "published_ts": 1793980835.0
+  },
+  {
+   "title": "AI for scientific discovery: How researchers use Claude",
+   "link": "https://www.anthropic.com/research/how-researchers-use-claude",
+   "source": "Hacker News",
+   "zh": "Hacker News 讨论研究者用 Claude 辅助科学发现的具体用法。",
+   "zh_title": "研究者如何用 Claude 做科学发现",
+   "short": "Claude 用于科研发现",
+   "why": "了解 LLM 在科研流程中的实际用法",
+   "weight": 0.9,
+   "published_ts": 1793956410.0
+  },
+  {
+   "title": "Perplexity launches AI agents for work",
+   "link": "https://www.perplexity.ai/en-GB/hub/blog/teammates-are-agents-for-complex-ongoing-work",
+   "source": "Hacker News",
+   "zh": "Perplexity 发布面向工作场景的 AI 智能体产品。",
+   "zh_title": "Perplexity 推出面向工作的 AI 智能体",
+   "short": "Perplexity 发布工作智能体",
+   "why": "搜索厂商切入企业智能体赛道",
+   "weight": 0.9,
+   "published_ts": 1793987981.0
+  },
+  {
+   "title": "GitLab 19.5 Makes Agentic Development a Governed Part of the DevOps Platform",
+   "link": "https://www.infoq.com/news/2026/11/gitlab-19-5-agentic-platform/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "GitLab 19.5, released on October 15, puts agentic software development and governance at the centre of the platform, making its GitLab MCP server generally available while expanding how external AI agents can interact with GitLab. By Craig Risi",
+   "zh": "GitLab 19.5 让智能体开发成为平台受治理的一部分，GitLab MCP server 正式可用，扩展外部 AI 智能体接入。",
+   "zh_title": "GitLab 19.5 将智能体开发纳入治理",
+   "short": "GitLab 19.5 MCP server GA",
+   "why": "MCP 接口进入主流 DevOps 平台",
+   "weight": 1.0,
+   "published_ts": 1793966400.0
+  },
+  {
+   "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+   "link": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+   "source": "TechCrunch AI",
+   "summary": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.",
+   "zh": "Meta 为 Muse 智能体新增 Spaces，提供与 AI 助手协作交互的新方式。",
+   "zh_title": "Meta 推出 Spaces 与 Muse 智能体协作",
+   "short": "Meta Muse 新增 Spaces",
+   "why": "消费级智能体协作形态探索",
+   "weight": 0.7,
+   "published_ts": 1793990660.0
+  },
+  {
+   "title": "AI is the new dating dealbreaker",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
+   "source": "The Verge AI",
+   "summary": "When Irene moved to San Francisco last year, she started using dating apps as a way to meet new people, get to know her new city, and connect with others who care about the things she does. After the 25-year-old analyst downloaded Hinge and started swiping, she noticed a trend. \"Hinge has a prompt where […]",
+   "zh": "The Verge 报道旧金山约会应用上，对 AI 的态度正成为择偶筛选条件。",
+   "zh_title": "AI 成为新的约会减分项",
+   "short": "AI 成约会新减分项",
+   "why": "反映公众对 AI 态度的社会信号",
+   "weight": 0.7,
+   "published_ts": 1794001919.0
+  }
+ ]
+}

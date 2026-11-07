@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月7日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月7日 · 星期六 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：Inkling 2 Small 高效训练、GitLab 与 Copilot 推进智能体工程落地</div>
+<ol class="list">
+<li><a class="t" href="https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/">Inkling 2 Small：17A-594B 用 68 小时训完 12T token</a><div class="meta">Latent Space · 21 小时前</div><p>披露 Inkling 2 Small 训练细节：17A-594B 架构，68 小时处理 12T token，评测超过 Muse Spark。</p><div class="why">值得看：超大规模模型训练效率与成本参考</div></li>
+<li><a class="t" href="https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/">GitHub：从代码生成到智能体工程指南</a><div class="meta">GitHub AI · 10 小时前</div><p>GitHub 介绍用 Copilot 完成规划、写码、评审与线上问题排查，并说明哪些环节仍需人工判断。</p><div class="why">值得看：明确智能体工作流的边界与用法</div></li>
+<li><a class="t" href="https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/">NVIDIA 开源工具助力 6G 研究</a><div class="meta">NVIDIA · 16 小时前</div><p>NVIDIA 开源 Aerial 无线软件，与 Sionna 等工具打通仿真、AI 训练与真实空口实验。</p><div class="why">值得看：6G 研究可复现的开源基础设施</div></li>
+<li><a class="t" href="https://www.anthropic.com/research/how-researchers-use-claude">研究者如何用 Claude 做科学发现</a><div class="meta">Hacker News · 23 小时前</div><p>Hacker News 讨论研究者用 Claude 辅助科学发现的具体用法。</p><div class="why">值得看：了解 LLM 在科研流程中的实际用法</div></li>
+<li><a class="t" href="https://www.perplexity.ai/en-GB/hub/blog/teammates-are-agents-for-complex-ongoing-work">Perplexity 推出面向工作的 AI 智能体</a><div class="meta">Hacker News · 14 小时前</div><p>Perplexity 发布面向工作场景的 AI 智能体产品。</p><div class="why">值得看：搜索厂商切入企业智能体赛道</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/gitlab-19-5-agentic-platform/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">GitLab 19.5 将智能体开发纳入治理</a><div class="meta">InfoQ AI/ML · 20 小时前</div><p>GitLab 19.5 让智能体开发成为平台受治理的一部分，GitLab MCP server 正式可用，扩展外部 AI 智能体接入。</p><div class="why">值得看：MCP 接口进入主流 DevOps 平台</div></li>
+<li><a class="t" href="https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/">Meta 推出 Spaces 与 Muse 智能体协作</a><div class="meta">TechCrunch AI · 13 小时前</div><p>Meta 为 Muse 智能体新增 Spaces，提供与 AI 助手协作交互的新方式。</p><div class="why">值得看：消费级智能体协作形态探索</div></li>
+<li><a class="t" href="https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity">AI 成为新的约会减分项</a><div class="meta">The Verge AI · 10 小时前</div><p>The Verge 报道旧金山约会应用上，对 AI 的态度正成为择偶筛选条件。</p><div class="why">值得看：反映公众对 AI 态度的社会信号</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-07 16:49
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>
