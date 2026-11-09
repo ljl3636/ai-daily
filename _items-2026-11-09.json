@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-09 16:16",
+ "overview": "Pinterest用4B Qwen3替代聚类做用户旅程推理，评测揭示罗马化印度语生成被自动指标误判",
+ "items": [
+  {
+   "title": "The Invisible Gap: Romanized Indic Generation Fails Where Automatic Metrics Succeed",
+   "link": "https://arxiv.org/abs/2611.09085",
+   "source": "arXiv cs.AI",
+   "summary": "Hundreds of millions of Indians communicate with digital systems in romanized Latin characters -- typing \"aap kaise hain\" rather than native script -- yet romanized Indic generation is absent from NLP benchmarks and evaluation frameworks. We demonstrate that automatic metrics (BGE-M3, BERTScore) systematically misrepresent the quality of romanized Hindi, Telugu, and Kannada generation. We evaluate four LLMs (Claude Opus 4.8, GPT-5.5, Gemini 2.5-flash, Qwen3.5-35B) on 142 OpenAssistant query-response pairs. On a 72-response diagnostic subset, native speakers rate GPT-5.5 1.43 points higher than Claude Opus 4.8 on a 12-point rubric, whereas their full-dataset BGE-M3 means differ by only 0.004. Two distinct model-specific failure modes emerge: Gemini produces script spillage (16.9% of Telugu responses leak native script), while Qwen collapses to English-only output (16.2% of Kannada responses). We introduce a failure-aware evaluation policy that assigns zero to empty outputs, script-corrupted responses, and instruction collapses -- revealing failures metrics alone cannot detect. Our results show that evaluating romanized Indic generation requires a coordinated bundle: semantic similarity, script compliance, failure coverage, and native-speaker acceptability.",
+   "zh": "论文指出BGE-M3、BERTScore等自动指标系统性高估罗马化印地语、泰卢固语、卡纳达语生成质量",
+   "zh_title": "罗马化印度语生成被自动指标误判",
+   "short": "罗马化印度语评测存在盲区",
+   "why": "现有NLP评测框架漏掉大量真实用户输入",
+   "weight": 0.9,
+   "published_ts": 1794200400.0
+  },
+  {
+   "title": "AuthGateBench: Benchmarking LLMs as Authorization Gate",
+   "link": "https://arxiv.org/abs/2610.16426",
+   "source": "arXiv cs.AI",
+   "summary": "Automated approval systems let coding agents execute high-risk actions with minimal human oversight by delegating the authorization decision to a classifier, typically a large language model (LLM). Such systems, adopted in tools like Claude Code and Codex, remain vulnerable to failure modes such as scope escalation, where the agent takes actions exceeding what the user authorized. Existing benchmarks focus mainly on malicious requests, evaluating refusal under an implicit policy. We introduce AuthGateBench, the first policy-guided benchmark for authorization gating under benign requests. We implement a novel pipeline where an LLM generates contrast pairs with identical action and trajectory but differing request, flipping the label between block and allow. This allows us to assess whether models reason over context rather than the action alone. We further examine whether auxiliary environment signals can help models make better decisions. The resulting benchmark comprises 1,400 instances spanning five failure modes drawn from real-world Claude Code incidents. Evaluations show accuracy degrades unevenly across failure modes as models over-rely on internal safety alignment, and models still block most actions even when explicitly authorized, revealing unstable rather than deterministic decisions; retrospectively retrieved environment signals, however, substantially improve authorization accuracy.",
+   "zh": "新基准测试LLM在Claude Code、Codex类自动审批系统中能否拦截越权操作",
+   "zh_title": "AuthGateBench：评测LLM作为授权网关",
+   "short": "AuthGateBench测LLM授权判定",
+   "why": "编码代理自动审批的越权风险需可量化评测",
+   "weight": 0.9,
+   "published_ts": 1794200400.0
+  },
+  {
+   "title": "Hide your slop PR descriptions behind",
+   "link": "https://simonwillison.net/2026/Nov/9/details-summary/",
+   "source": "Simon Willison",
+   "summary": "Most of the changes I make to my projects these days come in the form of PRs opened for me by Claude Code or Codex. The PR is my unit of work - I use them to bundle commits together, iterating on them until a feature is complete, document decisions and then merge the finished result. Today's coding agents are great at writing PR descriptions. \n They're too good at describing the work \n The problem is that they are too good. An agent-written PR description is accurate and comprehensive. It describes the problem, the detailed solution, and the steps taken to verify it. That's a lot of information to absorb. \n It's not necessarily slop, but it reads like slop! \n It's very easy to spot an AI-written PR, and as with other forms of AI writing my instant reaction is best summarized as \"I'm not reading all of that\". It doesn't matter how accurate or useful the information is, I'm instantly put off by the thought that it will take me longer to read than it took the driving author to write... even when that driving author is me! \n I want human editorial judgement. I want someone to have thought just long enough about the PR to give me a human-approved introduction that helps me understand, at a high level, what the PR is for and whether it deserves more of my attention. \n I think I've found a low-effort way to do this that feels right. \n Hide most of it in a details/summary \n The HTML <details><summary> elements render as a collapsed heading (the summary) that can be expanded to view the larger piece of text. The code looks like this: \n < details > \n < summary > Claude Opus 5.5 </ summary > \n < h2 > The hook </ h2 > \n Plugins implement < code > register_agent_reference_types(datasette) </ code > ...\n </ details > \n When rendered, it looks like this : \n \n Crucially, <details><summary> is supported in GitHub Markdown . You can drop those tags directly into an issue comment or PR description and GitHub will hide the details and display just the summary plus an expansion arrow. \n I've started using this for my AI-generated pull requests. \n The opening paragraph of my PRs will be carefully selected to act as a high-level explanation of what's going on - the shortest text a human can read that will help get them up to speed. \n I'll sometimes throw in a screenshot as well, since images are often the best way to quickly illustrate a new feature. \n The full agent-written essay then follows in a <details><summary> . I use the model name and often the effort level as that summary, to make it abundantly clear what is going on - \"Claude Opus 5.5 Medium\" for example. \n My PRs don't feel nearly as sloppy now! The information is all still there, but a reader can glance at it and get the top, human-curated information without their eyes glazing over at multiple paragraphs of agent-written details. \n I don't always write the introduction myself - sometimes the agent has given me what I need already, hidden away in the avalanche of other text. My promise to the reader is that the short opener will represent my human judgement as to what is definitely worth their time. \n Here are some recent examples where I've used this pattern, including the opener I used: \n \n \n datasette PR #3052: Redesign row page as a vertical list of fields - \"The row page showed its single row as a one-row table. For wide tables, like a 46-column GitHub repos table, that scrolled far off to the right and left most of the page blank.\" (then a screenshot) \n \n datasette PR #3043: Pagination bar showing which rows are on the current page - \"Table pages that span more than one page now make it obvious where you are, and offer navigation at the top of the page as well as the bottom.\" (plus screenshot) \n \n datasette PR #3042: Load edit-tools.js on demand via a small loader - \" edit-tools.js (~220KB) was loaded on every table, row and database page, even for users who couldn't edit anything. Now only load it for users who can edit when they first interact with an edit feature (including mouse over an edit link).\" \n \n datasette-agent PR #51: register_agent_reference_types plugin hook - \"Lets plugins add their own kinds of item to the # tagging in the chat composer using a new register_agent_reference_types(datasette) plugin hook.\" - pictured above. \n \n llm PR #1838: Add llm openai endpoint add/list/remove/path commands - \"Adds commands for managing the records in extra-openai-models.yaml , so OpenAI-compatible endpoints can be saved from the command line instead of by hand-editing YAML.\" - then copied --help output. \n \n The mnemonic \n I used to have trouble remembering the order of the tags - is it <details><summary> or <summary><details> ? \n Here are two tricks that helped me. \n First, and most obviously, the <summary> is clearly the bit where you summarize the details. That's the tag for your line of text that can be clicked to expand - the <details> element must then wrap everything else. \n An even better trick is to always refer to these two tags as \"details-summary\". \n \"details-summary\" is two syllables followed by three syllables. That rolls off the tongue more smoothly than the three-two punch of \"summary-details\". \n Say \"details-summary\" out loud just a few times and you'll never forget the order of the tags again. \n (I still wish GitHub would add a button to their Markdown editor for this - partly to save me painstakingly typing it on my mobile keyboard, and partly to help spread the word to more GitHub users that this feature exists.) \n \n Tags: github , html , markdown , ai , datasette , generative-ai , llms , ai-assisted-programming , llm , coding-agents",
+   "zh": "作者用Claude Code、Codex提PR，认为代理写的描述过于详尽，建议折叠隐藏",
+   "zh_title": "Simon Willison：把AI写的PR描述藏起来",
+   "short": "AI生成的PR描述应折叠",
+   "why": "反映代理工作流中PR描述膨胀的实际问题",
+   "weight": 1.1,
+   "published_ts": 1794198305.0
+  },
+  {
+   "title": "Pinterest Replaces Journey Clustering with 4B Qwen3 LLM, Reports Improved Engagement",
+   "link": "https://www.infoq.com/news/2026/11/pinterest-journey/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Pinterest has moved its user-journey inference system from a multi-stage clustering pipeline to a fine-tuned 4-billion-parameter language model, reporting a 1.1% improvement in email click-through and 1.3% higher push opens. By Matt Foster",
+   "zh": "Pinterest将多阶段聚类管线换成微调4B Qwen3做用户旅程推理，邮件点击率提升1.1%",
+   "zh_title": "Pinterest用4B Qwen3替代旅程聚类",
+   "short": "Pinterest微调4B Qwen3",
+   "why": "小模型微调替代复杂管线的落地案例",
+   "weight": 1.0,
+   "published_ts": 1794209100.0
+  },
+  {
+   "title": "The Web Is More Than Enough, by Paul Ford",
+   "link": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+   "source": "Simon Willison",
+   "summary": "My comment on The Web Is More Than Enough, by Paul Ford — Hacker News. OK, this comment convinced me to give that a shot. \n Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) \n I just asked Claude (Opus 5.5 Medium running in regular Claude Chat) to port that to Vanilla JS, in the same thread where it had built it, and got this: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (98KB) \n They aren't identical - you can see what Claude said about that in the transcript (I don't fully understand why it differed): https://claude.ai/share/e56d163e-2793-4677-aa11-191d5058b414 \n But yeah, it turns out Claude Opus 5.5 is perfectly capable of 3D modeling in Vanilla JS + WebGL without Three.js. \n In eyeballing the code I find the Three.js slightly easier to understand myself, but I rarely look at the code for these 3D projects so that isn't a particularly big deal. \n \n \n Tags: hacker-news , javascript , ai , generative-ai , llms , claude , three-js",
+   "zh": "Simon Willison评论该文，并用Claude把Three.js作品移植为原生JS",
+   "zh_title": "Paul Ford《The Web Is More Than Enough》",
+   "short": "Claude移植Three.js到Vanilla JS",
+   "why": "展示对话式代理做代码移植的实用场景",
+   "weight": 1.1,
+   "published_ts": 1794198753.0
+  },
+  {
+   "title": "[One Million AI Engineer Special] How Stanford Teaches AI-Native Engineering — Mihail Eric, Monaco",
+   "link": "https://latent.space/p/one_million_ai_engineer_special_how_stanford_teaches_ai-native_engineering_mihail_eric_monaco/",
+   "source": "Latent Space",
+   "summary": "What do you assign when a coding agent can finish last year’s homework in one prompt? In the second run of Stanford’s CS146S, Mihail Eric brought open-source maintainers into the course. Students have to learn an unfamiliar repo, propose a change, and ...",
+   "zh": "Mihail Eric介绍课程引入开源维护者，学生需读懂陌生仓库并提出改动",
+   "zh_title": "斯坦福CS146S如何教AI原生工程",
+   "short": "斯坦福CS146S改课程设计",
+   "why": "代理能秒做旧作业后，教学如何重构",
+   "weight": 1.0,
+   "published_ts": 1794173009.0
+  },
+  {
+   "title": "Apple is racing to make Siri more agentic",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
+   "source": "The Verge AI",
+   "summary": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI on an incredibly short timeline, the company has no illusions that it's […]",
+   "zh": "Bloomberg称Ternus施压Federighi加快Siri路线图，打造对标OpenAI、Meta的AI代理",
+   "zh_title": "Apple加速让Siri更具代理能力",
+   "short": "Apple加速Siri代理化",
+   "why": "大厂代理产品竞争进一步升温",
+   "weight": 0.7,
+   "published_ts": 1794165499.0
+  },
+  {
+   "title": "Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA",
+   "link": "https://blogs.nvidia.com/blog/korea-secure-agentic-ai/",
+   "source": "NVIDIA",
+   "summary": "As AI agents take on more work, they need capable open models and security that advances alongside them. Hyundai Motor Group is exploring NVIDIA NemoClaw blueprints and the NVIDIA OpenShell runtime, while AIM Intelligence is integrating its Starfort platform with NVIDIA OpenShell to support secure AI agents for employee productivity and enterprise workflows. A key […]",
+   "zh": "现代汽车探索NemoClaw蓝图与OpenShell运行时，AIM Intelligence集成Starfort平台",
+   "zh_title": "韩国AI生态用NVIDIA推进代理安全",
+   "short": "NVIDIA OpenShell做代理安全",
+   "why": "代理运行时安全成为企业部署关键环节",
+   "weight": 0.9,
+   "published_ts": 1794200439.0
+  }
+ ]
+}
