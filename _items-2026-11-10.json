@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-10 16:16",
+ "overview": "Anthropic发布Fable 5.2与Mythos 5.2，Meta推出小模型Muse Ember",
+ "items": [
+  {
+   "title": "The Invisible Gap: Romanized Indic Generation Fails Where Automatic Metrics Succeed",
+   "link": "https://arxiv.org/abs/2611.09085",
+   "source": "arXiv cs.AI",
+   "summary": "Hundreds of millions of Indians communicate with digital systems in romanized Latin characters -- typing \"aap kaise hain\" rather than native script -- yet romanized Indic generation is absent from NLP benchmarks and evaluation frameworks. We demonstrate that automatic metrics (BGE-M3, BERTScore) systematically misrepresent the quality of romanized Hindi, Telugu, and Kannada generation. We evaluate four LLMs (Claude Opus 4.8, GPT-5.5, Gemini 2.5-flash, Qwen3.5-35B) on 142 OpenAssistant query-response pairs. On a 72-response diagnostic subset, native speakers rate GPT-5.5 1.43 points higher than Claude Opus 4.8 on a 12-point rubric, whereas their full-dataset BGE-M3 means differ by only 0.004. Two distinct model-specific failure modes emerge: Gemini produces script spillage (16.9% of Telugu responses leak native script), while Qwen collapses to English-only output (16.2% of Kannada responses). We introduce a failure-aware evaluation policy that assigns zero to empty outputs, script-corrupted responses, and instruction collapses -- revealing failures metrics alone cannot detect. Our results show that evaluating romanized Indic generation requires a coordinated bundle: semantic similarity, script compliance, failure coverage, and native-speaker acceptability.",
+   "zh": "自动指标BGE-M3、BERTScore系统性地误判罗马化印地语、泰卢固语、卡纳达语生成质量",
+   "zh_title": "罗马化印度语生成评测存在盲区",
+   "short": "罗马化印度语评测指标失真",
+   "why": "暴露多语言评测盲区，需新基准",
+   "weight": 0.9,
+   "published_ts": 1794286800.0
+  },
+  {
+   "title": "llm-anthropic 0.31",
+   "link": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+   "source": "Simon Willison",
+   "summary": "Release: llm-anthropic 0.31 \n Anthropic released Fable 5.2 and Mythos 5.2 today. Fable 5.2 is currently ranked first on Artificial Analysis . Anthropic say it \"solved two open problems in the physics of black holes\", so clearly their internal benchmarks have become more ambitious! \n I've added the new models to llm-anthropic , so you can now run prompts through Fable 5.2 like this: \n uv tool install llm\nllm install llm-anthropic\nllm keys set anthropic\n# paste key here\nllm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\"\n \n I ran pelicans at all five reasoning levels - low , medium , high , xhigh , and max . You can see them all here - here's the best result I got, from xhigh : \n \n max failed to return an image at all, running out of tokens after spending 128,000 thinking about them . That's the same bug that I saw with Opus 5.5 - but it's new for the Fable series, both Fable 5 and Fable 5.1 returned max effort pelicans just fine. \n It's priced at $8/million input and $40/million output, which is a 20% discount on the previous Fable 5.1 ($10/$50). \n I also used Fable 5.2 to help identify the source of a mysterious beep . \n \n \n Tags: llm , anthropic , claude , generative-ai , pelican-riding-a-bicycle , ai , llms , claude-mythos-fable",
+   "zh": "插件加入Fable 5.2与Mythos 5.2，可用uv工具直接跑提示",
+   "zh_title": "llm-anthropic 0.31 支持新模型",
+   "short": "llm-anthropic 0.31 接入新模型",
+   "why": "命令行即可调用新模型",
+   "weight": 1.1,
+   "published_ts": 1794268726.0
+  },
+  {
+   "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+   "link": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+   "source": "Simon Willison",
+   "summary": "Introducing Our Smallest, Most Efficient Model: Muse Ember \nMeta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember, which they describe as: \n \n [...] our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing. \n \n For shorter prompts it's priced the same as GPT-6 Luna and Claude Haiku 5.5 - both are $0.10/million input tokens and $0.50/million output. Today's other big model release, Claude Fable 5.2, is 80x that price at $8/$40. \n The pricing is a little less straightforward as prompts get longer, though. Luna, Ember, and Haiku all support up to a million input tokens, but they also all have a threshold after which the price goes up. Taking that threshold into account Ember is priced between the two others: \n \n \n \n Model \n Prompt size \n Input ($/M) \n Cached input \n Output \n \n \n \n \n GPT-6 Luna \n ≤272k \n $0.10 \n $0.01 \n $0.50 \n \n \n >272k \n $0.20 \n $0.02 \n $0.75 \n \n \n Muse Ember 1.0 \n ≤200k \n $0.10 \n $0.004 \n $0.50 \n \n \n >200k \n $0.30 \n $0.012 \n $1.50 \n \n \n Claude Haiku 5.5 \n ≤100k \n $0.10 \n $0.01 \n $0.50 \n \n \n >100k \n $0.50 \n $0.05 \n $2.50 \n \n \n \n\n But comparing price-per-token doesn't really make sense these days, when reasoning tokens mean that different models might use dramatically different numbers of tokens to solve the same problem. \n For that, one measure that's useful is the Artificial Analysis. \n \n And even more useful than that is their Intelligence Index vs. Cost per Task chart, which shows the following for those three models: \n \n The Muse Ember models sit right on that Pareto line - the line at which you can only improve one dimension by giving up another. Meta call this out in their announcement: \n \n It also sits on the efficiency frontier of the full Artificial Analysis leaderboard: no model scores higher for less per task. \n \n (That grey dot on the Pareto line in the middle of the green area is GPT-6.1 Terra (low) - clearly I should be paying more attention to the Terra family!) \n Muse Ember has six reasoning levels - minimal, low, medium, high, xhigh, and max - so I rendered six pelicans riding bicycles . The \"high\" reasoning level failed to return a full SVG, and the other SVGs were surprising in that the reasoning level didn't cleanly map to the visual quality of the response. \n Here's the \"max\" one, but the others are worth a look too: \n \n The Ember pelicans are comparable in quality to those I got from Muse Wonder , which is 40x the price of Muse Ember.\n\n Tags: ai , generative-ai , llms , meta , llm-pricing , llm-release , artificial-analysis , muse",
+   "zh": "面向工具调用、编码子任务、路由、抽取和长文档解析等重复性agent工作",
+   "zh_title": "Meta发布最小高效模型Muse Ember",
+   "short": "Meta Muse Ember 小模型",
+   "why": "补位Haiku级轻量agent场景",
+   "weight": 1.1,
+   "published_ts": 1794295701.0
+  },
+  {
+   "title": "AuthGateBench: Benchmarking LLMs as Authorization Gate",
+   "link": "https://arxiv.org/abs/2610.16426",
+   "source": "arXiv cs.AI",
+   "summary": "Automated approval systems let coding agents execute high-risk actions with minimal human oversight by delegating the authorization decision to a classifier, typically a large language model (LLM). Such systems, adopted in tools like Claude Code and Codex, remain vulnerable to failure modes such as scope escalation, where the agent takes actions exceeding what the user authorized. Existing benchmarks focus mainly on malicious requests, evaluating refusal under an implicit policy. We introduce AuthGateBench, the first policy-guided benchmark for authorization gating under benign requests. We implement a novel pipeline where an LLM generates contrast pairs with identical action and trajectory but differing request, flipping the label between block and allow. This allows us to assess whether models reason over context rather than the action alone. We further examine whether auxiliary environment signals can help models make better decisions. The resulting benchmark comprises 1,400 instances spanning five failure modes drawn from real-world Claude Code incidents. Evaluations show accuracy degrades unevenly across failure modes as models over-rely on internal safety alignment, and models still block most actions even when explicitly authorized, revealing unstable rather than deterministic decisions; retrospectively retrieved environment signals, however, substantially improve authorization accuracy.",
+   "zh": "测试LLM作为编码agent授权分类器时的越权等失效模式",
+   "zh_title": "AuthGateBench 评测LLM授权门控",
+   "short": "AuthGateBench 测授权越权",
+   "why": "agent自动审批安全基准",
+   "weight": 0.9,
+   "published_ts": 1794286800.0
+  },
+  {
+   "title": "CodeRabbit scales agentic software development and ships 20x more",
+   "link": "https://openai.com/index/coderabbit-codex-daybreak",
+   "source": "OpenAI",
+   "summary": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
+   "zh": "借助OpenAI模型治理AI生成代码，并用Codex让同团队交付量提升20倍",
+   "zh_title": "CodeRabbit用OpenAI模型提效20倍",
+   "short": "CodeRabbit 交付量20倍",
+   "why": "agentic开发落地案例",
+   "weight": 1.3,
+   "published_ts": 1794211200.0
+  },
+  {
+   "title": "Google Releases Gemini 4 Argon for Robotics Control, Simulation, and Policy Improvement",
+   "link": "https://www.infoq.com/news/2026/11/google-gemini-argon/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Google has released Gemini 4 Argon framing it as a general-purpose physical-reasoning model for robot control, Real2Sim scene construction, multimodal labeling of robot video, and iterative policy improvement, rather than as a single end-effector policy. By Daniel Dominguez",
+   "zh": "定位通用物理推理模型，用于机器人控制、Real2Sim建场景、视频标注与策略迭代",
+   "zh_title": "Google发布Gemini 4 Argon机器人模型",
+   "short": "Gemini 4 Argon 机器人",
+   "why": "通用物理推理而非单一策略",
+   "weight": 1.0,
+   "published_ts": 1794239040.0
+  },
+  {
+   "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+   "source": "The Verge AI",
+   "summary": "Anthropic is announcing two new models today: Claude Fable 5.2 and Claude Mythos 5.2, which it says are designed to take on \"daunting\" technical challenges. The company claims the new models show improvements in coding, reasoning, and vision, and can generate outputs faster than the 5.1 versions of the Fable and Mythos models. Claude Fable […]",
+   "zh": "称在编码、推理、视觉上有提升，输出速度比5.1版更快",
+   "zh_title": "Anthropic推出Claude Fable与Mythos 5.2",
+   "short": "Claude Fable/Mythos 5.2",
+   "why": "主力模型升级，速度提升",
+   "weight": 0.7,
+   "published_ts": 1794250718.0
+  },
+  {
+   "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+   "link": "https://openai.com/index/control-room",
+   "source": "OpenAI",
+   "summary": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+   "zh": "集中系统监控研究基础设施中的模型工作负载，遇安全风险可快速停止",
+   "zh_title": "OpenAI Control Room 追踪并中止模型负载",
+   "short": "OpenAI Control Room 监控",
+   "why": "模型运行安全管控基础设施",
+   "weight": 1.3,
+   "published_ts": 1794229200.0
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月10日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月10日 · 星期二 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：Anthropic发布Fable 5.2与Mythos 5.2，Meta推出小模型Muse Ember</div>
+<ol class="list">
+<li><a class="t" href="https://arxiv.org/abs/2611.09085">罗马化印度语生成评测存在盲区</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>自动指标BGE-M3、BERTScore系统性地误判罗马化印地语、泰卢固语、卡纳达语生成质量</p><div class="why">值得看：暴露多语言评测盲区，需新基准</div></li>
+<li><a class="t" href="https://simonwillison.net/2026/Nov/9/llm-anthropic/">llm-anthropic 0.31 支持新模型</a><div class="meta">Simon Willison · 8 小时前</div><p>插件加入Fable 5.2与Mythos 5.2，可用uv工具直接跑提示</p><div class="why">值得看：命令行即可调用新模型</div></li>
+<li><a class="t" href="https://simonwillison.net/2026/Nov/10/muse-ember/">Meta发布最小高效模型Muse Ember</a><div class="meta">Simon Willison · 46 分钟前</div><p>面向工具调用、编码子任务、路由、抽取和长文档解析等重复性agent工作</p><div class="why">值得看：补位Haiku级轻量agent场景</div></li>
+<li><a class="t" href="https://arxiv.org/abs/2610.16426">AuthGateBench 评测LLM授权门控</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>测试LLM作为编码agent授权分类器时的越权等失效模式</p><div class="why">值得看：agent自动审批安全基准</div></li>
+<li><a class="t" href="https://openai.com/index/coderabbit-codex-daybreak">CodeRabbit用OpenAI模型提效20倍</a><div class="meta">OpenAI · 1 天前</div><p>借助OpenAI模型治理AI生成代码，并用Codex让同团队交付量提升20倍</p><div class="why">值得看：agentic开发落地案例</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/google-gemini-argon/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">Google发布Gemini 4 Argon机器人模型</a><div class="meta">InfoQ AI/ML · 16 小时前</div><p>定位通用物理推理模型，用于机器人控制、Real2Sim建场景、视频标注与策略迭代</p><div class="why">值得看：通用物理推理而非单一策略</div></li>
+<li><a class="t" href="https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2">Anthropic推出Claude Fable与Mythos 5.2</a><div class="meta">The Verge AI · 13 小时前</div><p>称在编码、推理、视觉上有提升，输出速度比5.1版更快</p><div class="why">值得看：主力模型升级，速度提升</div></li>
+<li><a class="t" href="https://openai.com/index/control-room">OpenAI Control Room 追踪并中止模型负载</a><div class="meta">OpenAI · 19 小时前</div><p>集中系统监控研究基础设施中的模型工作负载，遇安全风险可快速停止</p><div class="why">值得看：模型运行安全管控基础设施</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-10 16:16
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>
