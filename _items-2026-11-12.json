@@ -1,0 +1,101 @@
+{
+ "saved": "2026-11-12 16:16",
+ "overview": "Gemini推出决策模型API，多家公司分享生产级Agent实践，United禁止AI代理订票",
+ "items": [
+  {
+   "title": "Gemini Decisions API",
+   "link": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+   "source": "Simon Willison",
+   "summary": "Gemini Decisions API \nGoogle join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a yes/no question. \n It's priced the same as the GPT-6 Luna decision model: 10 cents per million input tokens, and output is free. Jev remains the cheapest of the three, at 4.2 cents per million. \n Jev is text (and JSON) only. OpenAI can handle text and images. Gemini Decision 1 is fully multi-model: it covers text, images, audio, video, and PDFs. \n I tested it against video by passing these questions to it along with my Yonkers stomping robot video file: \n dragon: Does this video have a dragon in it?\nrobot: Does this video have a robot in it?\nfrance: Is this video set in France?\nusa: Is this video set in the USA?\n \n Jev and OpenAI both return 1.0 or 0.0 for yes/no questions, but Gemini insists on being a little less confident than that: \n {\n \"dragon\" : {\n \"type\" : \" yes_no \" ,\n \"probability\" : 0.04976021841520312 \n },\n \"robot\" : {\n \"type\" : \" yes_no \" ,\n \"probability\" : 0.9234055387792485 \n },\n \"france\" : {\n \"type\" : \" yes_no \" ,\n \"probability\" : 0.08329171353166241 \n },\n \"usa\" : {\n \"type\" : \" yes_no \" ,\n \"probability\" : 0.9230459995157706 \n }\n} \n\n Via Hacker News \n\n Tags: ai , generative-ai , gemini , llm-release , jev , decision-models",
+   "zh": "新增决策模型API，支持是/否、选择、评分三类问题，定价与GPT-6 Luna相同",
+   "zh_title": "Google发布Gemini Decisions API",
+   "short": "Gemini Decision 1，10美分/百万输入token",
+   "why": "决策类模型API竞争加剧，可评估结构化问答场景",
+   "weight": 1.1,
+   "published_ts": 1794434605.0
+  },
+  {
+   "title": "How LinkedIn, Netflix & DoorDash Run Agents, Evals & Inference in Production: QCon AI New York 2026",
+   "link": "https://www.infoq.com/news/2026/11/qcon-ai-newyork-2026-program/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "QCon AI New York has published its full program for December 15–16, 2026. Engineers from LinkedIn, Netflix, DoorDash, Figma, Pinterest, Honeycomb, Harvey, Google DeepMind and OpenAI describe AI systems they run in production. Talks cover agent permissions and guardrails, eval loops, inference cost, AI code review, and team adoption. By Artenisa Chatziou",
+   "zh": "LinkedIn、Netflix、DoorDash等将分享生产环境Agent、评测与推理成本实践",
+   "zh_title": "QCon AI纽约2026议程公布",
+   "short": "QCon AI NY，2026年12月15-16日",
+   "why": "一线生产经验，覆盖权限、评测与成本",
+   "weight": 1.0,
+   "published_ts": 1794394800.0
+  },
+  {
+   "title": "Browse tools.simonwillison.net by tag",
+   "link": "https://simonwillison.net/2026/Nov/11/tools-tags/",
+   "source": "Simon Willison",
+   "summary": "Browse tools.simonwillison.net by tag \nI've been wanting a better way to browse my collection of vibe-coded tools (244 and counting) for a while. I had a few Fable 5.2 credits left over before my weekly reset so I set it to work using tree-sitter to analyze the code for JavaScript APIs, libraries, and web API hosts used by each tool. \n The homepage now features tag clouds for browsing by each of those categories of tag: \n \n\n Tags: javascript , tools , ai , generative-ai , llms , claude , vibe-coding",
+   "zh": "用tree-sitter分析244个工具所用JS API与库，生成标签云便于检索",
+   "zh_title": "Simon Willison工具站支持标签浏览",
+   "short": "244个工具，tree-sitter自动打标签",
+   "why": "展示代码静态分析自动归类工具的思路",
+   "weight": 1.1,
+   "published_ts": 1794422570.0
+  },
+  {
+   "title": "JioHotstar Benchmarks Knowledge Bases for AI Coding Agents",
+   "link": "https://www.infoq.com/news/2026/11/jiohotstar-codingagent-retrieval/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "JioHotstar evaluated 6 approaches to code retrieval for AI coding agents using SWE, CodeScale Bench, and an internal question-answering harness. Structural search performed well on concrete tasks, while semantic retrieval helped with ambiguous requirements. The findings highlight trade-offs in accuracy, token use, and tool design, underscoring the need to match retrieval tools to task types. By Leela Kumili",
+   "zh": "用SWE、CodeScale Bench及内部问答测试6种检索方式，结构检索与语义检索各有优劣",
+   "zh_title": "JioHotstar评测代码检索方案",
+   "short": "6种检索方案，结构vs语义",
+   "why": "为编码Agent选检索工具提供实测依据",
+   "weight": 1.0,
+   "published_ts": 1794407280.0
+  },
+  {
+   "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+   "link": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+   "source": "Hacker News",
+   "zh": "以隐私和监管为由，不允许个人AI助手代客订票，称实际尝试者尚少",
+   "zh_title": "美联航禁止AI代理代订机票",
+   "short": "United禁止AI代理订票",
+   "why": "Agent落地遭遇平台政策与合规边界",
+   "weight": 0.9,
+   "published_ts": 1794432275.0
+  },
+  {
+   "title": "Intelligent Delivery: Making Every Unit of Compute Serve Better Ads",
+   "link": "https://engineering.fb.com/2026/11/11/ml-applications/intelligent-delivery-serve-better-ads/",
+   "source": "Meta Engineering",
+   "summary": "Ads ranking models are growing toward LLM scale faster than the hardware to run them can keep up. An extra unit of compute has more impact on some ad requests, models, and chips than on others. The challenge is deciding where to allocate it to get the best outcome for the entire system. We built [...] \n Read More... \n The post Intelligent Delivery: Making Every Unit of Compute Serve Better Ads appeared first on Engineering at Meta .",
+   "zh": "广告排序模型逼近LLM规模，按请求与模型价值动态分配算力以提升整体收益",
+   "zh_title": "Meta智能投放优化算力分配",
+   "short": "Meta按价值分配广告算力",
+   "why": "大规模推理下算力调度与ROI优化思路",
+   "weight": 0.9,
+   "published_ts": 1794416438.0
+  },
+  {
+   "title": "Jensen Huang accused of having another affair — with an Nvidia exec",
+   "link": "https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/",
+   "source": "TechCrunch AI",
+   "summary": "Jensen Huang, who has come under fire for admitting to an affair with a woman accused of being a Chinese intelligence agent, has been accused of having a separate affair with an Nvidia subordinate.",
+   "zh": "继承认与中国情报人员有关的女性有染后，又被指与一名Nvidia下属存在另一段婚外情",
+   "zh_title": "黄仁勋被指与Nvidia高管有婚外情",
+   "short": "黄仁勋再被指婚外情",
+   "why": "高管丑闻，与AI技术无关",
+   "weight": 0.7,
+   "published_ts": 1794439025.0
+  },
+  {
+   "title": "United won’t let your AI agent book your flight",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+   "source": "The Verge AI",
+   "summary": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns. The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash. But United is concerned […]",
+   "zh": "出于隐私与监管顾虑，不允许个人AI助手代订，称目前尝试人数不多",
+   "zh_title": "United拒绝AI代理代订机票",
+   "short": "United：隐私与监管顾虑",
+   "why": "平台对Agent访问的态度趋于收紧",
+   "weight": 0.7,
+   "published_ts": 1794434061.0
+  }
+ ]
+}

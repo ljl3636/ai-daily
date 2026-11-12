@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月12日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月12日 · 星期四 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：Gemini推出决策模型API，多家公司分享生产级Agent实践，United禁止AI代理订票</div>
+<ol class="list">
+<li><a class="t" href="https://simonwillison.net/2026/Nov/11/gemini-decisions-api/">Google发布Gemini Decisions API</a><div class="meta">Simon Willison · 10 小时前</div><p>新增决策模型API，支持是/否、选择、评分三类问题，定价与GPT-6 Luna相同</p><div class="why">值得看：决策类模型API竞争加剧，可评估结构化问答场景</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/qcon-ai-newyork-2026-program/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">QCon AI纽约2026议程公布</a><div class="meta">InfoQ AI/ML · 21 小时前</div><p>LinkedIn、Netflix、DoorDash等将分享生产环境Agent、评测与推理成本实践</p><div class="why">值得看：一线生产经验，覆盖权限、评测与成本</div></li>
+<li><a class="t" href="https://simonwillison.net/2026/Nov/11/tools-tags/">Simon Willison工具站支持标签浏览</a><div class="meta">Simon Willison · 13 小时前</div><p>用tree-sitter分析244个工具所用JS API与库，生成标签云便于检索</p><div class="why">值得看：展示代码静态分析自动归类工具的思路</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/jiohotstar-codingagent-retrieval/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">JioHotstar评测代码检索方案</a><div class="meta">InfoQ AI/ML · 17 小时前</div><p>用SWE、CodeScale Bench及内部问答测试6种检索方式，结构检索与语义检索各有优劣</p><div class="why">值得看：为编码Agent选检索工具提供实测依据</div></li>
+<li><a class="t" href="https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/">美联航禁止AI代理代订机票</a><div class="meta">Hacker News · 10 小时前</div><p>以隐私和监管为由，不允许个人AI助手代客订票，称实际尝试者尚少</p><div class="why">值得看：Agent落地遭遇平台政策与合规边界</div></li>
+<li><a class="t" href="https://engineering.fb.com/2026/11/11/ml-applications/intelligent-delivery-serve-better-ads/">Meta智能投放优化算力分配</a><div class="meta">Meta Engineering · 15 小时前</div><p>广告排序模型逼近LLM规模，按请求与模型价值动态分配算力以提升整体收益</p><div class="why">值得看：大规模推理下算力调度与ROI优化思路</div></li>
+<li><a class="t" href="https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/">黄仁勋被指与Nvidia高管有婚外情</a><div class="meta">TechCrunch AI · 8 小时前</div><p>继承认与中国情报人员有关的女性有染后，又被指与一名Nvidia下属存在另一段婚外情</p><div class="why">值得看：高管丑闻，与AI技术无关</div></li>
+<li><a class="t" href="https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents">United拒绝AI代理代订机票</a><div class="meta">The Verge AI · 10 小时前</div><p>出于隐私与监管顾虑，不允许个人AI助手代订，称目前尝试人数不多</p><div class="why">值得看：平台对Agent访问的态度趋于收紧</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-12 16:16
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>
