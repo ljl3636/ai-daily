@@ -1,0 +1,101 @@
+{
+ "saved": "2026-11-13 16:16",
+ "overview": "Gemini 4 Hydrogen 低价发布，AI 代理代码存活率与医疗偏见受审",
+ "items": [
+  {
+   "title": "Do Large Language Models Show Racial and Sex Bias in Pain Management? A Counterfactual Audit of GPT, Claude, Gemini, Llama, DeepSeek and Qwen",
+   "link": "https://arxiv.org/abs/2611.14935",
+   "source": "arXiv cs.AI",
+   "summary": "Racial and ethnic minority patients receive less pain treatment than non-Hispanic White patients, and large language models (LLMs) used as medical AI could reproduce that bias. Prior audits tested a few proprietary models, stated race explicitly and rarely measured the models' own response instability. In exploratory, non-preregistered analyses, Study 1 had four open-weight LLMs assess six acute-pain vignettes in every combination of four races and two sexes, with identity stated or cued only by a name (two names per group), comparing each identity with a White male reference on the same case and sampling seed. In Study 2, 24 configurations of 17 models, including OpenAI's GPT-4.1 mini and gpt-oss, Anthropic's Claude Haiku 4.5, Google's Gemini 2.5 Flash, Meta's Llama, DeepSeek and Qwen, with reasoning on and off and at two precisions, answered the same vignettes and the 50 clinician-written Q-Pain cases. In this single-prompt, JSON-constrained task, no difference survived correction in Study 1, none of 1,386 comparisons survived the false discovery rate in Study 2, and every pain-severity difference was equivalent to zero within one point on a 0-10 scale (within a quarter point for 237 of 238 Q-Pain comparisons). Opioid decisions were bounded less precisely (Study 1 could not exclude differences of about 20 percentage points), so they show no detected difference, not proof of none. The few differences surviving correction within a model favoured Black patients. Models differed far more from one another and across their own settings than between patients (the reference patient received the high opioid dose in 6% to 93% of responses), although serving software, provider and prompt format also differed. Fairness audits of clinical AI should use several names per group, pair comparisons on the seed, report the noise floor and test each deployed configuration.",
+   "zh": "用反事实方法测试GPT、Claude、Gemini、Llama、DeepSeek、Qwen在疼痛处置中的种族与性别偏差，并测量模型自身回答不稳定性。",
+   "zh_title": "研究审计六大LLM的疼痛管理种族性别偏见",
+   "short": "六款LLM疼痛管理偏见审计",
+   "why": "医疗AI部署前的偏见风险需量化",
+   "weight": 0.9,
+   "published_ts": 1794546000.0
+  },
+  {
+   "title": "Will It Survive? Deciphering the Fate of AI Agent-Authored Code in Open Source",
+   "link": "https://arxiv.org/abs/2601.16809",
+   "source": "arXiv cs.AI",
+   "summary": "AI coding agents such as GitHub Copilot, OpenAI Codex and Devin now open pull requests (PRs) that are merged into open-source projects. Industry reports suggest that AI-assisted code is revised or reverted soon after it is written, which raises the concern that agent code is \"disposable\". However, little is known about what happens to agent code after it is merged. Knowing how long this code survives, and why it is changed, can help maintainers decide how much review it needs. We performed a survival analysis of the 648,959 lines that 2,794 merged PRs added outside vendored and generated paths in 215 open-source repositories from the AIDev dataset, comparing agent-attributed and human code within the same repositories. Agent-attributed code is not modified sooner than human code. When each PR is weighted equally, agent-attributed lines are modified later (HR = 0.83, 95% CI [0.75, 0.93]). This difference comes from the supervised assistants, mainly Copilot and Codex (HR = 0.76). Code from Devin does not differ from human code over the whole period (HR = 0.95), but among PRs merged after mid-May 2025, code from both the supervised assistants and Devin is modified later. Without PR weighting, the difference is not statistically significant. When agent-attributed code is modified, the intent of the change is similar to that of human code (Cramer's V = 0.080). A file's size and recent changes predict whether agent-attributed code will be modified better than its code tokens do (AUC-ROC 0.78 vs. 0.70), and process features predict when it will be modified only weakly (Macro F1 of 0.31 against 0.25 for a random guess). Our findings suggest that agent code is not disposable, but whether it survives longer than human code depends on the agent, on when the code was merged and on how the comparison is computed.",
+   "zh": "追踪Copilot、Codex、Devin等代理提交并合并的PR，分析其代码在开源项目中被修改或回退的存活情况。",
+   "zh_title": "AI代理写的代码合并后能活多久？",
+   "short": "代理代码合并后存活率研究",
+   "why": "评估代理代码是否“一次性”",
+   "weight": 0.9,
+   "published_ts": 1794546000.0
+  },
+  {
+   "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+   "link": "https://openai.com/business/customer-stories/amplitude",
+   "source": "OpenAI",
+   "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+   "zh": "基于OpenAI模型构建产品代理Wave，识别该做什么、用编码代理落地改动并衡量影响。",
+   "zh_title": "Amplitude用OpenAI模型1-2天交付改进",
+   "short": "Amplitude Wave基于OpenAI",
+   "why": "看代理串联产品迭代的落地范式",
+   "weight": 1.3,
+   "published_ts": 1794513600.0
+  },
+  {
+   "title": "llm-gemini 0.37",
+   "link": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+   "source": "Simon Willison",
+   "summary": "Release: llm-gemini 0.37 \n Google launched Gemini 4 Hydrogen today - the lowest cost member of the Gemini 4 family. \n It's actually not too far off the price of its much bigger siblings, Carbon and Argon. I'm finding Gemini 4's pricing really confusing. Here's the pricing scheme: \n \n \n \n Model \n Dates \n Input ($/M) \n Cached input \n Output \n \n \n \n \n Gemini 4 Carbon \n Through Nov 30, 2026 \n $2.00 \n $0.10 \n $10.00 \n \n \n From Dec 1, 2026 \n $4.00 \n $0.20 \n $20.00 \n \n \n Gemini 4 Argon \n Through Nov 30, 2026 \n $2.00 \n $0.10 \n $10.00 \n \n \n From Dec 1, 2026 \n $4.00 \n $0.20 \n $20.00 \n \n \n Gemini 4 Hydrogen \n \n $1.50 \n $0.075 \n $7.50 \n \n \n \n\n Carbon and Argon are the same price , and both are scheduled to double in price on December 1st. If they're the same price, why have two different models? Google says that Argon \"delivers Gemini 4 intelligence with faster responses and lower token spend per turn compared to Gemini 4 Carbon\" - so it may be priced the same, but it will use less tokens per task. \n Hydrogen, supposedly the cheap model, is currently only a 25% discount on its more capable peers. The Hydrogen price will make more sense after December 1st, when it will represent a 75% discount. It's still considerably more expensive than Claude Haiku 5.5 and GPT-6 Luna - they're both $0.10/$0.50, so Hydrogen is 15x that. \n I had Hydrogen generate some pelicans . Here's a full comparison grid showing the pelicans for all three members of the Gemini 4 family at their three supported effort levels: \n \n Considering how close they are in price, the difference in pelican quality for Hydrogen is quite stark. \n Here's how Google describe Hydrogen's intended position in their mix of models: \n \n In real-world software development, while teams rely on frontier models like Carbon and Argon for deep architectural judgment when designing systems or untangling subtle bugs, they still need a fast, disciplined execution model for writing code, running tests, and verifying changes. Hydrogen is built to stand on its own as a model for everyday work — or to pair with Carbon and Argon as the high-efficiency execution engine in multi-model workflows. \n \n Most notably, Hydrogen is the new free tier model, and is the model that will power AI features in Google Search. \n \n \n Tags: gemini , llm , google , pelican-riding-a-bicycle , llm-pricing , ai , llms",
+   "zh": "插件更新接入Gemini 4家族最低价成员Hydrogen，作者称其定价体系令人困惑。",
+   "zh_title": "llm-gemini 0.37支持Gemini 4 Hydrogen",
+   "short": "llm-gemini 0.37 接入Hydrogen",
+   "why": "开发者可低成本调用新模型",
+   "weight": 1.1,
+   "published_ts": 1794524119.0
+  },
+  {
+   "title": "Presentation: Opening the Black Box: Critical Explainability for AI Agent Tool Selection with Kiji Inspector",
+   "link": "https://www.infoq.com/presentations/explainable-ai-llm-agent-decisions/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Hannes Hapke shares how Dataiku’s open-source Kiji Inspector applies Sparse Autoencoders (SAEs) directly to decision tokens to expose why agents pick specific tools. Moving past superficial chain-of-thought narratives, he discusses causal ablation, layer activation extraction via patched vLLM engines, and production monitoring workflows for software architects and senior engineering leaders. By Hannes Hapke",
+   "zh": "Dataiku开源工具对决策token应用稀疏自编码器，结合因果消融与vLLM层激活提取，解释代理为何选某工具。",
+   "zh_title": "Kiji Inspector用SAE解释代理工具选择",
+   "short": "Kiji Inspector 开源SAE解释",
+   "why": "超越思维链的可解释性方案",
+   "weight": 1.0,
+   "published_ts": 1794481200.0
+  },
+  {
+   "title": "Introducing Gemini 4 Hydrogen",
+   "link": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+   "source": "Google DeepMind",
+   "zh": "Gemini 4家族新增最低成本成员Hydrogen，与Carbon、Argon同属该系列。",
+   "zh_title": "Google DeepMind发布Gemini 4 Hydrogen",
+   "short": "Gemini 4 Hydrogen 发布",
+   "why": "低价档模型影响调用成本",
+   "weight": 1.2,
+   "published_ts": 1794506450.0
+  },
+  {
+   "title": "AI chatbots are recommending fake retail websites, study finds",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+   "source": "The Verge AI",
+   "summary": "Shoppers using AI chatbots to research products or find places to buy items could be directed to imposters and other risky websites, a new study found. The study conducted by IP protection firm Podqi and shared exclusively with The Verge prompted ChatGPT, Gemini, and Perplexity with a handful of shopping-related questions involving a selection of […]",
+   "zh": "Podqi测试ChatGPT、Gemini、Perplexity的购物类提问，发现可能导向仿冒与高风险网站。",
+   "zh_title": "研究：AI聊天机器人推荐假冒零售网站",
+   "short": "ChatGPT/Gemini/Perplexity 导流风险",
+   "why": "购物场景需校验来源可信度",
+   "weight": 0.7,
+   "published_ts": 1794508554.0
+  },
+  {
+   "title": "Build once, run on any agent: A practical guide to agent skills",
+   "link": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+   "source": "GitHub AI",
+   "summary": "Agent skills capture repeatable engineering work in files teams can review and reuse, while tools, project context, and permissions remain specific to the host that runs them. \n The post Build once, run on any agent: A practical guide to agent skills appeared first on The GitHub Blog .",
+   "zh": "介绍agent skills用可评审复用的文件封装重复工程工作，工具、上下文与权限仍由宿主决定。",
+   "zh_title": "GitHub指南：一次构建，跨代理运行技能",
+   "short": "GitHub agent skills 实践指南",
+   "why": "跨代理复用工程能力的规范",
+   "weight": 1.1,
+   "published_ts": 1794524092.0
+  }
+ ]
+}
