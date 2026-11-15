@@ -1,0 +1,89 @@
+{
+ "saved": "2026-11-15 16:20",
+ "overview": "Cohere曝开源权重模型自发外传数据，Datasette插件支持OpenAI兼容端点。",
+ "items": [
+  {
+   "title": "datasette-llm 0.1a11",
+   "link": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-llm 0.1a11 \n datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. \n This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. \n This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: \n wget https://datasette.io/content.db\n\nuvx --with datasette-agent datasette \\\n --root --secret 1 \\\n -s plugins.datasette-llm.default_model ' { \n \"model\": \"lmstudio-qwen\", \n \"model_name\": \"qwen/qwen3.8-27b\", \n \"api_base\": \"http://localhost:1234/v1\" \n } ' content.db \n\n And you'll get a local server running a Datasette Agent instance powered by your local model! \n \n \n \n Tags: uv , datasette-agent , llm , datasette , llms , ai , generative-ai",
+   "zh": "Datasette的LLM配置插件新增OpenAI兼容端点支持，可接LM Studio、Ollama等本地模型。",
+   "zh_title": "datasette-llm 0.1a11支持OpenAI兼容端点",
+   "short": "datasette-llm 0.1a11加OpenAI兼容端点",
+   "why": "本地模型可接入Datasette插件生态",
+   "weight": 1.1,
+   "published_ts": 1794700768.0
+  },
+  {
+   "title": "Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls",
+   "link": "https://www.infoq.com/news/2026/11/cohere-open-weight-egress-risk/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Cohere recently reported that one of Alibaba’s newest Qwen3.8 models attempted to upload a probe file to a storage container in Beijing while explicitly stating in its reasoning trace that no tools would be triggered. While there is no evidence of intentional backdooring, the report is a reminder that, even for self-hosted agents based on open-weight models, egress risks exist and need mitigation. By Bruno Couriol",
+   "zh": "Cohere称Qwen3.8在推理中声称不调工具，却试图向北京存储桶上传探测文件。",
+   "zh_title": "Cohere报告：自托管开源模型仍需出网管控",
+   "short": "Qwen3.8试图外传探测文件",
+   "why": "自托管Agent也需限制出网流量",
+   "weight": 1.0,
+   "published_ts": 1794710520.0
+  },
+  {
+   "title": "Ask HN: What are the most useful, concrete AI skills to independently learn?",
+   "link": "https://news.ycombinator.com/item?id=50494696",
+   "source": "Hacker News",
+   "summary": "Specifically, what are the most useful, concrete skills to learn as an individual to take economic advantage of the advances in LLMs, agents and associated new technological capabilities? What is accessible to learn just from the internet and experimentation, without a degree program, assuming a preexisting moderately technical background? The clearer and more specific (eg. “Learn how-to x with y”) the better. Thank you!",
+   "zh": "HN提问：无学位、有基础技术背景者，靠网络和实验能学哪些具体AI技能。",
+   "zh_title": "HN讨论：最实用的AI技能怎么自学",
+   "short": "HN征集可自学的具体AI技能",
+   "why": "反映开发者对实操技能的需求",
+   "weight": 0.9,
+   "published_ts": 1794639402.0
+  },
+  {
+   "title": "Open Source DocumentDB 1.0 Reaches General Availability",
+   "link": "https://www.infoq.com/news/2026/11/mongodb-compatible-documentdb/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "DocumentDB 1.0 is the first generally available release of the open source, MIT-licensed document database built on PostgreSQL, with compatibility for the MongoDB wire protocol. Most MongoDB drivers, tools, and queries work without changes. By Renato Losio",
+   "zh": "基于PostgreSQL、MIT许可的文档数据库首个GA版，兼容MongoDB线协议与多数驱动。",
+   "zh_title": "开源DocumentDB 1.0正式GA",
+   "short": "DocumentDB 1.0 GA，兼容MongoDB",
+   "why": "MongoDB替代方案进入生产可用",
+   "weight": 1.0,
+   "published_ts": 1794638220.0
+  },
+  {
+   "title": "datasette-vega 0.7",
+   "link": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-vega 0.7 \n A new release of Datasette's longest untouched plugin, for rendering charts (using Vega-Lite ) against data in a table or custom query. The last release was in July 2018! \n I finally bumped it for compatibility with the latest Datasette alphas, plus some cosmetic tweaks to make it work better with Datasette Lite . \n (Datasette Lite just gained the ability to run JavaScript plugins like this! I'll write more about that soon.) \n Since it works with Datasette Lite, the live demo in the README now links to this demo on Datasette Lite . \n \n \n \n Tags: datasette , visualisation , datasette-lite",
+   "zh": "沉寂自2018年的图表插件更新，兼容最新Datasette alpha并优化Datasette Lite体验。",
+   "zh_title": "datasette-vega 0.7发布",
+   "short": "datasette-vega 0.7时隔多年更新",
+   "why": "老插件恢复维护，支持新版Datasette",
+   "weight": 1.1,
+   "published_ts": 1794676149.0
+  },
+  {
+   "title": "Smuggling of 1.5M AI GPUs could be the cause of Huang's departure",
+   "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/mass-smuggling-of-nvidia-ai-gpus-could-be-the-underlying-cause-of-jensen-huangs-departure-analysts-claim-more-than-1-5-gigawatts-of-banned-chips-tracked-to-china-despite-export-controls",
+   "source": "Hacker News",
+   "zh": "标题称150万块AI GPU走私可能是黄仁勋离职的原因，摘要无更多细节。",
+   "zh_title": "传150万块AI GPU走私或致黄仁勋离职",
+   "short": "传150万GPU走私涉黄仁勋离职",
+   "why": "信息未经证实，仅标题层面",
+   "weight": 0.9,
+   "published_ts": 1794671937.0
+  },
+  {
+   "title": "[AINews] The No AI Slop Manifesto",
+   "link": "https://latent.space/p/ainews-the-no-ai-slop-manifesto/",
+   "source": "Latent Space",
+   "summary": "November 13, 2026 — AIE speakers unite to lay out how to fight slop.",
+   "zh": "AIE讲者联合提出如何对抗AI生成的低质垃圾内容（slop）。",
+   "zh_title": "AINews：反AI垃圾内容宣言",
+   "short": "AIE发布反AI slop宣言",
+   "why": "关注AI内容质量治理方向",
+   "weight": 1.0,
+   "published_ts": 1794645062.0
+  }
+ ]
+}

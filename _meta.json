@@ -73,5 +73,10 @@
   "count": 8,
   "overview": "Gemini 4 Hydrogen 低价发布，AI 代理代码存活率与医疗偏见受审",
   "updated": "2026-11-13 16:16"
+ },
+ "2026-11-15": {
+  "count": 7,
+  "overview": "Cohere曝开源权重模型自发外传数据，Datasette插件支持OpenAI兼容端点。",
+  "updated": "2026-11-15 16:20"
  }
 }
