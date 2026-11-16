@@ -78,5 +78,10 @@
   "count": 7,
   "overview": "Cohere曝开源权重模型自发外传数据，Datasette插件支持OpenAI兼容端点。",
   "updated": "2026-11-15 16:20"
+ },
+ "2026-11-16": {
+  "count": 8,
+  "overview": "多智能体对齐、昇腾内核优化基准与AI代码审查流程",
+  "updated": "2026-11-16 16:16"
  }
 }

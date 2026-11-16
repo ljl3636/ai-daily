@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-16 16:16",
+ "overview": "多智能体对齐、昇腾内核优化基准与AI代码审查流程",
+ "items": [
+  {
+   "title": "Aligning AI Teams",
+   "link": "https://arxiv.org/abs/2611.17820",
+   "source": "arXiv cs.AI",
+   "summary": "Previous work has shown that alignment training on individual LLM agents can fail to transfer to multi-agent settings. We investigate the underlying mechanisms for this failure, and explore interventions to preserve alignment transfer to multi-agent LLM teams. We focus on two software-engineering tasks (sepsis triage, a news recommender) and ten consulting-proposal generation tasks. We present four findings: (1) The single-vs-team safety gap does not show a clear trend with more capable models. We find that Anthropic's Mythos Preview shows the largest gap on one of our tasks but the smallest on another; (2) Many natural interventions, such as having agents critique each other's work or coordinate in a group chat, do not reliably bring agent teams back to single-agent alignment behavior; (3) diffusion of responsibility substantially accounts for the safety gap: agents in teams are less likely to proactively check for system-level safety failures and more likely to ignore, rationalize, or deflect responsibility for issues when they arise; (4) having a designated safety lead agent ensure system-level safety, and having a coordinator agent publish a safety specifications document are effective at restoring single-agent alignment. We also release magelab, a multi-agent LLM orchestration and experimentation framework. Our findings can help practitioners design agent teams that successfully preserve the behaviors expected of aligned individual agents.",
+   "zh": "研究单智能体对齐训练难迁移到多智能体，分析机制并提出保留迁移的干预方法。",
+   "zh_title": "多智能体团队对齐为何失效及干预",
+   "short": "多智能体对齐迁移失败机制",
+   "why": "多智能体部署需重新考虑对齐策略",
+   "weight": 0.9,
+   "published_ts": 1794805200.0
+  },
+  {
+   "title": "AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs",
+   "link": "https://arxiv.org/abs/2611.17621",
+   "source": "arXiv cs.AI",
+   "summary": "Kernel optimization is essential for efficient large language model (LLM) training and inference on Ascend NPUs. Existing Ascend kernel benchmarks primarily focus on kernel generation, with less emphasis on the ability of agents to optimize existing implementations under input configurations drawn from real workloads. To address this requirement, we introduce AscendGYM, a benchmark whose initial suite comprises 48 kernels across three difficulty levels. Each kernel is paired with test cases whose data types and tensor shapes are collected from real-world training and inference tasks. Consequently, performance improvements on AscendGYM map directly to the corresponding workloads. In terms of usability, two evaluation modes are supported in AscendGYM: model evaluation and model-harness evaluation. The kernel optimization capabilities of both trained models and custom agents are allowed to be measured. It provides a complete execution environment that closely reproduces how Ascend kernels are invoked in practical pipelines. For model evaluation, it additionally includes a built-in harness equipped with search orchestration and experience accumulation. Finally, we propose a new metric, the Speedup-Token Score (STS), which quantifies performance gains relative to token cost. By jointly considering speedup and cost, STS enables the assessment of practical kernel optimization capability of a model or harness under an acceptable budget. AscendGYM is available at https://github.com/SLAI-AITP/AscendGYM.",
+   "zh": "面向真实负载的昇腾NPU内核优化基准，考察智能体优化已有实现而非仅生成。",
+   "zh_title": "AscendGYM：昇腾NPU内核优化基准",
+   "short": "AscendGYM 昇腾内核优化基准",
+   "why": "填补昇腾内核优化评测空白",
+   "weight": 0.9,
+   "published_ts": 1794805200.0
+  },
+  {
+   "title": "Anthropic Outlines its AI-Powered Code Review Process for Claude Code",
+   "link": "https://www.infoq.com/news/2026/11/claude-code-review/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Anthropic has outlined how the Claude Code team handles code reviews as AI agents increasingly contribute to its codebase. The approach relies on multiple layers of automated verification, AI-powered reviews, and risk-based human approval, aiming to reduce manual review time without increasing regressions or production incidents. By Robert Krzaczyński",
+   "zh": "Claude Code团队用多层自动验证、AI审查和基于风险的人工审批处理代码评审。",
+   "zh_title": "Anthropic公开Claude Code代码审查流程",
+   "short": "Anthropic Claude Code 审查流程",
+   "why": "AI代理贡献代码时的评审范式参考",
+   "weight": 1.0,
+   "published_ts": 1794736500.0
+  },
+  {
+   "title": "datasette-apps 0.4a0",
+   "link": "https://simonwillison.net/2026/Nov/15/datasette-apps/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-apps 0.4a0 \n Datasette Apps are sandboxed HTML and JavaScript applications that live inside Datasette - think Claude Artifacts, but these ones can run SQL queries against your data. \n 0.4a0 adds support for linking: you can link to an app with #fragments in the URL and the app can see and use those, plus supported URL schemes are reported back to Datasette Agent so it can help write apps that link to each other. \n This means you can have e.g. an app that shows details about a specific record, and a completely separate app that searches those records and links to their representations in the first app. \n \n \n Tags: datasette-agent , datasette-apps , datasette , urls",
+   "zh": "沙箱HTML/JS应用支持URL片段链接，并向Datasette Agent报告支持的URL方案。",
+   "zh_title": "datasette-apps 0.4a0发布",
+   "short": "datasette-apps 0.4a0 支持链接",
+   "why": "可对数据跑SQL的Artifacts式应用",
+   "weight": 1.1,
+   "published_ts": 1794715365.0
+  },
+  {
+   "title": "datasette-maplibre 0.1a0",
+   "link": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-maplibre 0.1a0 \n The first new Datasette geospatial plugin in quite a while! This one combines the excellent MapLibre GL library with OpenFreeMap , the free vector map server operated by Zsolt Ero (you should sponsor Zsolt on GitHub .) \n I built most of this with a single prompt to Claude Fable 5.2: \n \n Look at datasette-cluster-map and datasette-leaflet-geojson plugins, then look at ~/dev/tools/openfreemap-demo.html - then build a brand new Datasette plugin that uses maplibreGL and openfreemap and combines the features of those other two plugins - but be creative and think outside the box for other useful features the plugin might have \n \n \"Be creative and think outside the box\" resulted in a few neat ideas - my favorite is that it displays SVG previews of GeoJSON shapes, then loads a WebGL preview only when they scroll into view. \n I also had Claude build a comprehensive demo which works in the latest Datasette Lite, so you can visit this link to load the plugin and a demo database in your browser via Pyodide and WebAssembly. \n I like this demo page showing both GeoJSON shapes and lat/lon points on the same map: \n \n \n \n Tags: visualization , generative-ai , datasette-lite , claude-mythos-fable , ai , llms , geospatial , openstreetmap , datasette",
+   "zh": "新地理插件结合MapLibre GL与免费矢量地图服务OpenFreeMap，多由单次提示生成。",
+   "zh_title": "datasette-maplibre 0.1a0发布",
+   "short": "datasette-maplibre 0.1a0 地图插件",
+   "why": "Datasette地理可视化能力回归",
+   "weight": 1.1,
+   "published_ts": 1794787116.0
+  },
+  {
+   "title": "A step toward defining the Standard Model on a lattice",
+   "link": "https://openai.com/index/step-toward-defining-the-standard-model",
+   "source": "OpenAI",
+   "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
+   "zh": "探索标准模型的候选格点非微扰定义，GPT-6 Astra协助将想法转为详细证明。",
+   "zh_title": "格点标准模型的非微扰定义探索",
+   "short": "GPT-6 Astra 格点标准模型",
+   "why": "AI辅助理论物理证明的案例",
+   "weight": 1.3,
+   "published_ts": 1794780001.0
+  },
+  {
+   "title": "Uber's Secure AI Framework Governs Autonomous AI Agents across Their Lifecycle",
+   "link": "https://www.infoq.com/news/2026/11/uber-secure-ai-framework/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "In a recent article, Uber Engineering highlights the limitations of traditional identity and API controls in securing AI agents that dynamically reason over external content and take real-world actions. Uber developed a framework to determine whether an agent's action is appropriate given the user's request, the agent's intended purpose, its permissions, and the context of the interaction. By Sergio De Simone",
+   "zh": "Uber提出框架，结合用户请求、代理目的、权限与上下文判断代理动作是否恰当。",
+   "zh_title": "Uber安全框架治理自主AI代理",
+   "short": "Uber 自主AI代理安全框架",
+   "why": "传统身份与API控制不足以约束代理",
+   "weight": 1.0,
+   "published_ts": 1794772800.0
+  },
+  {
+   "title": "AI Day Seoul Brings Together Korea’s Industry Leaders, Startups and Developer Communities",
+   "link": "https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/",
+   "source": "NVIDIA",
+   "summary": "Over two days at COEX, more than 2,000 attendees converged for AI Day Seoul, bringing together Korea’s industry leaders, startups and developer communities advancing physical AI and AI agents. At the plenary sessions, Deepu Talla, vice president of robotics and edge AI at NVIDIA, said Korea is “punching above its weight,” with Doosan Robotics, Hyundai […]",
+   "zh": "两天活动超2000人，韩国企业与开发者社区聚焦物理AI和AI代理。",
+   "zh_title": "NVIDIA首尔AI日聚焦物理AI与代理",
+   "short": "NVIDIA AI Day Seoul 2000人",
+   "why": "反映韩国物理AI生态动向",
+   "weight": 0.9,
+   "published_ts": 1794787228.0
+  }
+ ]
+}
