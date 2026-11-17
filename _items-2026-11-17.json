@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-17 16:16",
+ "overview": "NVIDIA Vera Rubin首秀横扫MLPerf，AWS开源本地云模拟器，Airbnb用合成数据训练搜索",
+ "items": [
+  {
+   "title": "Aligning AI Teams",
+   "link": "https://arxiv.org/abs/2611.17820",
+   "source": "arXiv cs.AI",
+   "summary": "Previous work has shown that alignment training on individual LLM agents can fail to transfer to multi-agent settings. We investigate the underlying mechanisms for this failure, and explore interventions to preserve alignment transfer to multi-agent LLM teams. We focus on two software-engineering tasks (sepsis triage, a news recommender) and ten consulting-proposal generation tasks. We present four findings: (1) The single-vs-team safety gap does not show a clear trend with more capable models. We find that Anthropic's Mythos Preview shows the largest gap on one of our tasks but the smallest on another; (2) Many natural interventions, such as having agents critique each other's work or coordinate in a group chat, do not reliably bring agent teams back to single-agent alignment behavior; (3) diffusion of responsibility substantially accounts for the safety gap: agents in teams are less likely to proactively check for system-level safety failures and more likely to ignore, rationalize, or deflect responsibility for issues when they arise; (4) having a designated safety lead agent ensure system-level safety, and having a coordinator agent publish a safety specifications document are effective at restoring single-agent alignment. We also release magelab, a multi-agent LLM orchestration and experimentation framework. Our findings can help practitioners design agent teams that successfully preserve the behaviors expected of aligned individual agents.",
+   "zh": "分析单智能体对齐训练为何难迁移到多智能体，并提出干预方法",
+   "zh_title": "多智能体团队的对齐迁移机制研究",
+   "short": "多智能体对齐迁移失效机制",
+   "why": "多智能体安全对齐的关键问题",
+   "weight": 0.9,
+   "published_ts": 1794891600.0
+  },
+  {
+   "title": "AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs",
+   "link": "https://arxiv.org/abs/2611.17621",
+   "source": "arXiv cs.AI",
+   "summary": "Kernel optimization is essential for efficient large language model (LLM) training and inference on Ascend NPUs. Existing Ascend kernel benchmarks primarily focus on kernel generation, with less emphasis on the ability of agents to optimize existing implementations under input configurations drawn from real workloads. To address this requirement, we introduce AscendGYM, a benchmark whose initial suite comprises 48 kernels across three difficulty levels. Each kernel is paired with test cases whose data types and tensor shapes are collected from real-world training and inference tasks. Consequently, performance improvements on AscendGYM map directly to the corresponding workloads. In terms of usability, two evaluation modes are supported in AscendGYM: model evaluation and model-harness evaluation. The kernel optimization capabilities of both trained models and custom agents are allowed to be measured. It provides a complete execution environment that closely reproduces how Ascend kernels are invoked in practical pipelines. For model evaluation, it additionally includes a built-in harness equipped with search orchestration and experience accumulation. Finally, we propose a new metric, the Speedup-Token Score (STS), which quantifies performance gains relative to token cost. By jointly considering speedup and cost, STS enables the assessment of practical kernel optimization capability of a model or harness under an acceptable budget. AscendGYM is available at https://github.com/SLAI-AITP/AscendGYM.",
+   "zh": "面向真实负载的昇腾内核优化基准，考察智能体优化现有实现的能力",
+   "zh_title": "AscendGYM：昇腾NPU内核优化基准",
+   "short": "AscendGYM昇腾内核优化基准",
+   "why": "填补昇腾内核优化评测空白",
+   "weight": 0.9,
+   "published_ts": 1794891600.0
+  },
+  {
+   "title": "NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance",
+   "link": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/",
+   "source": "NVIDIA",
+   "summary": "In its MLPerf benchmarks debut, with results released today, the NVIDIA Vera Rubin platform delivers leading performance across training, post-training and agentic inference. NVIDIA swept every MLPerf Training v6.1 benchmark and, in its first MLPerf Endpoints submission, delivered more than 10x generational gains in throughput per watt for agentic AI — measuring how much agentic […]",
+   "zh": "Vera Rubin在训练、后训练与智能体推理全面领先，端点测试能效提升超10倍",
+   "zh_title": "NVIDIA Vera Rubin首秀横扫MLPerf",
+   "short": "Vera Rubin横扫MLPerf",
+   "why": "新一代平台性能基准参考",
+   "weight": 0.9,
+   "published_ts": 1794844825.0
+  },
+  {
+   "title": "Our first phase of embedded assessments",
+   "link": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+   "source": "OpenAI",
+   "summary": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
+   "zh": "联合Apollo、METR、Transluce、Goodfire独立评估模型对齐、防护与监控",
+   "zh_title": "OpenAI启动首阶段嵌入式评估",
+   "short": "OpenAI嵌入式独立评估",
+   "why": "第三方对齐评估机制动向",
+   "weight": 1.3,
+   "published_ts": 1794816000.0
+  },
+  {
+   "title": "llm 0.37.3",
+   "link": "https://simonwillison.net/2026/Nov/16/llm/",
+   "source": "Simon Willison",
+   "summary": "Release: llm 0.37.3 \n A bug fix release for LLM , mainly to cover a problem with the most recent Homebrew package of the software. \n Homebrew now ships the latest SQLite, 3.54.1 , which includes a fix that broke LLM's logging code . \n Short version: in SQLite 3.54.0 the following SQL: \n select json_object('a', (select json_array(1)))\n \n Returns this: \n {\"a\":[1]}\n \n But in 3.54.1 the same query returns this: \n {\"a\":\"[1]\"}\n \n According to D. Richard Hipp : \n \n That was a bug fix. Per the documentation, (SELECT json_array(...)) returns SQL text, not JSON. Hence the 3.54.1 behavior is correct and 3.54.0 was a bug. \n \n The workaround looks like this: \n select json_object('a', json((select json_array(1))))\n \n \n \n Tags: llm , webassembly , sqlite , generative-ai , ai , llms , d-richard-hipp",
+   "zh": "修复Homebrew新版SQLite 3.54.1导致日志代码失效的bug",
+   "zh_title": "llm 0.37.3 修复SQLite兼容问题",
+   "short": "llm 0.37.3修SQLite bug",
+   "why": "常用CLI工具升级提示",
+   "weight": 1.1,
+   "published_ts": 1794873446.0
+  },
+  {
+   "title": "AWS Open-Sources Emulator for Local Testing of 200+ Services by Coding Agents",
+   "link": "https://www.infoq.com/news/2026/11/aws-emulator-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "AWS Emulator is a generally available local HTTPS endpoint, generated from public Smithy API models, that lets developers and coding agents test against more than 200 AWS services without an account, with published fidelity scores and documented limits around IAM, regions, and in-memory state. By Daniel Dominguez",
+   "zh": "基于Smithy模型生成的本地HTTPS端点，无需账号即可测试200多个AWS服务",
+   "zh_title": "AWS开源200+服务本地模拟器",
+   "short": "AWS开源本地服务模拟器",
+   "why": "便于编码智能体本地测试",
+   "weight": 1.0,
+   "published_ts": 1794825600.0
+  },
+  {
+   "title": "Airbnb Introduces CASTLE for Training Natural Language Search Models with Synthetic Data",
+   "link": "https://www.infoq.com/news/2026/11/airbnb-castle/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Airbnb researchers have introduced CASTLE, a framework designed to address the cold-start problem in natural language search. The approach uses de-identified booking sessions and large language models (LLMs) to jointly generate synthetic search queries and relevance labels, enabling model training before sufficient real search traffic is available. By Robert Krzaczyński",
+   "zh": "用脱敏预订会话与LLM联合生成合成查询和相关性标签，解决冷启动",
+   "zh_title": "Airbnb推出CASTLE合成搜索数据框架",
+   "short": "CASTLE合成搜索数据",
+   "why": "冷启动训练数据生成思路",
+   "weight": 1.0,
+   "published_ts": 1794831900.0
+  },
+  {
+   "title": "Science at the Frontier: How scientists use ChatGPT",
+   "link": "https://openai.com/index/science-at-the-frontier",
+   "source": "OpenAI",
+   "summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
+   "zh": "调研超1800名科学家在科研流程中的使用方式、效率与发现预期",
+   "zh_title": "1800名科学家如何使用ChatGPT",
+   "short": "1800名科学家用ChatGPT",
+   "why": "科研场景LLM应用实况",
+   "weight": 1.3,
+   "published_ts": 1794830400.0
+  }
+ ]
+}
