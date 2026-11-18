@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-18 16:18",
+ "overview": "OpenAI发布GPT-6.2双模型，Google Spark更名Tasks免费开放",
+ "items": [
+  {
+   "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+   "link": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+   "source": "Simon Willison",
+   "summary": "GPT‑6.2 Astra and GPT‑6.2 Sol \nOpenAI: \n \n We’re introducing GPT‑6.2 Astra, our new frontier model for your hardest projects, and GPT‑6.2 Sol, our efficient, versatile model for everyday work. \n \n They're available in the API as gpt-6.2-astra and gpt-6.2-sol . I shipped LLM 0.38 with support for the new models. \n 6.2 Astra is 80% of the price of 6 Astra - $8/MTok input and $40/MTok output, the same price as Claude Fable 5.2 (which was also 80% of its predecessor). 6 Astra and Fable 5 were both $10/$50. The cached price is an even bigger discount - $0.40/million compared to $1/million for the older model. This is great news for longer running agentic sessions. \n GPT-6.2 Sol is the same $2/$10 price as 6.1 Sol and 6 Sol - which are half the price of GPT-5.6 Sol ($4/$20). \n Here are the pelicans for GPT-6.2 Sol and for GPT-6.2 Astra . The 6.2 Astra max pelican looks like this: \n \n I have a full comparison grid here , but here's how the high/xhigh/max pelicans compare with the previous Sol and Astra releases: \n \n I also ran my most recent benchmark prompt against the two models, using \"Ultra' effort levels in the Codex CLI: \n \n Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and stomps around manhattan and queens and Brooklyn, use openstreetmap mapping data \n \n Here's Sol and here's Astra . Neither of them did a good enough job of morphing Yonkers into a big mech, at least in comparison to Claude Fable 5.2 and Gemini 4 Carbon . \n This video showing the Astra and Sol animations playing out at the same time: \n \n \n \n\n I created that video using GPT-6.2 Astra (Ultra) in the Codex desktop app by prompting: \n \n https://static.simonwillison.net/static/2026/yonkers-gpt-6.2-astra-ultra/index.html and https://static.simonwillison.net/static/2026/yonkers-gpt-6.2-sol-ultra/index.html are two videos of the same thing by two different models \n I need a video of the first 10 seconds where the top half of the video plays the first and the bottom half plays the second \n I need an overlaid label of \"GPT-6.2 Astra\" on the top half and \"GPT-6.2 Sol\" on the bottom half. These labels should be tastefully positioned. \n Make the video square and 2000x2000 pixels \n \n Then later: \n \n OK make it 20s \n \n Here's the exported transcript . \n The buzz around these new models is mixed at the moment. Astra 6.2 isn't scoring quite as high as Fable 5.2 on various benchmarks, and I've seen a few complaints that its communication style can be confusing. Theo Browne's review (in the form of a feedback letter he sent OpenAI during pre-release) has this useful example: \n \n When this model is working on long tasks, it can pull in a lot of subagents and manage them pretty well. It will then proceed to randomly ask you some weird internal implementation detail bullshit that you could not under any earthly circumstance understand, much less have input on . \n I sent \"/goal make a new level for Outer Wilds\". 2 hours in, it's \"blocked\" because it wanted to ask me \"does r24's reviewer write it's clips to 24_g521.mp4 or 24_p11.mp4?\" \n \n\n Tags: ai , openai , generative-ai , llms , llm-pricing , pelican-riding-a-bicycle , llm-release , theo-browne , gpt , yonkers-rising",
+   "zh": "Astra面向高难任务，Sol主打日常高效，API名gpt-6.2-astra/sol，LLM 0.38已支持",
+   "zh_title": "OpenAI发布GPT-6.2 Astra与Sol",
+   "short": "GPT-6.2 Astra/Sol，$8/$40每MTok",
+   "why": "新前沿模型定价降20%，开发者可立即接入",
+   "weight": 1.1,
+   "published_ts": 1794955132.0
+  },
+  {
+   "title": "CueClash: Frontier Vision-Language Models Judge 3-D Relations Close to the Picture Plane",
+   "link": "https://arxiv.org/abs/2611.22180",
+   "source": "arXiv cs.AI",
+   "summary": "A vision-language model (VLM) can judge 3-D relations from the picture or from the ground layout. In photographs the two usually agree. We separate them with CueClash, rendered scenes in which the 2-D cue for each of five relations is right on exactly half the statements. The shortcut gap is accuracy when the cue is right minus accuracy when it is wrong. For Claude Opus 5.5, GPT-5.5 and Gemini 3.6 Flash at low reasoning effort it is +18 to +37 percentage points. It is +7 to +29 without two relations whose cue-wrong items are confounded with borderline cases or occlusion. Given ground coordinates and each relation's definition, they answer 99 to 100% correctly. Pixel measurements with camera depths remove most of the gap for objects fitting through openings. The failure lies in the step from the picture to the layout. The maps that the models draw of the scene from above mostly keep the depth order but, like the picture, shorten depth. GPT-5.5's maps stay close to a copy of the picture. Opus 5.5's and Gemini's maps undo about 0.6 of this shortening. Gemini's then shrink all depths by a further uniform factor. Opus 5.5 follows the picture mainly on fits, and its maps correct depth about as much as human observers of real scenes do. The three models also lose accuracy on CV-Bench photographs where a reliable 2-D cue misleads. In two open models the layout information reaches the language model, but their maps lose much of it.",
+   "zh": "用渲染场景分离2D线索与真实布局，测Claude、GPT、Gemini的捷径差距",
+   "zh_title": "CueClash：VLM判断3D关系依赖2D线索",
+   "short": "CueClash测VLM 3D关系捷径",
+   "why": "揭示VLM空间推理的评测盲区",
+   "weight": 0.9,
+   "published_ts": 1794978000.0
+  },
+  {
+   "title": "How Web Research Agents Interpret User Priorities",
+   "link": "https://arxiv.org/abs/2611.22989",
+   "source": "arXiv cs.AI",
+   "summary": "Web research agents gather information online and write cited reports, including financial analysis. Users can state a priority to guide this research, but a priority may not say how to judge the options, leaving the agent to choose the criteria. We examine how two such agents, built on OpenAI and Anthropic models, interpret a stated priority. In 36 runs, the agents compared Microsoft and Alphabet as businesses. Prompts asked for special attention to growth or resilience, or gave no priority. We analyzed reports, searches, returned sources and cited sources. Of the 24 reports given a priority, 21 focused on it, but their criteria varied. Under the growth priority, OpenAI reports that ranked the companies accounted for risk or predictability and favored Microsoft, while the Anthropic ones judged growth by its pace and favored Alphabet. Under the resilience priority, reports used partly different criteria, and most named Microsoft as the more resilient company. Of the search and source measures tested, only the Anthropic agent's search wording differed detectably by condition. These findings suggest evaluations should examine the criteria behind a report's judgements, not only its focus or accuracy. Interfaces could let users see and adjust those criteria.",
+   "zh": "36次运行中，基于OpenAI与Anthropic的Agent自行选择评判标准，未必贴合用户意图",
+   "zh_title": "网页研究Agent如何理解用户优先级",
+   "short": "36次运行测两Agent优先级理解",
+   "why": "暴露Agent自主选标准的偏差风险",
+   "weight": 0.9,
+   "published_ts": 1794978000.0
+  },
+  {
+   "title": "Google’s Spark AI agent becomes ‘Tasks’ — and now it’s free",
+   "link": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+   "source": "The Verge AI",
+   "summary": "Google is rebranding its Spark AI agent as \"Tasks\" and making it free to use. The feature, which is powered by Google's new Gemini 4 Hydrogen AI model, can do things like create meal plans, manage your calendar, and dig through your emails to find recurring expenses you might not need. Users in the US […]",
+   "zh": "由Gemini 4 Hydrogen驱动，可做餐单、管日历、翻邮件找重复支出，美国用户可用",
+   "zh_title": "Google Spark更名Tasks并免费",
+   "short": "Gemini 4 Hydrogen驱动Tasks免费",
+   "why": "消费级Agent免费化，竞争加剧",
+   "weight": 0.7,
+   "published_ts": 1794941934.0
+  },
+  {
+   "title": "Proton’s Lumo, a privacy-focused alternative to ChatGPT and Claude, arrives on desktop",
+   "link": "https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/",
+   "source": "TechCrunch AI",
+   "summary": "Proton's new Lumo Desktop app for Windows, Mac, and Linux lets users automate tasks across files and connected apps, with granular controls over what its AI can access.",
+   "zh": "Windows/Mac/Linux版可跨文件与已连应用自动化任务，并细粒度控制AI访问权限",
+   "zh_title": "Proton Lumo隐私AI登陆桌面端",
+   "short": "Lumo桌面版，细粒度权限控制",
+   "why": "隐私优先的ChatGPT替代品扩展形态",
+   "weight": 0.7,
+   "published_ts": 1794936745.0
+  },
+  {
+   "title": "External sandboxes for coding agents",
+   "link": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+   "source": "Simon Willison",
+   "summary": "External sandboxes for coding agents \nI've been exploring new ways to sandbox code that is executed by agents, with a focus on making it safer to try out local models without worrying that a mistake or prompt injection attack might cause them to take damaging actions on a machine. \n I worked on this project with Prime Radiant , the AI research lab behind Superpowers and other projects . \n My post on the Prime Radiant blog introduces the external sandbox pattern, where code executed by the agent runs inside a dedicated sandbox while the agent itself lives outside of that sandbox. \n To demonstrate this pattern we've released three sandbox server implementations: \n \n external-sandbox-v86 runs a Node.js server which then uses v86 to run Alpine Linux inside WebAssembly. \n external-sandbox-container is a Python web server which runs the sandbox in Alpine Linux inside an Apple Containers instance. \n external-sandbox-quicksand is another Python web server, this time using Microsoft's Quicksand sandboxing library, which bundles QEMU and Alpine Linux in a Python package! \n \n Each of these implementations offers the same localhost API. You can then configure Pi, Claude Code, or Codex to send API calls to that sandbox any time they want to execute code. \n The sandboxes also include an optional HTTP/HTTPS allow-list proxy, so you can control exactly which hosts your agent's code is allowed to communicate with - plus a credential replacement mechanism to make authenticated API calls without sharing a secret with the agent. Here's the UI you can use to reconfigure that proxy while the sandbox is still running: \n \n I continue to be fascinated by the challenge of safely running untrusted code. This external sandbox pattern provides a neat way to experiment with different approaches.\n\n Tags: sandboxing , security , ai , webassembly , generative-ai , llms , coding-agents , claude-code , codex , pi",
+   "zh": "Simon Willison与Prime Radiant合作探索沙箱执行Agent代码，安全试用本地模型防提示注入",
+   "zh_title": "为编码Agent构建外部沙箱",
+   "short": "外部沙箱安全跑Agent代码",
+   "why": "降低本地模型试用的破坏性风险",
+   "weight": 1.1,
+   "published_ts": 1794955949.0
+  },
+  {
+   "title": "How Shopify Orchestrates AI-Powered Mobile App Development Without Overloading Developers' Machines",
+   "link": "https://www.infoq.com/news/2026/11/shopify-remote-ai-dev/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "To prevent AI development workflows from exhausting developer machines' resources, Shopify built Remote Dev, a remote mobile development environment that enables AI agents to independently build, test and maintain iOS and Android applications and in parallel. By Sergio De Simone",
+   "zh": "Remote Dev让AI Agent并行独立构建、测试、维护iOS与Android应用，不占开发者本机资源",
+   "zh_title": "Shopify用远程环境编排AI移动开发",
+   "short": "Shopify Remote Dev并行跑Agent",
+   "why": "解决Agent工作流耗尽本地资源问题",
+   "weight": 1.0,
+   "published_ts": 1794949200.0
+  },
+  {
+   "title": "Datadog Brings Production Experimentation to AI Agent Observability",
+   "link": "https://www.infoq.com/news/2026/11/datadog-ai-agent-observability/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Datadog is extending its Agent Observability platform with Online Experiments, allowing engineering teams to compare AI agent versions against real production traffic rather than relying exclusively on predefined evaluation datasets. By Craig Risi",
+   "zh": "Online Experiments用真实生产流量对比Agent版本，不再只依赖预设评测数据集",
+   "zh_title": "Datadog为Agent可观测性加在线实验",
+   "short": "Datadog在线实验对比Agent版本",
+   "why": "生产流量评测更贴近真实表现",
+   "weight": 1.0,
+   "published_ts": 1794916800.0
+  }
+ ]
+}
