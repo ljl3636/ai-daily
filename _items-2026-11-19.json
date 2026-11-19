@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-19 16:18",
+ "overview": "Gemini 4 Neon发布、OpenAI谈AI研究加速与前沿风险管理、蛋白质结构基准揭示Agent几何短板",
+ "items": [
+  {
+   "title": "automodel: A Skill for Agentic Model Discovery",
+   "link": "https://arxiv.org/abs/2611.24347",
+   "source": "arXiv cs.AI",
+   "summary": "The search for better models, whether expressed as analytical equations or neural architectures, has increasingly shifted from manual design toward data-driven automation. While a multitude of algorithms exist, ranging from exhaustive search to AlphaEvolve, recent advances in general-purpose coding agents such as Claude Code and OpenAI Codex raise the question: could providing such systems with a \"model discovery recipe\" be enough to discover or improve models? We present automodel, an agent skill for general model discovery. With case studies in astrophysics, cardiovascular dynamics, precision agriculture, traffic flow, and vehicle tire dynamics, we show how commercial agents equipped with automodel can successfully identify novel and scientifically-relevant models. Our findings suggest that encoding model-discovery methodology as a portable agent skill can provide a simple, interactive, powerful and broadly applicable alternative to domain-specific automated discovery pipelines. The skill is available at: https://github.com/unlayer-ai/automodel.",
+   "zh": "提出automodel技能，让Claude Code等通用编码Agent自动搜索方程与神经架构。",
+   "zh_title": "automodel：让编码Agent自动搜索模型",
+   "short": "automodel：Agent自动搜模型",
+   "why": "探索编码Agent做模型发现的新范式",
+   "weight": 0.9,
+   "published_ts": 1795064400.0
+  },
+  {
+   "title": "ProteinGeoBench: Frontier Structural-Biology Agents Are Fluent at Lookup but Lost in Geometry",
+   "link": "https://arxiv.org/abs/2610.26829",
+   "source": "arXiv cs.AI",
+   "summary": "ProteinGeoBench is a set of 131 tasks that give an agent protein structure files and ask it to look up recorded facts, check sequences, calculate geometry from atom coordinates or reason about structures. We ran four frontier models on every task several times (4,249 runs) and 26 models on a subset. A single overall score hides two different skills. Three of the four frontier models are best at looking up facts and worst at calculating from coordinates: Claude Opus 5 scores 0.907 on lookup and 0.716 on calculation. Gemini 3.1 Pro is the exception. Geometry is overrepresented among the hardest tasks. Half of the twelve tasks that all four models fail are calculations, although calculations are a fifth of the suite, and eight of the twelve were solved by none of the 26 models. The three leading models are within 0.031 of one another, too close to order, and with one run per task a different model ranks first in 24% of bootstrap resamples. Reports should therefore give scores by task type and the number of runs per task. They should also state the agent harness, the software that runs the model, and its network access, because both change scores. On a 15-task subset, blocking eight structural databases lowered scores, and removing network access lowered them more. Replacing our harness with each provider's own command-line agent moved scores by up to 0.09 in either direction. Across the 26 models, those that scored higher on the other tasks also scored higher on calculation.",
+   "zh": "131个蛋白质结构任务测30个模型，前沿模型查事实强但坐标几何推理弱。",
+   "zh_title": "ProteinGeoBench：Agent查表强、几何弱",
+   "short": "ProteinGeoBench：几何推理是短板",
+   "why": "暴露结构生物学Agent能力断层",
+   "weight": 0.9,
+   "published_ts": 1795064400.0
+  },
+  {
+   "title": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
+   "link": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
+   "source": "Latent Space",
+   "summary": "November 18, 2026 — Google’s middle tier scores 61 on the Intelligence Index. Plus, Anthropic prices its IPO at $83.",
+   "zh": "谷歌中端Gemini 4 Neon智能指数61分，Anthropic IPO定价83美元。",
+   "zh_title": "Gemini 4 Neon：谷歌中端新模型",
+   "short": "Gemini 4 Neon 智能指数61",
+   "why": "中端模型竞争与定价格局变化",
+   "weight": 1.0,
+   "published_ts": 1795072063.0
+  },
+  {
+   "title": "llm-gemini 0.38",
+   "link": "https://simonwillison.net/2026/Nov/18/llm-gemini/",
+   "source": "Simon Willison",
+   "summary": "Release: llm-gemini 0.38 \n Today Google introduced Gemini 4 Neon . I wrote recently about how confusing the pricing for the Gemini 4 series was - Neon has somehow made this even worse. \n Previously the Gemini 4 lineup was Hydrogen, Argon, and Carbon - where Argon and Carbon were the same price , and Hydrogen was 3/4 of that price now but will be 1/4 of that price when the other two double an 1st December once their initial discount pricing expires. \n The Neon announcement pretends that Argon doesn't exist. Here's their new image explaining the model line-up: \n \n So the lineup now, from most to least expensive, is Carbon, Neon, Hydrogen. \n Except Carbon is currently half price, so right now Neon ($3/million input, $15/million output) is the most expensive of the three - then Carbon ($2/$10), then Hydrogen ($1.50/$7.50). I guess this will make more sense when Carbon doubles to $4/$20 on December 1st. \n I ran some pelicans through the three reasoning levels for Neon - low, medium, high. \n I dropped Argon from my Gemini 4 comparison grid - here's the new Gemini 4 lineup, where the Neon pelicans do look better than Hydrogen and worse than Carbon: \n \n As I've done with several recent models , I also fired the following prompt against Gemini 4 Neon on \"extra\" effort level in Google Antigravity: \n \n Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and stomps around manhattan and queens and Brooklyn, use openstreetmap mapping data \n \n Here's the result . \n \n \n \n \n \n Tags: yonkers-rising , gemini , llm , pelican-riding-a-bicycle , ai , llms , llm-release , google , generative-ai",
+   "zh": "Simon Willison的llm-gemini插件升0.38支持Neon，并吐槽其定价更混乱。",
+   "zh_title": "llm-gemini 0.38 支持Gemini 4 Neon",
+   "short": "llm-gemini 0.38 支持Neon",
+   "why": "CLI调用Gemini新模型即刻可用",
+   "weight": 1.1,
+   "published_ts": 1795046360.0
+  },
+  {
+   "title": "Remember the frontier AI pause? Chip companies don’t either",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1036549/nvidia-amd-earnings-fall-2026-chips-pause-frontier-models",
+   "source": "The Verge AI",
+   "summary": "This summer, OpenAI paused its largest planned frontier training run after its AI agents accidentally hacked Hugging Face and early evidence suggested that its next model could independently find and exploit security flaws. In September, Anthropic CEO Dario Amodei called for slowing advances in the most powerful AI models, warning that they could be used […]",
+   "zh": "回顾OpenAI因Agent事故暂停训练、Anthropic呼吁放缓，芯片业却继续扩张。",
+   "zh_title": "前沿AI暂停？芯片公司已不记得",
+   "short": "前沿暂停呼声 vs 芯片扩张",
+   "why": "安全担忧与算力竞赛的现实落差",
+   "weight": 0.7,
+   "published_ts": 1795019130.0
+  },
+  {
+   "title": "Research acceleration: The jagged frontier",
+   "link": "https://openai.com/index/research-acceleration-jagged-frontier",
+   "source": "OpenAI",
+   "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+   "zh": "OpenAI量化编码Agent对AI研究的加速，指出能力参差及其对递归自我改进的启示。",
+   "zh_title": "OpenAI：编码Agent加速AI研究不均衡",
+   "short": "编码Agent加速研究但不均衡",
+   "why": "关乎递归自我改进的早期信号",
+   "weight": 1.3,
+   "published_ts": 1794988800.0
+  },
+  {
+   "title": "Managing frontier AI risk: From training to deployment",
+   "link": "https://openai.com/index/managing-frontier-ai-risk",
+   "source": "OpenAI",
+   "summary": "OpenAI explains how it manages frontier AI risk from training through deployment with model alignment, sandboxing, blocking safeguards, and monitoring.",
+   "zh": "介绍通过模型对齐、沙箱、阻断防护与监控管理前沿AI全生命周期风险。",
+   "zh_title": "OpenAI：前沿AI风险从训练到部署",
+   "short": "对齐+沙箱+监控管风险",
+   "why": "了解OpenAI部署侧安全机制",
+   "weight": 1.3,
+   "published_ts": 1794981600.0
+  },
+  {
+   "title": "datasette-arrows 0.1a0",
+   "link": "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-arrows 0.1a0 \n Datasette 1.0a43 added the ability for plugins to implement streaming export formats. Datasette core supports streaming CSV and TSV - you can export millions of lines of data from a table without needing to load it all into memory, because those two file formats support streaming data in chunks. The register_output_renderer() plugin hook can now be used to implement the same pattern for other formats. \n I've learned never to release a new plugin feature without accompanying it with a plugin that uses it. \n Claude Fable 5.2 suggested the Apache Arrow streaming format as a good option, and built this plugin in almost a single shot. \n Add the plugin to Datasette ( datasette install datasette-arrows ) and the export dialog gains this new Arrow option: \n \n This screenshot is from Datasette's main branch - the most recent release doesn't yet group streaming formats such as Arrow with the TSV and CSV in the \"All rows in this table\" section, but that's coming in the next alpha release. \n \n \n Tags: datasette , projects",
+   "zh": "Datasette 1.0a43支持插件实现流式导出格式，新插件演示Arrow流式输出。",
+   "zh_title": "datasette-arrows 0.1a0 发布",
+   "short": "datasette-arrows 流式导出",
+   "why": "百万行数据可流式导出不占内存",
+   "weight": 1.1,
+   "published_ts": 1795021799.0
+  }
+ ]
+}
