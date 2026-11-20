@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-20 16:17",
+ "overview": "Gemini API 新增工具检索，AWS 发布由 agent 编写的本地模拟器，多个 agent 评测基准上线。",
+ "items": [
+  {
+   "title": "How to \"train\" a surgeon? Benchmarking generalist agents in surgical scene understanding",
+   "link": "https://arxiv.org/abs/2611.11437",
+   "source": "arXiv cs.AI",
+   "summary": "Evaluating general-purpose multimodal large language models (MLLMs) for surgical scene understanding remains limited due to scarce surgical data and fragmented evaluation protocols. We address these challenges through a two-stage evaluation framework for surgical scene understanding. In Stage I, we introduce SurgKnowBench, a diagnostic benchmark that harmonizes public surgical datasets across procedures and tasks and evaluates proprietary and open-source MLLMs to map the boundary of pretrained surgical competence. SurgKnowBench reveals that current models retain partial visual priors but remain weak on relational and procedural understanding and workflow assessment. Building on this failure frontier and motivated by the scaffolded nature of surgical training, we introduce SurgAgentGym, an agentic environment where general-purpose MLLM agents can use bounded knowledge search over SurgWiki and general-purpose visual grounding for surgical tasks. SurgAgentGym evaluates whether generalist agents can improve surgical understanding at inference time through tool-mediated evidence use, without additional surgical training. Our results show that agentic inference narrows the gap mainly for perception-heavy tasks, while fine-grained localization and expert-style assessment remain persistent bottlenecks. This opens a path toward future studies of agentic surgical understanding.",
+   "zh": "提出两阶段评测框架，用SurgKnowBench整合公开手术数据集，评测通用多模态大模型。",
+   "zh_title": "SurgKnowBench：手术场景理解基准",
+   "short": "SurgKnowBench 评测手术场景 MLLM",
+   "why": "为医疗多模态模型提供统一评测口径",
+   "weight": 0.9,
+   "published_ts": 1795150800.0
+  },
+  {
+   "title": "MKA: Evaluating Multimodal Knowledge Agents on end-to-end professional tasks",
+   "link": "https://arxiv.org/abs/2611.25228",
+   "source": "arXiv cs.AI",
+   "summary": "We introduce the Multimodal Knowledge Agent (MKA) benchmark, which measures how well autonomous agents perform end-to-end professional knowledge work that depends on visual understanding. Each task requires an agent to extract and combine information from multiple visually dense files, such as CAD blueprints, electronics schematics, radiographs, complex charts and geospatial maps, and to produce a standalone deliverable in .xlsx, .pptx, .pdf, .docx, .html or .png format. Existing benchmarks leave this capability largely untested: removing image-viewing tools leaves Gemini 4 Carbon's score on GDPval unchanged, and single-format evaluations such as GDP.pdf and GDP.xlsx do not require reasoning across files or modalities. MKA contains 200 tasks across 10 economic sectors. Deliverables are graded against expert-weighted rubrics by a sandboxed agentic autorater that agrees with human domain experts on 96.2% of criterion judgments in our expert-graded study (Cohen's $\\kappa = 0.91$), scored by weighted satisfaction rate (WSR) overall and on frontier criteria unsaturated by prior-generation models (Climb-WSR). Across the frontier models we evaluate (Gemini 4 Carbon, Claude Fable 5.2, Claude Opus 5.5, and GPT-6 Astra), Claude Fable 5.2 (56.6% Climb-WSR, 73.3% Overall WSR) and Gemini 4 Carbon (54.3% Climb-WSR, 71.9% Overall WSR) achieve the highest scores, while Carbon uses $5.7\\times$ fewer tokens. Even for the strongest models, Climb-WSR remains below 57%, leaving substantial headroom for multimodal agents.",
+   "zh": "新基准要求agent从CAD图、电路图、影像等多份密集视觉文件中提取并整合信息完成任务。",
+   "zh_title": "MKA：多模态知识Agent专业任务基准",
+   "short": "MKA 基准测多模态知识 agent",
+   "why": "填补端到端专业视觉任务评测空白",
+   "weight": 0.9,
+   "published_ts": 1795150800.0
+  },
+  {
+   "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+   "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+   "source": "OpenAI",
+   "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+   "zh": "介绍Performance Factory：由Codex驱动的工作流自动发现并修复性能问题，维持ChatGPT响应速度。",
+   "zh_title": "OpenAI用Codex工作流保ChatGPT性能",
+   "short": "Codex 工作流自动修性能问题",
+   "why": "展示agent用于生产性能运维的实践",
+   "weight": 1.3,
+   "published_ts": 1795075200.0
+  },
+  {
+   "title": "Apple may be developing its own AI agent that runs your Mac",
+   "link": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+   "source": "TechCrunch AI",
+   "summary": "The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenAI Dots.",
+   "zh": "报道称苹果似在构建可操作Mac的agent，对标Meta Muse、Claude与OpenAI Dots等产品。",
+   "zh_title": "苹果或在开发运行Mac的AI agent",
+   "short": "苹果自研 Mac 端 AI agent",
+   "why": "端侧系统级agent竞争加剧",
+   "weight": 0.7,
+   "published_ts": 1795136161.0
+  },
+  {
+   "title": "Token fraud is here and it’s BAD (YouTube)",
+   "link": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+   "source": "Simon Willison",
+   "summary": "Token fraud is here and it’s BAD (YouTube) \nClaire Vo runs ChatPRD , an AI platform that helps product managers \"turn an idea into a spec\". The product has been live since the GPT-4 era, and Claire has been building it in public for much of that time. \n In this YouTube video (see also the accompanying Twitter post ) Claire describes the flood of token fraud she has seen from groups abusing the product's free trial, sometimes just to get free AI usage but often to resell tokens or run other commercial enterprises on top of the ChatPRD agent. \n \n I am funding a international Roblox and Fortnite map studio. They run a loop of free trials and promo codes and then tunnel to my agent and use it to build Roblox and Fortnite maps. \n \n Apparently one of the common prompts Claire saw running through her agent involved SVGs of pelicans riding bicycles! Presumably the token scammers are using that to help sniff the underlying models - different model families have a definite signature, and I've used it like this in the past to try and guess the identity of stealth preview models on platforms like OpenRouter. \n Claire is winding down her free trials entirely, which sadly looks like the right decision in the face of this abuse.\n\n Tags: youtube , ai , generative-ai , llms , pelican-riding-a-bicycle , ai-misuse",
+   "zh": "Claire Vo讲述ChatPRD遭遇大量token滥用，介绍识别与防范这类欺诈的做法。",
+   "zh_title": "Token欺诈泛滥：ChatPRD的遭遇",
+   "short": "ChatPRD 遭 token 滥用",
+   "why": "提醒开发者关注API用量欺诈风险",
+   "weight": 1.1,
+   "published_ts": 1795142997.0
+  },
+  {
+   "title": "[AINews] Gemini 4 Neon: GDM's Opus/Sol Contender",
+   "link": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender/",
+   "source": "Latent Space",
+   "summary": "November 18, 2026 — Google’s middle tier scores 61 on the Intelligence Index. Plus, Anthropic prices its IPO at $83.",
+   "zh": "AINews称谷歌中端模型Gemini 4 Neon在智能指数得61分，另提Anthropic IPO定价83。",
+   "zh_title": "Gemini 4 Neon：谷歌中端模型登场",
+   "short": "Gemini 4 Neon 智能指数 61",
+   "why": "中端模型能力对标旗舰值得关注",
+   "weight": 1.0,
+   "published_ts": 1795072063.0
+  },
+  {
+   "title": "AWS Releases a Free Local Emulator of AWS Built Entirely by Agents",
+   "link": "https://www.infoq.com/news/2026/11/aws-emulator-local-testing/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "AWS has released AWS Emulator, a free, CC0-licensed local stand-in for more than 200 of its services, generated from its public API models and aimed at the test loops of coding agents. AWS says agents wrote and maintain all of the code and publishes per-release fidelity scores. The docs say it does not evaluate IAM, and practitioners are split on trusting an emulator nobody reviewed. By Steef-Jan Wiggers",
+   "zh": "AWS Emulator以CC0免费提供200多项服务的本地替代，代码全由agent编写并附保真度评分。",
+   "zh_title": "AWS发布全由agent编写的本地模拟器",
+   "short": "AWS 本地模拟器 200+ 服务",
+   "why": "为编码agent测试循环提供离线环境",
+   "weight": 1.0,
+   "published_ts": 1795157580.0
+  },
+  {
+   "title": "Introducing Tool Retrieval in the Gemini API",
+   "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+   "source": "Google AI Blog",
+   "summary": "Gemini spark on a space background",
+   "zh": "Gemini API引入工具检索，让模型在大量工具中按需检索调用，减少上下文占用。",
+   "zh_title": "Gemini API新增工具检索能力",
+   "short": "Gemini API 支持工具检索",
+   "why": "大规模工具调用场景更省token",
+   "weight": 1.0,
+   "published_ts": 1795111200.0
+  }
+ ]
+}

@@ -98,5 +98,10 @@
   "count": 8,
   "overview": "Gemini 4 Neon发布、OpenAI谈AI研究加速与前沿风险管理、蛋白质结构基准揭示Agent几何短板",
   "updated": "2026-11-19 16:18"
+ },
+ "2026-11-20": {
+  "count": 8,
+  "overview": "Gemini API 新增工具检索，AWS 发布由 agent 编写的本地模拟器，多个 agent 评测基准上线。",
+  "updated": "2026-11-20 16:17"
  }
 }
