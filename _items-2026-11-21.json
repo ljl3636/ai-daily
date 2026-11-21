@@ -1,0 +1,52 @@
+{
+ "saved": "2026-11-21 17:09",
+ "overview": "Anthropic数学家称用Claude证明黎曼猜想；AI代理数据采集受限与Token欺诈引关注",
+ "items": [
+  {
+   "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+   "link": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+   "source": "The Verge AI",
+   "summary": "Anthropic mathematician Levent Alpöge claims he has proved the Riemann hypothesis, one of mathematics's most notoriously difficult problems, with the help of Claude, cracking a puzzle that has eluded some of the world's best mathematicians for decades. If verified, it would mark yet another seismic achievement for AI in mathematics and add to the upheaval […]",
+   "zh": "Anthropic数学家Levent Alpöge声称在Claude协助下证明了黎曼猜想，尚待验证。",
+   "zh_title": "Anthropic数学家称借Claude证明黎曼猜想",
+   "short": "Claude助证黎曼猜想",
+   "why": "若属实将是AI数学重大突破",
+   "weight": 0.7,
+   "published_ts": 1795193867.0
+  },
+  {
+   "title": "Token fraud is here and it’s BAD (YouTube)",
+   "link": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+   "source": "Simon Willison",
+   "summary": "Token fraud is here and it’s BAD (YouTube) \nClaire Vo runs ChatPRD , an AI platform that helps product managers \"turn an idea into a spec\". The product has been live since the GPT-4 era, and Claire has been building it in public for much of that time. \n In this YouTube video (see also the accompanying Twitter post ) Claire describes the flood of token fraud she has seen from groups abusing the product's free trial, sometimes just to get free AI usage but often to resell tokens or run other commercial enterprises on top of the ChatPRD agent. \n \n I am funding a international Roblox and Fortnite map studio. They run a loop of free trials and promo codes and then tunnel to my agent and use it to build Roblox and Fortnite maps. \n \n Apparently one of the common prompts Claire saw running through her agent involved SVGs of pelicans riding bicycles! Presumably the token scammers are using that to help sniff the underlying models - different model families have a definite signature, and I've used it like this in the past to try and guess the identity of stealth preview models on platforms like OpenRouter. \n Claire is winding down her free trials entirely, which sadly looks like the right decision in the face of this abuse.\n\n Tags: youtube , ai , generative-ai , llms , pelican-riding-a-bicycle , ai-misuse",
+   "zh": "Claire Vo称其产品遭大量Token欺诈滥用，展示AI平台按量计费被套利的手法。",
+   "zh_title": "Token欺诈泛滥：ChatPRD创始人披露滥用",
+   "short": "ChatPRD遭Token欺诈滥用",
+   "why": "按量计费AI产品需防套利",
+   "weight": 1.1,
+   "published_ts": 1795142997.0
+  },
+  {
+   "title": "Restricting AI agents in mobile operating systems platforms from capturing data",
+   "link": "https://signal.org/blog/protecting-your-privacy/",
+   "source": "Hacker News",
+   "zh": "讨论移动OS平台如何限制AI代理抓取数据，涉及权限与隐私边界。",
+   "zh_title": "移动操作系统限制AI代理采集数据",
+   "short": "移动OS限制AI代理取数",
+   "why": "代理能力与平台权限博弈",
+   "weight": 0.9,
+   "published_ts": 1795167736.0
+  },
+  {
+   "title": "Epic Games Turns to AI Coding for the Unreal Engine",
+   "link": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
+   "source": "Hacker News",
+   "zh": "Epic Games在虚幻引擎开发中引入AI编码工具，辅助引擎相关代码编写。",
+   "zh_title": "Epic Games将AI编码引入虚幻引擎",
+   "short": "Epic用AI编码虚幻引擎",
+   "why": "游戏引擎开发流程AI化信号",
+   "weight": 0.9,
+   "published_ts": 1795176996.0
+  }
+ ]
+}
