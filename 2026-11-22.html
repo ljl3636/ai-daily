@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月22日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月22日 · 星期日 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：AWS Lambda支持GPU推理，谷歌推出Agent安全沙箱，AI代理生态持续扩张</div>
+<ol class="list">
+<li><a class="t" href="https://www.infoq.com/news/2026/11/aws-lambda-gpu-managed-instances/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">AWS Lambda支持GPU推理，单GPU共享48并发</a><div class="meta">InfoQ AI/ML · 1 小时前</div><p>Lambda托管实例可在EC2 G系列GPU上运行事件函数，vLLM/SGLang镜像免写handler，异步超时90分钟。</p><div class="why">值得看：无服务器GPU推理降低部署门槛</div></li>
+<li><a class="t" href="https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure">Anthropic上市后能否坚持安全优先</a><div class="meta">The Verge AI · 18 小时前</div><p>The Verge播客讨论Anthropic登陆纳斯达克后，巨额资本与安全优先路线之间的张力。</p><div class="why">值得看：头部实验室商业化与安全取舍</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">谷歌发布Agent Compute Engine安全执行代理</a><div class="meta">InfoQ AI/ML · 1 小时前</div><p>托管服务在隔离microVM中运行AI代理，支持检查点挂起恢复，密钥经外部网关注入沙箱外。</p><div class="why">值得看：解决代理凭据泄露与状态恢复</div></li>
+<li><a class="t" href="https://www.pandex.io">Pandex：面向AI代理的欧洲法规MCP实现</a><div class="meta">Hacker News · 11 小时前</div><p>以MCP协议提供欧洲AI代理相关法规的官方接口，供代理查询合规要求。</p><div class="why">值得看：合规查询可被代理直接调用</div></li>
+<li><a class="t" href="https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/">可驻留短信中的主流AI代理盘点</a><div class="meta">TechCrunch AI · 15 小时前</div><p>TechCrunch列出可在短信中运行的AI代理，覆盖通用助手、家庭、旅行与办公场景。</p><div class="why">值得看：代理入口向消息渠道延伸</div></li>
+<li><a class="t" href="https://simonwillison.net/2026/Nov/21/muru/">Muru：AI辅助的Rust Python应用服务器</a><div class="meta">Simon Willison · 8 小时前</div><p>mod_wsgi作者用Rust打造AI辅助服务器，为ASGI/WSGI应用提供开发与生产部署工具。</p><div class="why">值得看：Python部署工具链的新选择</div></li>
+<li><a class="t" href="http://ricapar.net/ClawDOS/">ClawDOS：面向DOS的AI编程代理</a><div class="meta">Hacker News · 1 天前</div><p>一个在DOS环境下运行的AI编程代理项目，展示代理在极简系统中的可行性。</p><div class="why">值得看：代理运行环境边界被推向极端</div></li>
+<li><a class="t" href="https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/">黎曼猜想据称被两次独立证明</a><div class="meta">Latent Space · 1 天前</div><p>AINews汇总称黎曼猜想出现两次独立证明，日期标注为2026年11月20日。</p><div class="why">值得看：数学重大进展待验证</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-22 16:17
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>

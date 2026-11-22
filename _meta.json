@@ -108,5 +108,10 @@
   "count": 4,
   "overview": "Anthropic数学家称用Claude证明黎曼猜想；AI代理数据采集受限与Token欺诈引关注",
   "updated": "2026-11-21 17:09"
+ },
+ "2026-11-22": {
+  "count": 8,
+  "overview": "AWS Lambda支持GPU推理，谷歌推出Agent安全沙箱，AI代理生态持续扩张",
+  "updated": "2026-11-22 16:17"
  }
 }
