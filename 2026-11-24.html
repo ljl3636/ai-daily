@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>AI 开发日报 · 11月24日</title>
+<style>
+:root{--fg:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:0 18px 36px;background:#fff;color:var(--fg);-webkit-text-size-adjust:100%;
+font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+header{padding:26px 0 14px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.5px}
+.sub{margin-top:6px;color:var(--muted);font-size:13px}
+.overview{margin-top:16px;padding:12px 14px;background:#f5f8ff;border-radius:10px;font-size:15px;color:#1e3a8a}
+.list{list-style:none;margin:8px 0 0;padding:0;counter-reset:i}
+.list li{position:relative;padding:18px 0 18px 34px;border-bottom:1px solid var(--line);counter-increment:i}
+.list li:before{content:counter(i);position:absolute;left:0;top:20px;width:22px;height:22px;border-radius:50%;
+background:#eef2ff;color:var(--accent);font-size:12px;font-weight:600;text-align:center;line-height:22px}
+.t{display:block;font-size:17px;font-weight:600;color:var(--fg);text-decoration:none;line-height:1.45}
+.meta{margin-top:4px;color:var(--muted);font-size:12px}
+p{margin:8px 0 0;font-size:15px;color:#374151}
+.why{display:inline-block;margin-top:8px;padding:3px 8px;background:#f0fdf4;color:#166534;border-radius:6px;font-size:13px}
+.archive{margin-top:28px}
+.archive h2{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.archive a{display:block;padding:9px 0;color:var(--accent);text-decoration:none;font-size:14px;border-bottom:1px solid #f3f4f6}
+footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+.tip{margin:14px 0 2px;padding:9px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:9px;font-size:13px;line-height:1.6;color:#92400e}
+.tip b{font-weight:600}
+.cp{margin-left:6px;padding:3px 10px;border:1px solid #f59e0b;background:#fff;color:#92400e;border-radius:6px;font-size:12px;font-family:inherit}
+.nav{display:inline-block;margin-top:16px;font-size:13px;color:var(--accent);text-decoration:none}
+.arclist{list-style:none;margin:12px 0 0;padding:0}
+.arclist li{border-bottom:1px solid var(--line)}
+.arclist a{display:block;padding:14px 0;text-decoration:none;color:var(--fg)}
+.arclist .hd{display:flex;justify-content:space-between;align-items:baseline}
+.arclist .day{font-size:17px;font-weight:600}
+.arclist .cnt{color:var(--muted);font-size:12px}
+.arclist .ov{margin-top:4px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>AI 开发日报</h1><div class="sub">2026年11月24日 · 星期二 · 8 条精选</div></header>
+<div class="tip">想以后再看：点右上角 <b>⋯</b> → <b>收藏</b>，以后从「我 → 收藏」随时打开<button type="button" class="cp" id="cp">复制链接</button></div>
+<div class="overview">今日看点：OpenAI公开预训练曲线，Anthropic推代码审查代理，GPT-5/Gemini一致性受检</div>
+<ol class="list">
+<li><a class="t" href="https://arxiv.org/abs/2611.29859">GPT-5与Gemini 3 Flash在H5N1问题上的一致性研究</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>arXiv研究测试GPT-5和Gemini 3 Flash回答H5N1健康问题的语义可重复性，先看一致性再谈准确性。</p><div class="why">值得看：健康类问答需先保证回答稳定可复现</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/qcon-sf-openai-lessons/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">OpenAI六周做出1亿美元产品：Codex代理零手写代码</a><div class="meta">InfoQ AI/ML · 1 小时前</div><p>OpenAI用Codex代理无手写代码构建ChatGPT广告产品，采用分层测试、沙箱和批量PR审查。</p><div class="why">值得看：代理工程化流程与失败模式的实战经验</div></li>
+<li><a class="t" href="https://arxiv.org/abs/2611.30410">AI审稿人存在披露偏差</a><div class="meta">arXiv cs.AI · 3 小时前</div><p>研究仅改动150篇ICLR投稿的AI使用声明，观察AI审稿人评分是否随之变化。</p><div class="why">值得看：AI辅助评审的公平性隐患</div></li>
+<li><a class="t" href="https://openai.com/index/introducing-shirudo">OpenAI与Cisco推出开源运行时Shirudo</a><div class="meta">OpenAI · 11 小时前</div><p>面向Linux的开源运行时，帮助团队在打补丁期间保护运行中的系统。</p><div class="why">值得看：补丁窗口期的运行时防护工具</div></li>
+<li><a class="t" href="https://www.infoq.com/news/2026/11/claude-code-mode/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=AI%2C+ML+%26+Data+Engineering">Claude Code新增实验性Code Mode</a><div class="meta">InfoQ AI/ML · 20 小时前</div><p>用JavaScript编排Bash、Read、Edit调用，支持链式、并行与过滤，并调整自动模式与钩子审查。</p><div class="why">值得看：工具调用编排更灵活可控</div></li>
+<li><a class="t" href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/">Anthropic推出Claude Ship代理审查代码</a><div class="meta">TechCrunch AI · 10 小时前</div><p>新开发者工具让AI代理审查、修复并批准代码变更，处理例行审批环节。</p><div class="why">值得看：缓解AI生成代码堆积的评审瓶颈</div></li>
+<li><a class="t" href="https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/">黄仁勋回归，OpenAI公开预训练曲线</a><div class="meta">Latent Space · 4 小时前</div><p>Nvidia恢复其创始人职务；OpenAI发布内部loss曲线并提出共享训练上限。</p><div class="why">值得看：预训练规模化策略的重要信号</div></li>
+<li><a class="t" href="https://openai.com/business/customer-stories/richpanel-ai-customer-support">Richpanel用GPT-6系列30天自动化50%客服</a><div class="meta">OpenAI · 1 天前</div><p>Richpanel用GPT-6 Astra与GPT-6.1 Sol驱动带工具流程的客服代理，GPT-6 Luna负责对话。</p><div class="why">值得看：多模型分工落地客服场景的案例</div></li>
+</ol>
+<a class="nav" href="index.html">← 全部往期</a>
+<footer>共 8 条 · 由 ai-daily 脚本自动汇总 · 2026-11-24 16:32
+
+<script>
+(function(){var b=document.getElementById('cp');if(!b)return;var t0=b.textContent;
+b.onclick=function(){var u=location.href.split('#')[0];
+var t=document.createElement('textarea');t.value=u;t.setAttribute('readonly','');
+t.style.cssText='position:fixed;top:-1000px;left:0';document.body.appendChild(t);
+t.select();t.setSelectionRange(0,u.length);var ok=false;
+try{ok=document.execCommand('copy')}catch(e){}
+document.body.removeChild(t);
+b.textContent=ok?'已复制':'长按选择复制';
+setTimeout(function(){b.textContent=t0},2000);};})();
+</script>
+
+</body>
+</html>

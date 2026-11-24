@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-24 16:32",
+ "overview": "OpenAI公开预训练曲线，Anthropic推代码审查代理，GPT-5/Gemini一致性受检",
+ "items": [
+  {
+   "title": "Semantic repeatability and reproducibility of GPT-5 and Gemini 3 Flash on H5N1 One Health questions",
+   "link": "https://arxiv.org/abs/2611.29859",
+   "source": "arXiv cs.AI",
+   "summary": "Highly pathogenic avian influenza A(H5N1) has re-emerged as a One Health concern since 2024, and the public is increasingly consulting large-language-model (LLM) chatbots for health information during outbreaks. Before a chatbot's accuracy can be meaningfully assessed, its consistency must first be understood, so that any single response can be trusted as a fair representative of the model's behavior. We characterized the semantic repeatability and reproducibility of GPT-5 (OpenAI) and Gemini 3 Flash (Google) on 15 H5N1 One Health questions sourced from social media discourse by adopting and extending a centroid-based evaluation framework. Each question was submitted 30 times and reformulated using five Chain-of-Thought (CoT) variants with 30 runs each, yielding 5,400 responses. Pairwise cosine similarity was computed on MPNet embeddings, with sensitivity analyses across three additional transformers. Statistical inference combined standard nonparametric tests (paired Wilcoxon and Friedman with Holm--Bonferroni correction) with inter-embedding agreement statistics (ICC(2,k) and Cronbach's $\\alpha$) introduced here as a methodological addition. Both models produced high mean consistency (0.93--0.97, rescaled to {[}0, 1{]}). GPT-5 showed reproducibility significantly higher than repeatability (W = 3.0, p = 0.0003), whereas for Gemini 3 Flash the two metrics were statistically indistinguishable (W = 42.0, p = 0.33). Differential Diagnosis ranked among the top two CoT framings for consistency in both models. The tested chatbots behave as semantically stable sources on H5N1 One Health questions, and the developed consistency evaluation framework is portable to other domains.",
+   "zh": "arXiv研究测试GPT-5和Gemini 3 Flash回答H5N1健康问题的语义可重复性，先看一致性再谈准确性。",
+   "zh_title": "GPT-5与Gemini 3 Flash在H5N1问题上的一致性研究",
+   "short": "GPT-5/Gemini 3 Flash一致性评测",
+   "why": "健康类问答需先保证回答稳定可复现",
+   "weight": 0.9,
+   "published_ts": 1795496400.0
+  },
+  {
+   "title": "QCon San Francisco 2026: Lessons from Building a $100M Product in Six Weeks at OpenAI",
+   "link": "https://www.infoq.com/news/2026/11/qcon-sf-openai-lessons/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "At QCon San Francisco 2026, OpenAI's Brian Yang described building the ChatGPT ads product with Codex agents and no human-written code. He outlined layered testing, sandboxes, and batched pull request reviews, and noted failure modes such as code \"slop\" and unsafe agent actions. He advised gradual adoption and framed engineers as managers of agents. By Daniel Curtis",
+   "zh": "OpenAI用Codex代理无手写代码构建ChatGPT广告产品，采用分层测试、沙箱和批量PR审查。",
+   "zh_title": "OpenAI六周做出1亿美元产品：Codex代理零手写代码",
+   "short": "Codex代理零手写代码建产品",
+   "why": "代理工程化流程与失败模式的实战经验",
+   "weight": 1.0,
+   "published_ts": 1795501920.0
+  },
+  {
+   "title": "Disclosure Bias in AI Reviewers",
+   "link": "https://arxiv.org/abs/2611.30410",
+   "source": "arXiv cs.AI",
+   "summary": "AI models increasingly help to review papers, and many conferences and journals now require authors to state how they used AI. Does this AI-use statement change how an AI reviewer rates a paper, and could it change which papers are accepted? In a preliminary study, we varied only the AI-use statement of 150 ICLR 2027 submissions, in up to nine versions adapted from real statements: from no AI, through writing help and coding, to an AI research agent and an AI author. Six AI reviewers rated the versions: the decision model Jev and the language models Claude Haiku 5.5, Claude Sonnet 5.5, Gemini 3.8 Flash, Gemini 3.1 Pro and Gemini 4 Argon. Across 23,652 reviews, we find that every reviewer rates papers lower on average when the statement says AI did all the work than under a statement of no AI use. The AI research agent statement lowers the rating significantly for Jev, Sonnet and Argon. We find no evidence of a disclosure bias for AI assistance: for writing help, coding and research help, no reviewer's rating differs significantly from its rating under a statement of no AI use. Whether the observed penalty changes which papers are accepted depends on more than the size of the penalty: on how finely and how consistently the reviewer separates the papers near the acceptance boundary, on whether the penalty is spread over all papers or concentrated on a few, and possibly on how many other papers disclose AI use.",
+   "zh": "研究仅改动150篇ICLR投稿的AI使用声明，观察AI审稿人评分是否随之变化。",
+   "zh_title": "AI审稿人存在披露偏差",
+   "short": "AI使用声明影响AI审稿评分",
+   "why": "AI辅助评审的公平性隐患",
+   "weight": 0.9,
+   "published_ts": 1795496400.0
+  },
+  {
+   "title": "OpenAI and Cisco introduce Shirudo",
+   "link": "https://openai.com/index/introducing-shirudo",
+   "source": "OpenAI",
+   "summary": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
+   "zh": "面向Linux的开源运行时，帮助团队在打补丁期间保护运行中的系统。",
+   "zh_title": "OpenAI与Cisco推出开源运行时Shirudo",
+   "short": "OpenAI/Cisco开源Shirudo运行时",
+   "why": "补丁窗口期的运行时防护工具",
+   "weight": 1.3,
+   "published_ts": 1795468800.0
+  },
+  {
+   "title": "Claude Code Adds Experimental Code Mode to Orchestrate Tool Calls with JavaScript",
+   "link": "https://www.infoq.com/news/2026/11/claude-code-mode/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Anthropic's experimental Code Mode lets Claude Code write JavaScript that chains, parallelizes, and filters Bash, Read, and Edit calls, with changes to how auto mode and hooks review those calls. By Daniel Dominguez",
+   "zh": "用JavaScript编排Bash、Read、Edit调用，支持链式、并行与过滤，并调整自动模式与钩子审查。",
+   "zh_title": "Claude Code新增实验性Code Mode",
+   "short": "Claude Code用JS编排工具调用",
+   "why": "工具调用编排更灵活可控",
+   "weight": 1.0,
+   "published_ts": 1795436220.0
+  },
+  {
+   "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+   "link": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+   "source": "TechCrunch AI",
+   "summary": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents handle routine approvals.",
+   "zh": "新开发者工具让AI代理审查、修复并批准代码变更，处理例行审批环节。",
+   "zh_title": "Anthropic推出Claude Ship代理审查代码",
+   "short": "Claude Ship代理审批代码变更",
+   "why": "缓解AI生成代码堆积的评审瓶颈",
+   "weight": 0.7,
+   "published_ts": 1795471550.0
+  },
+  {
+   "title": "[AINews] Jensen Is Back! and OpenAI Shows Its Pretraining Curve, joined by Microsoft",
+   "link": "https://latent.space/p/ainews-jensen-is-back-and-openai-shows-its-pretraining-curve-joined-by-microsoft/",
+   "source": "Latent Space",
+   "summary": "November 23, 2026 — Nvidia reinstates its founder, and OpenAI publishes its internal loss curve and proposes a shared training limit.",
+   "zh": "Nvidia恢复其创始人职务；OpenAI发布内部loss曲线并提出共享训练上限。",
+   "zh_title": "黄仁勋回归，OpenAI公开预训练曲线",
+   "short": "OpenAI公开loss曲线与训练上限",
+   "why": "预训练规模化策略的重要信号",
+   "weight": 1.0,
+   "published_ts": 1795493656.0
+  },
+  {
+   "title": "Richpanel helps companies automate 50% of support in 30 days",
+   "link": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+   "source": "OpenAI",
+   "summary": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
+   "zh": "Richpanel用GPT-6 Astra与GPT-6.1 Sol驱动带工具流程的客服代理，GPT-6 Luna负责对话。",
+   "zh_title": "Richpanel用GPT-6系列30天自动化50%客服",
+   "short": "GPT-6三模型支撑客服自动化",
+   "why": "多模型分工落地客服场景的案例",
+   "weight": 1.3,
+   "published_ts": 1795420800.0
+  }
+ ]
+}
