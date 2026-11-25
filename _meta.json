@@ -123,5 +123,10 @@
   "count": 8,
   "overview": "OpenAI公开预训练曲线，Anthropic推代码审查代理，GPT-5/Gemini一致性受检",
   "updated": "2026-11-24 16:32"
+ },
+ "2026-11-25": {
+  "count": 8,
+  "overview": "Simon Willison 复盘 LLM 十二个月三次拐点，Gemini 4 Neon 回归前沿",
+  "updated": "2026-11-25 16:31"
  }
 }
