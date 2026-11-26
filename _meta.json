@@ -128,5 +128,10 @@
   "count": 8,
   "overview": "Simon Willison 复盘 LLM 十二个月三次拐点，Gemini 4 Neon 回归前沿",
   "updated": "2026-11-25 16:31"
+ },
+ "2026-11-26": {
+  "count": 8,
+  "overview": "vLLM推理优化、并行子代理编码实证、Gemini 4 Neon发布",
+  "updated": "2026-11-26 16:31"
  }
 }

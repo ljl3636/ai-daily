@@ -1,0 +1,102 @@
+{
+ "saved": "2026-11-26 16:31",
+ "overview": "vLLM推理优化、并行子代理编码实证、Gemini 4 Neon发布",
+ "items": [
+  {
+   "title": "BOP-Refer: Benchmark for Monocular 3D and 2D Object Grounding",
+   "link": "https://arxiv.org/abs/2611.34862",
+   "source": "arXiv cs.AI",
+   "summary": "We introduce BOP-Refer, the first benchmark for monocular 3D and 2D grounding of everyday and industrial objects sourced from 9 diverse BOP datasets. We pair images from these datasets with VLM-generated and human-verified referring expressions, and derive accurate ground-truth 3D and 2D bounding boxes of the referred objects from their 3D models and 6DoF pose annotations. Our systematic evaluation of 17 frontier VLMs across the major proprietary and open-weight families (Gemini, GPT, Claude, Qwen, Gemma) shows that the best model, Gemini 4 Carbon, reaches 72.6% AP_IoU2D in 2D but only 12.4% AP_IoU3D in 3D, despite the more lenient IoU thresholds in 3D. The predicted 3D boxes are usually centered on the target objects in the image but often off in depth by more than the object's size, suggesting that metric scale estimation, which needs reliable object size priors, is currently by far the main source of error.",
+   "zh": "首个基于9个BOP数据集的单目3D与2D目标定位基准，用VLM生成并经人工核验指代表达。",
+   "zh_title": "BOP-Refer：单目3D/2D目标定位基准",
+   "short": "BOP-Refer基准，9个BOP数据集",
+   "why": "为VLM空间定位提供统一评测",
+   "weight": 0.9,
+   "published_ts": 1795669200.0
+  },
+  {
+   "title": "vLLM Singapore Meetup: Faster Prefill, Agent-Written Kernels and the Road to Vera Rubin",
+   "link": "https://pytorch.org/blog/vllm-singapore-meetup-faster-prefill-agent-written-kernels-and-the-road-to-vera-rubin/",
+   "source": "PyTorch",
+   "summary": "TL;DR At the Singapore vLLM meetup, engineers from Inferact, NVIDIA, and Alibaba Cloud showcased how the community is advancing open source AI inference through pipeline parallelism optimizations, agent-written kernels, real-time... \n The post vLLM Singapore Meetup: Faster Prefill, Agent-Written Kernels and the Road to Vera Rubin appeared first on PyTorch .",
+   "zh": "Inferact、NVIDIA、阿里云分享流水线并行优化、Agent自动编写内核及实时推理进展。",
+   "zh_title": "vLLM新加坡Meetup：更快Prefill与Agent写内核",
+   "short": "vLLM Meetup，Agent写内核",
+   "why": "开源推理栈优化方向参考",
+   "weight": 1.2,
+   "published_ts": 1795629795.0
+  },
+  {
+   "title": "When Are Parallel Subagents Effective for Coding? An Empirical Study on Repository Construction",
+   "link": "https://arxiv.org/abs/2611.33893",
+   "source": "arXiv cs.AI",
+   "summary": "LLM-based coding agents are increasingly used for long-horizon tasks such as building an entire program from a specification. Products like Codex and Claude Code let an agent delegate work to parallel subagents, multiplying run cost, yet it remains unclear whether and when delegation produces a better program. We compare a single agent with a main agent delegating to subagents on repository-construction tasks from NL2Repo and ProgramBench (which also provides an executable reference program). We compare scores at equal time and equal cost, run intervention experiments, and analyze fine-grained behavior. On randomly drawn tasks, parallel subagents raise hidden-test pass rates by only about 1 to 5 percentage points at up to 3.8x the cost of a single agent. Their gain is larger on hard tasks, where we find evidence of three mechanisms. Self-checking: with GPT-5.6 Sol, one sentence telling a single agent to probe the reference program first recovers most of this gain at a fraction of the cost; from GPT-5.6 Sol to GPT-6.1 Sol, the gain shrinks as single agents check their own work more. Fresh context: in extended runs, a single agent that periodically starts a new session with an empty conversation makes faster early progress in every comparison than one that resumes its conversation. Modularity: multi-agent runs produce more modular code (more files and shorter functions), closer to the upstream source. We observe similar patterns in a smaller replication with Opus 5.5 on Claude Code. Overall, subagents help when (i) a single agent stops checking too early, (ii) a long session keeps editing with little improvement, or (iii) modular code helps on the task; otherwise, they mainly add cost.",
+   "zh": "在仓库构建任务上对比单代理与主代理委派子代理，考察委派是否产出更好程序。",
+   "zh_title": "并行子代理对编码任务何时有效？",
+   "short": "并行子代理编码实证研究",
+   "why": "指导多代理编码的成本收益权衡",
+   "weight": 0.9,
+   "published_ts": 1795669200.0
+  },
+  {
+   "title": "datasette-charts 0.3a0",
+   "link": "https://simonwillison.net/2026/Nov/25/datasette-charts/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-charts 0.3a0 \n I added chart annotations to datasette-charts ! \n You can now render a chart and then annotate it with lines, shaded areas, labels, or a combination of the three. \n A chart with annotations looks like this: \n \n Here's that same chart in Datasette Lite , where you can tweak the annotations using the chart builder UI: \n \n If you also install Datasette Agent the agent can build annotated charts for you. Here's what I got on the agent.datasette.io demo for this prompt: \n \n Show a chart comparing Simon's tagged content about LLMs with his tagged content about Datasette, with annotations \n \n \n \n \n Tags: datasette , visualization , datasette-charts",
+   "zh": "新增图表标注功能，可用线、阴影区、标签组合标注，并支持在图表构建UI中调整。",
+   "zh_title": "datasette-charts 0.3a0发布",
+   "short": "datasette-charts 0.3a0加标注",
+   "why": "Datasette可视化能力增强",
+   "weight": 1.1,
+   "published_ts": 1795630610.0
+  },
+  {
+   "title": "QCon San Francisco 2026: Automating Spark Upgrades with Codex Agents at OpenAI",
+   "link": "https://www.infoq.com/news/2026/11/openai-spark-fleet/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "At QCon San Francisco 2026, Mouli Mukherjee, Engineering Manager for Data Infrastructure at OpenAI, argued that AI agents are most useful not for rebuilding a data platform, but for the open-ended operational work that is hard to turn into fixed playbooks. By Robert Krzaczyński",
+   "zh": "OpenAI数据基础设施团队称代理最适合难以固化为手册的开放式运维工作，如Spark升级。",
+   "zh_title": "OpenAI用Codex代理自动化Spark升级",
+   "short": "OpenAI用Codex代理升级Spark",
+   "why": "代理落地运维的实践案例",
+   "weight": 1.0,
+   "published_ts": 1795587600.0
+  },
+  {
+   "title": "The Revolution vs The Renaissance — Thariq Shihipar, OpenAI",
+   "link": "https://latent.space/p/the_revolution_vs_the_renaissance_thariq_shihipar_openai/",
+   "source": "Latent Space",
+   "summary": "AI can make software cheap enough to produce by the thousand and still give you more time to make one thing feel right. At AI Engineer CODE, Thariq Shihipar shows how those two futures can coexist. In his fighting game, he edits the size of a rock in t...",
+   "zh": "OpenAI的Thariq Shihipar以格斗游戏为例，展示AI批量生产软件与精雕单件可并存。",
+   "zh_title": "Thariq Shihipar谈量产与精雕的共存",
+   "short": "OpenAI谈AI量产与精雕",
+   "why": "启发AI辅助开发工作流设计",
+   "weight": 1.0,
+   "published_ts": 1795645681.0
+  },
+  {
+   "title": "Recap of Microsoft Ignite 2026: Copilot as the Work OS and Agent Governance",
+   "link": "https://www.infoq.com/news/2026/11/microsoft-ignite-2026-recap/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "At Ignite 2026, Microsoft positioned Copilot as the operating system for work and extended agent identity, governance, and cost controls across Azure, Foundry, Entra, and Defender. Highlights include Cobalt 200 VMs, Azure HorizonDB, a continuous improvement loop in Foundry, Microsoft IQ, a standalone Azure AI Gateway, and Windows Server 2028. By Steef-Jan Wiggers",
+   "zh": "微软将Copilot定位为工作操作系统，并在Azure、Foundry、Entra、Defender扩展代理身份与成本管控。",
+   "zh_title": "Ignite 2026：Copilot成工作OS与代理治理",
+   "short": "微软Ignite，Copilot工作OS",
+   "why": "企业级代理治理与身份方案",
+   "weight": 1.0,
+   "published_ts": 1795675500.0
+  },
+  {
+   "title": "[AINews] Gemini 4 Neon marks GDM's full return as a Frontier Lab",
+   "link": "https://latent.space/p/ainews-gemini-4-neon-marks-gdm-s-full-return-as-a-frontier-lab/",
+   "source": "Latent Space",
+   "summary": "November 24, 2026 — Neon beats Astra and Fable on LiveBench and cuts Theo’s TS Rust benchmark runtime by 48.6%.",
+   "zh": "Neon在LiveBench上胜过Astra与Fable，并将某TS Rust基准运行时间缩短48.6%。",
+   "zh_title": "Gemini 4 Neon标志GDM回归前沿实验室",
+   "short": "Gemini 4 Neon，提速48.6%",
+   "why": "新模型基准表现值得关注",
+   "weight": 1.0,
+   "published_ts": 1795580947.0
+  }
+ ]
+}
