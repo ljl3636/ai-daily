@@ -133,5 +133,10 @@
   "count": 8,
   "overview": "vLLM推理优化、并行子代理编码实证、Gemini 4 Neon发布",
   "updated": "2026-11-26 16:31"
+ },
+ "2026-11-27": {
+  "count": 8,
+  "overview": "DeepMind让AI代理参与算力调度，微软Ignite强化代理治理，嵌入模型微调与并行子代理实证研究。",
+  "updated": "2026-11-27 16:31"
  }
 }
