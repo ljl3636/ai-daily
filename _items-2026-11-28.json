@@ -1,0 +1,65 @@
+{
+ "saved": "2026-11-28 17:47",
+ "overview": "Meta开源PR自动审批系统GreenLight，Azure AI网关正式GA",
+ "items": [
+  {
+   "title": "Meta Brings Code Review Auto-Approval More Mainstream with PyTorch GreenLight",
+   "link": "https://www.infoq.com/news/2026/11/uber-agent-spend-steady/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "PyTorch now lets an AI reviewer approve pull requests from its own maintainers. GreenLight is an open-source take on RADAR, the system Meta uses to auto-land low-risk diffs after safety checks, a risk score and an LLM review. OpenAI, Anthropic and Sonar describe similar ways to automate approval while keeping humans on risky changes. By Andrew Hoblitzell",
+   "zh": "PyTorch用AI审阅者自动批准维护者PR，GreenLight开源复刻Meta内部RADAR，靠风险评分加LLM审查放行低风险改动",
+   "zh_title": "Meta开源PyTorch GreenLight自动审批PR",
+   "short": "GreenLight开源，RADAR复刻",
+   "why": "可参考其风险评分与LLM审查的落地方式",
+   "weight": 1.0,
+   "published_ts": 1795790160.0
+  },
+  {
+   "title": "datasette-charts 0.4a0",
+   "link": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+   "source": "Simon Willison",
+   "summary": "Release: datasette-charts 0.4a0 \n The new datasette-charts plugin has its own plugin hook to allow other plugins to define new chart types, but I hadn't actually used it for anything yet. I had Claude Opus 5.5 build an experimental plugins just to try out the hook and it came up with a bunch of friction points in the design. This release addresses those, which should make building additional chart plugins a whole lot more ergonomic. \n I've also added a website for the plugin, at charts.datasette.io . The new website includes a tutorial for plugin authors , and a gallery showing all of the core charts and annotations, each one linking to an interactive demo on Datasette Lite . \n \n \n \n Tags: datasette-charts , datasette , visualization , datasette-lite",
+   "zh": "新增插件钩子让其他插件定义图表类型，作者用Claude Opus 5.5试写插件后修复了设计摩擦点",
+   "zh_title": "datasette-charts 0.4a0发布",
+   "short": "datasette-charts 0.4a0",
+   "why": "展示用LLM试跑插件钩子设计的实践",
+   "weight": 1.1,
+   "published_ts": 1795823837.0
+  },
+  {
+   "title": "[AINews] Inside the exploding Coding Data Market",
+   "link": "https://latent.space/p/ainews-inside-the-exploding-coding-data-market/",
+   "source": "Latent Space",
+   "summary": "November 27, 2026 — How frontier labs buy training data.",
+   "zh": "AINews讨论前沿实验室如何采购训练数据，聚焦代码数据交易的市场格局",
+   "zh_title": "编程数据市场正在爆发",
+   "short": "AINews：编程数据市场",
+   "why": "了解代码训练数据的采购与供给现状",
+   "weight": 1.0,
+   "published_ts": 1795837559.0
+  },
+  {
+   "title": "Azure AI Gateway Reaches General Availability as a Standalone Service",
+   "link": "https://www.infoq.com/news/2026/11/azure-ai-gateway-ga/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI%2C+ML+%26+Data+Engineering",
+   "source": "InfoQ AI/ML",
+   "summary": "Microsoft has made Azure AI Gateway generally available as a standalone Azure service for governing access to AI models and MCP tools across providers. A free tier covers 10,000 requests per gateway per month; paid billing starts January 1, 2027; and private networking remains in preview. By Steef-Jan Wiggers",
+   "zh": "统一管控跨厂商AI模型与MCP工具访问，免费层每网关每月1万请求，2027年起计费，私有网络仍预览",
+   "zh_title": "Azure AI Gateway正式GA独立服务",
+   "short": "Azure AI Gateway GA",
+   "why": "多模型与MCP工具的统一网关治理方案",
+   "weight": 1.0,
+   "published_ts": 1795848420.0
+  },
+  {
+   "title": "Prospero: Bloat-free, native AI coding harness with ImGui",
+   "link": "https://github.com/skeeto/prospero",
+   "source": "Hacker News",
+   "zh": "轻量无臃肿的原生AI编码harness，界面用ImGui构建",
+   "zh_title": "Prospero：基于ImGui的原生AI编码工具",
+   "short": "Prospero，ImGui编码harness",
+   "why": "轻量原生编码代理的另一种实现思路",
+   "weight": 0.9,
+   "published_ts": 1795810994.0
+  }
+ ]
+}

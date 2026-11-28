@@ -138,5 +138,10 @@
   "count": 8,
   "overview": "DeepMind让AI代理参与算力调度，微软Ignite强化代理治理，嵌入模型微调与并行子代理实证研究。",
   "updated": "2026-11-27 16:31"
+ },
+ "2026-11-28": {
+  "count": 5,
+  "overview": "Meta开源PR自动审批系统GreenLight，Azure AI网关正式GA",
+  "updated": "2026-11-28 17:47"
  }
 }
